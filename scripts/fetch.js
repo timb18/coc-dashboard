@@ -110,7 +110,9 @@ function computeAnalytics(memberItems, raidSeasons, cwlWars) {
     const tag = member.tag;
 
     // Raid stats
-    const raidHistory = raidSeasons.map(season => {
+    // only seasons where the API returned per-member data count toward participation
+    const trackableSeasons = raidSeasons.filter(s => (s.members ?? []).length > 0);
+    const raidHistory = trackableSeasons.map(season => {
       const m = (season.members ?? []).find(m => m.tag === tag);
       return {
         startTime:        season.startTime,
@@ -145,13 +147,13 @@ function computeAnalytics(memberItems, raidSeasons, cwlWars) {
       });
     }
 
-    const raidRate  = raidSeasons.length ? attended.length / raidSeasons.length : 0;
+    const raidRate  = trackableSeasons.length ? attended.length / trackableSeasons.length : 0;
     const cwlAtkRate = cwlHistory.length ? cwlHistory.filter(h => h.attacksUsed > 0).length / cwlHistory.length : 0;
 
     analytics[tag] = {
       raids: {
         attended:     attended.length,
-        total:        raidSeasons.length,
+        total:        trackableSeasons.length,
         rate:         raidRate,
         totalAttacks, totalLoot,
         avgAttacks:   attended.length ? totalAttacks / attended.length : 0,

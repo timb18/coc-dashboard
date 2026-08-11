@@ -427,14 +427,20 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
 
     <!-- ══ RAIDS ══ -->
     <div class="tab-panel" id="tab-raids">
-      {raids.length > 0 && (
-        <div class="card">
-          <div class="card-title">Jahresübersicht — letzte {raids.length} Überfallwochenenden</div>
-          <div class="chart-wrap" style="height:230px">
-            <canvas id="raids-yearly-chart"></canvas>
+      {(() => {
+        const withData = raids.filter((s: any) => (s.members ?? []).length > 0);
+        return raids.length > 0 && (
+          <div class="card">
+            <div class="card-title">
+              Jahresübersicht — letzte {raids.length} Überfallwochenenden
+              {withData.length < raids.length && <span class="c-muted" style="font-size:.8rem;font-weight:400;margin-left:.5rem">({withData.length} mit Mitgliederdaten)</span>}
+            </div>
+            <div class="chart-wrap" style="height:230px">
+              <canvas id="raids-yearly-chart"></canvas>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
       {raids.map((season: any, si: number) => {
         const mems  = season.members ?? [];
         const notIn = (season.memberCount ?? 0) - mems.length;
@@ -520,7 +526,8 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
     document.getElementById('tab-' + btn.dataset.tab)!.classList.add('active');
     if (btn.dataset.tab === 'raids' && !raidsChartInited) {
       raidsChartInited = true;
-      (window as any)._initRaidsYearlyChart?.();
+      // rAF ensures the canvas is laid out (display:block) before Chart.js measures it
+      requestAnimationFrame(() => (window as any)._initRaidsYearlyChart?.());
     }
   });
 
@@ -597,12 +604,10 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
   const raidsJsonEl = document.getElementById('__raids_json');
   if (raidsJsonEl) {
     const rd = JSON.parse(raidsJsonEl.textContent ?? '[]');
-    // only seasons with member data are meaningful for participation stats
-    const rdWithMembers = (rd as any[]).filter((s: any) => (s.members ?? []).length > 0);
 
     (window as any)._initRaidsYearlyChart = () => {
-      if (rdWithMembers.length === 0) return;
-      const rev = [...rdWithMembers].reverse();
+      if ((rd as any[]).length === 0) return;
+      const rev = [...(rd as any[])].reverse();
       mkChart('raids-yearly-chart', {
         data:{
           labels: rev.map((s:any)=>{
