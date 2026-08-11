@@ -19,7 +19,7 @@ const analytics = (data.analytics ?? {})[memberTag] ?? {};
 const raids     = (data.raids?.items ?? []) as any[];
 const cwl       = data.cwl ?? {};
 const cwlWars   = Array.isArray(cwl.wars) ? cwl.wars.filter((w: any) => !w?._error) : [];
-const base      = import.meta.env.BASE_URL;
+const base      = import.meta.env.BASE_URL.replace(/\/?$/, '/');  // Astro 4 omits trailing slash
 
 function esc(v: any) {
   return String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');

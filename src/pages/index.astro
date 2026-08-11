@@ -12,7 +12,7 @@ const raids       = (data.raids?.items ?? []) as any[];
 const analytics   = data.analytics   ?? {};
 const lastUpdated = data.lastUpdated ? new Date(data.lastUpdated).toLocaleString('de-DE') : '–';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');  // Astro 4 omits trailing slash
 
 function esc(v: any) {
   return String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
