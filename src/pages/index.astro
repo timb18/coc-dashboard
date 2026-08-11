@@ -146,14 +146,14 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                 <th data-sort="str">Name</th>
                 <th data-sort="num">Rolle</th>
                 <th data-sort="num" data-default-dir="desc">TH</th>
-                <th data-sort="num" data-default-dir="desc">Trophäen</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">Trophäen</th>
                 <th data-sort="num" data-default-dir="desc">Liga</th>
-                <th data-sort="num" data-default-dir="desc">XP</th>
-                <th data-sort="num" data-default-dir="desc">Spenden ↑</th>
-                <th data-sort="num" data-default-dir="desc">Spenden ↓</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">XP</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">Spenden ↑</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">Spenden ↓</th>
                 <th data-sort="num" data-default-dir="desc">Ratio</th>
-                <th data-sort="num" data-default-dir="desc">RC</th>
-                <th data-sort="num" data-default-dir="desc">Kriegs★</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">RC</th>
+                <th class="col-sm" data-sort="num" data-default-dir="desc">Kriegs★</th>
                 <th data-sort="num" data-default-dir="desc">Raid %</th>
                 <th data-sort="num" data-default-dir="desc">Aktivität</th>
                 <th></th>
@@ -188,14 +188,14 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                     </td>
                     <td data-val={ROLE_RANK[m.role] ?? 3} set:html={rolePill(m.role)} />
                     <td data-val={m.townHallLevel ?? 0}>{m.townHallLevel ?? '–'}</td>
-                    <td data-val={m.trophies ?? 0}>{fmtNum(m.trophies)}</td>
+                    <td class="col-sm" data-val={m.trophies ?? 0}>{fmtNum(m.trophies)}</td>
                     <td data-val={leagueTierRank(m)}>{esc(m.leagueTier?.name ?? m.league?.name ?? '–')}</td>
-                    <td data-val={m.expLevel ?? 0}>{m.expLevel ?? m.profile?.expLevel ?? '–'}</td>
-                    <td data-val={give} class="c-green">{fmtNum(give)}</td>
-                    <td data-val={recv} class="c-red">{fmtNum(recv)}</td>
+                    <td class="col-sm" data-val={m.expLevel ?? 0}>{m.expLevel ?? m.profile?.expLevel ?? '–'}</td>
+                    <td class="col-sm c-green" data-val={give}>{fmtNum(give)}</td>
+                    <td class="col-sm c-red" data-val={recv}>{fmtNum(recv)}</td>
                     <td data-val={ratio.toFixed(2)} style={`color:${ratioColor};font-weight:700`}>{ratioDisp}</td>
-                    <td data-val={rc?.level ?? -1} class={rc ? 'c-gold' : 'c-muted'}>{rc ? rc.level : '–'}</td>
-                    <td data-val={m.profile?.warStars ?? 0}>{m.profile ? fmtNum(m.profile.warStars) : '–'}</td>
+                    <td class={'col-sm ' + (rc ? 'c-gold' : 'c-muted')} data-val={rc?.level ?? -1}>{rc ? rc.level : '–'}</td>
+                    <td class="col-sm" data-val={m.profile?.warStars ?? 0}>{m.profile ? fmtNum(m.profile.warStars) : '–'}</td>
                     <td data-val={raidRate}>
                       <span class={raidRate >= 80 ? 'c-green' : raidRate >= 50 ? 'c-gold' : 'c-red'}>{raidRate}%</span>
                     </td>
@@ -609,6 +609,7 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
       if ((rd as any[]).length === 0) return;
       const rev = [...(rd as any[])].reverse();
       mkChart('raids-yearly-chart', {
+        type: 'bar',
         data:{
           labels: rev.map((s:any)=>{
             const d = s.startTime?.replace(/^(\d{4})(\d{2})(\d{2})T.*/,'$1-$2-$3');

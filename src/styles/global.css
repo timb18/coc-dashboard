@@ -353,16 +353,50 @@ tbody tr:last-child td{border-bottom:none}
 .divider{height:1px;background:var(--border);margin:1rem 0}
 
 /* ── Responsive ── */
-@media(max-width:768px){
-  main{padding:1rem .75rem}
-  .site-header{padding:.75rem 1rem}
-  .clan-badge img{width:40px;height:40px}
-  .clan-info h1{font-size:1.1rem}
-  .kpi-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
-  .member-hero{flex-direction:column;gap:1rem}
-  .tab-btn{padding:.65rem .75rem;font-size:.8rem}
+
+/* Table column visibility helpers */
+@media(max-width:767px){ .col-sm{ display:none!important } }
+@media(max-width:479px){ .col-xs{ display:none!important } }
+
+/* Mobile ≤ 767 px */
+@media(max-width:767px){
+  main{ padding:1rem .75rem }
+  .site-header{ padding:.75rem 1rem; gap:.75rem }
+  .clan-badge img{ width:40px; height:40px }
+  .clan-info h1{ font-size:1.1rem }
+  .last-updated{ display:none }
+  .card{ padding:1rem .9rem }
+  .card-title{ font-size:.72rem }
+  .kpi-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)) }
+  .tab-btn{ padding:.65rem .75rem; font-size:.8rem }
+  .accordion-header{ flex-wrap:wrap; gap:.35rem }
+  .member-hero{ flex-direction:column; gap:1rem }
 }
-@media(max-width:480px){
-  .kpi-grid{grid-template-columns:repeat(2,1fr)}
-  .heroes-grid{grid-template-columns:repeat(2,1fr)}
+
+/* Very small ≤ 479 px */
+@media(max-width:479px){
+  .site-header{ flex-wrap:wrap }
+  .header-right{ width:100%; margin-left:0; justify-content:space-between }
+  .btn-ghost{ font-size:.74rem; padding:.3rem .6rem }
+  .kpi-grid{ grid-template-columns:repeat(2,1fr) }
+  .kpi-val{ font-size:1.35rem }
+  .heroes-grid{ grid-template-columns:repeat(2,1fr) }
+  .card{ padding:.85rem .75rem }
+  .member-hero{ padding:1rem 1rem }
+  .member-hero-badge{ width:52px; height:52px }
+  .member-hero-badge img{ width:38px; height:38px }
+  .member-hero-info h1{ font-size:1.25rem }
+}
+
+/* Large ≥ 1024 px */
+@media(min-width:1024px){
+  main{ padding:1.75rem 2rem }
+  .kpi-grid{ grid-template-columns:repeat(auto-fill,minmax(160px,1fr)) }
+  .card{ padding:1.4rem 1.6rem }
+  .heroes-grid{ grid-template-columns:repeat(auto-fill,minmax(145px,1fr)) }
+}
+
+/* Very large ≥ 1440 px */
+@media(min-width:1440px){
+  main{ max-width:1400px }
 }
