@@ -59,17 +59,8 @@ function activityColor(score: number) {
   return 'var(--red)';
 }
 
-const LEAGUE_RANK: Record<string, number> = {
-  'Unranked': 0,
-  'Bronze League III': 1,  'Bronze League II': 2,  'Bronze League I': 3,
-  'Silver League III': 4,  'Silver League II': 5,  'Silver League I': 6,
-  'Gold League III': 7,    'Gold League II': 8,    'Gold League I': 9,
-  'Crystal League III': 10,'Crystal League II': 11,'Crystal League I': 12,
-  'Master League III': 13, 'Master League II': 14, 'Master League I': 15,
-  'Champion League III': 16,'Champion League II': 17,'Champion League I': 18,
-  'Titan League III': 19,  'Titan League II': 20,  'Titan League I': 21,
-  'Legend League': 22,
-};
+// leagueTier.id = 105000000 (Unranked) … 105000033 (Electro 33) … higher for Legend
+function leagueTierRank(m: any) { return (m.leagueTier?.id ?? 105000000) - 105000000; }
 const ROLE_RANK: Record<string, number> = { leader: 0, coLeader: 1, admin: 2, member: 3 };
 
 // Pre-sort members by clanRank
@@ -191,14 +182,14 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                     </td>
                     <td data-val={m.name}>
                       <a class="member-link" href={`${base}member/${tag}`}>
-                        {m.league?.iconUrls?.tiny && <img class="league-icon" src={m.league.iconUrls.tiny} alt="" />}
+                        {(m.leagueTier?.iconUrls?.small ?? m.league?.iconUrls?.tiny) && <img class="league-icon" src={m.leagueTier?.iconUrls?.small ?? m.league?.iconUrls?.tiny} alt="" />}
                         <span>{esc(m.name)}</span>
                       </a>
                     </td>
                     <td data-val={ROLE_RANK[m.role] ?? 3} set:html={rolePill(m.role)} />
                     <td data-val={m.townHallLevel ?? 0}>{m.townHallLevel ?? '–'}</td>
                     <td data-val={m.trophies ?? 0}>{fmtNum(m.trophies)}</td>
-                    <td data-val={LEAGUE_RANK[m.league?.name ?? ''] ?? 0}>{esc(m.league?.name ?? '–')}</td>
+                    <td data-val={leagueTierRank(m)}>{esc(m.leagueTier?.name ?? m.league?.name ?? '–')}</td>
                     <td data-val={m.expLevel ?? 0}>{m.expLevel ?? m.profile?.expLevel ?? '–'}</td>
                     <td data-val={give} class="c-green">{fmtNum(give)}</td>
                     <td data-val={recv} class="c-red">{fmtNum(recv)}</td>
@@ -467,39 +458,45 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                 <div class="kpi"><div class="kpi-val">{season.totalAttacks ?? '–'}</div><div class="kpi-label">Angriffe</div></div>
                 <div class="kpi"><div class="kpi-val green">{fmtNum(season.capitalTotalLoot ?? 0)}</div><div class="kpi-label">Gold erbeutet</div></div>
                 <div class="kpi"><div class="kpi-val">{season.raidsCompleted ?? '–'}</div><div class="kpi-label">Raids abgeschlossen</div></div>
-                <div class="kpi"><div class="kpi-val plain">{mems.length}</div><div class="kpi-label">Teilnehmer</div></div>
-                <div class="kpi"><div class="kpi-val red">{notIn}</div><div class="kpi-label">Nicht dabei</div></div>
-                <div class="kpi"><div class="kpi-val plain">{fmtNum(season.offensiveReward ?? 0)}</div><div class="kpi-label">Angriffs-Medaillen</div></div>
+                {mems.length > 0 && <>
+                  <div class="kpi"><div class="kpi-val plain">{mems.length}</div><div class="kpi-label">Teilnehmer</div></div>
+                  <div class="kpi"><div class="kpi-val red">{notIn}</div><div class="kpi-label">Nicht dabei</div></div>
+                  <div class="kpi"><div class="kpi-val plain">{fmtNum(season.offensiveReward ?? 0)}</div><div class="kpi-label">Angriffs-Medaillen</div></div>
+                </>}
               </div>
-              <div class="chart-wrap" style={`height:${Math.max(80,mems.length*22+40)}px;margin-bottom:1rem`}>
-                <canvas id={`raid-chart-${si}`}></canvas>
-              </div>
-              <div class="table-wrap">
-                <table data-sortable>
-                  <thead>
-                    <tr>
-                      <th class="rank-num">#</th>
-                      <th data-sort="str">Name</th>
-                      <th data-sort="num" data-default-dir="desc">Angriffe</th>
-                      <th data-sort="num" data-default-dir="desc">Gold</th>
-                      <th data-sort="num" data-default-dir="desc">Bonus-Angriffe</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sortedMems.map((m: any, mi: number) => (
-                      <tr data-row>
-                        <td class="rank-num" data-val={mi+1}>{mi+1}</td>
-                        <td data-val={m.name}><strong>{esc(m.name)}</strong></td>
-                        <td data-val={m.attacks ?? 0} class={`${m.attacks >= (m.attackLimit ?? 5) ? 'c-green' : m.attacks > 0 ? 'c-gold' : 'c-red'}`}>
-                          {m.attacks ?? 0}/{m.attackLimit ?? 5}
-                        </td>
-                        <td data-val={m.capitalResourcesLooted ?? 0} class="c-gold">{fmtNum(m.capitalResourcesLooted)}</td>
-                        <td data-val={m.bonusAttackLimit ?? 0} class="c-muted">{m.bonusAttackLimit ?? 0}</td>
+              {mems.length > 0 ? (<>
+                <div class="chart-wrap" style={`height:${Math.max(80,mems.length*22+40)}px;margin-bottom:1rem`}>
+                  <canvas id={`raid-chart-${si}`}></canvas>
+                </div>
+                <div class="table-wrap">
+                  <table data-sortable>
+                    <thead>
+                      <tr>
+                        <th class="rank-num">#</th>
+                        <th data-sort="str">Name</th>
+                        <th data-sort="num" data-default-dir="desc">Angriffe</th>
+                        <th data-sort="num" data-default-dir="desc">Gold</th>
+                        <th data-sort="num" data-default-dir="desc">Bonus-Angriffe</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                    </thead>
+                    <tbody>
+                      {sortedMems.map((m: any, mi: number) => (
+                        <tr data-row>
+                          <td class="rank-num" data-val={mi+1}>{mi+1}</td>
+                          <td data-val={m.name}><strong>{esc(m.name)}</strong></td>
+                          <td data-val={m.attacks ?? 0} class={`${m.attacks >= (m.attackLimit ?? 5) ? 'c-green' : m.attacks > 0 ? 'c-gold' : 'c-red'}`}>
+                            {m.attacks ?? 0}/{m.attackLimit ?? 5}
+                          </td>
+                          <td data-val={m.capitalResourcesLooted ?? 0} class="c-gold">{fmtNum(m.capitalResourcesLooted)}</td>
+                          <td data-val={m.bonusAttackLimit ?? 0} class="c-muted">{m.bonusAttackLimit ?? 0}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>) : (
+                <p class="c-muted" style="font-size:.85rem;margin:.25rem 0 .5rem">Keine Mitgliederdaten verfügbar – API liefert für ältere Saisons keine Einzeldaten.</p>
+              )}
             </div>
           </div>
         );
@@ -513,6 +510,7 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
   import { initSortable } from '../scripts/sort.js';
 
   // ── Tabs ──
+  let raidsChartInited = false;
   document.getElementById('tab-nav')!.addEventListener('click', e => {
     const btn = (e.target as HTMLElement).closest('.tab-btn') as HTMLElement | null;
     if (!btn) return;
@@ -520,12 +518,17 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab)!.classList.add('active');
+    if (btn.dataset.tab === 'raids' && !raidsChartInited) {
+      raidsChartInited = true;
+      (window as any)._initRaidsYearlyChart?.();
+    }
   });
 
   // ── Sortable tables ──
   initSortable();
 
   // ── Chart defaults ──
+  const Chart = (window as any).Chart;
   Chart.defaults.color       = '#8892a4';
   Chart.defaults.borderColor = 'rgba(240,165,0,0.08)';
   Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
@@ -590,12 +593,16 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
     }
   }
 
-  // ── Raids yearly chart ──
+  // ── Raids yearly chart (lazy: initialized when raids tab opens) ──
   const raidsJsonEl = document.getElementById('__raids_json');
   if (raidsJsonEl) {
     const rd = JSON.parse(raidsJsonEl.textContent ?? '[]');
-    if (rd.length > 0) {
-      const rev = [...rd].reverse();
+    // only seasons with member data are meaningful for participation stats
+    const rdWithMembers = (rd as any[]).filter((s: any) => (s.members ?? []).length > 0);
+
+    (window as any)._initRaidsYearlyChart = () => {
+      if (rdWithMembers.length === 0) return;
+      const rev = [...rdWithMembers].reverse();
       mkChart('raids-yearly-chart', {
         data:{
           labels: rev.map((s:any)=>{
@@ -621,7 +628,7 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
           }
         }
       });
-    }
+    };
 
     // Raid season charts (lazy on accordion open)
     const raidSeasons = rd;

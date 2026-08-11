@@ -98,8 +98,8 @@ const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
     <!-- MEMBER HERO SECTION -->
     <div class="member-hero">
       <div class="member-hero-badge">
-        {member?.league?.iconUrls?.medium
-          ? <img src={member.league.iconUrls.medium} alt="" />
+        {(member?.leagueTier?.iconUrls?.large ?? member?.league?.iconUrls?.medium)
+          ? <img src={member.leagueTier?.iconUrls?.large ?? member.league.iconUrls.medium} alt="" />
           : <span style="font-size:1.5rem">⚔️</span>
         }
       </div>
@@ -108,7 +108,7 @@ const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
         <div class="member-hero-meta">
           <span set:html={rolePill(member?.role)} />
           <span class="th-badge">TH {member?.townHallLevel ?? '–'}</span>
-          <span class="th-badge">{esc(member?.league?.name ?? '–')}</span>
+          <span class="th-badge">{esc(member?.leagueTier?.name ?? member?.league?.name ?? '–')}</span>
           <span class="th-badge c-muted">{member?.tag}</span>
         </div>
       </div>
@@ -269,6 +269,7 @@ const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
   import { initSortable } from '../../scripts/sort.js';
   initSortable();
 
+  const Chart = (window as any).Chart;
   Chart.defaults.color       = '#8892a4';
   Chart.defaults.borderColor = 'rgba(240,165,0,0.08)';
   const SCALE = { grid: { color: 'rgba(240,165,0,0.06)' } };

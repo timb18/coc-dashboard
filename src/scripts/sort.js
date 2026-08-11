@@ -5,8 +5,9 @@ export function initSortable() {
   document.querySelectorAll('table[data-sortable]').forEach(table => {
     let sortCol = -1, sortDir = 'asc';
 
-    table.querySelectorAll('th[data-sort]').forEach((th, i) => {
+    table.querySelectorAll('th[data-sort]').forEach((th) => {
       th.addEventListener('click', () => {
+        const i = th.cellIndex;  // actual column index, not forEach index
         if (sortCol === i) {
           sortDir = sortDir === 'asc' ? 'desc' : 'asc';
         } else {
