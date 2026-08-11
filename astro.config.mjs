@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config';
 // BASE example: /coc-dashboard
 export default defineConfig({
   output: 'static',
-  site: process.env.SITE ?? 'https://timb18.github.io',
-  base: process.env.BASE ?? '/coc-dashboard',
+  site: process.env.SITE || 'https://timb18.github.io',
+  base: process.env.BASE || '/coc-dashboard',
   compressHTML: true,
 });
