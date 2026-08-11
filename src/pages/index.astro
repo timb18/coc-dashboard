@@ -1,6 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import rawData from '../../data/data.json';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Load history war files, keyed by endTime for warlog cross-reference
+const _histWarDir = path.join(process.cwd(), 'data', 'history', 'wars');
+const historyWarsByEnd: Record<string, any> = {};
+if (fs.existsSync(_histWarDir)) {
+  for (const file of fs.readdirSync(_histWarDir)) {
+    if (!file.endsWith('.json')) continue;
+    try {
+      const w = JSON.parse(fs.readFileSync(path.join(_histWarDir, file), 'utf8'));
+      if (w.endTime) historyWarsByEnd[w.endTime] = w;
+    } catch {}
+  }
+}
 
 const data        = rawData as any;
 const clan        = data.clan        ?? {};
@@ -44,6 +59,19 @@ function activityColor(score: number) {
   return 'var(--red)';
 }
 
+const LEAGUE_RANK: Record<string, number> = {
+  'Unranked': 0,
+  'Bronze League III': 1,  'Bronze League II': 2,  'Bronze League I': 3,
+  'Silver League III': 4,  'Silver League II': 5,  'Silver League I': 6,
+  'Gold League III': 7,    'Gold League II': 8,    'Gold League I': 9,
+  'Crystal League III': 10,'Crystal League II': 11,'Crystal League I': 12,
+  'Master League III': 13, 'Master League II': 14, 'Master League I': 15,
+  'Champion League III': 16,'Champion League II': 17,'Champion League I': 18,
+  'Titan League III': 19,  'Titan League II': 20,  'Titan League I': 21,
+  'Legend League': 22,
+};
+const ROLE_RANK: Record<string, number> = { leader: 0, coLeader: 1, admin: 2, member: 3 };
+
 // Pre-sort members by clanRank
 const membersSorted = [...members].sort((a,b)=>(a.clanRank??99)-(b.clanRank??99));
 
@@ -72,7 +100,6 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
   <nav class="tab-nav" id="tab-nav">
     <button class="tab-btn active" data-tab="overview">Übersicht</button>
     <button class="tab-btn" data-tab="members">Mitglieder</button>
-    <button class="tab-btn" data-tab="war">Krieg</button>
     <button class="tab-btn" data-tab="warlog">Kriegslog</button>
     <button class="tab-btn" data-tab="cwl">CWL</button>
     <button class="tab-btn" data-tab="raids">Überfallwochenende</button>
@@ -124,19 +151,16 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
           <table data-sortable id="members-tbl">
             <thead>
               <tr>
-                <th class="rank-num">#</th>
+                <th class="rank-num" data-sort="num">#</th>
                 <th data-sort="str">Name</th>
-                <th data-sort="str">Rolle</th>
+                <th data-sort="num">Rolle</th>
                 <th data-sort="num" data-default-dir="desc">TH</th>
                 <th data-sort="num" data-default-dir="desc">Trophäen</th>
-                <th data-sort="str">Liga</th>
+                <th data-sort="num" data-default-dir="desc">Liga</th>
                 <th data-sort="num" data-default-dir="desc">XP</th>
                 <th data-sort="num" data-default-dir="desc">Spenden ↑</th>
                 <th data-sort="num" data-default-dir="desc">Spenden ↓</th>
                 <th data-sort="num" data-default-dir="desc">Ratio</th>
-                <th data-sort="num" data-default-dir="desc">BK</th>
-                <th data-sort="num" data-default-dir="desc">AQ</th>
-                <th data-sort="num" data-default-dir="desc">GW</th>
                 <th data-sort="num" data-default-dir="desc">RC</th>
                 <th data-sort="num" data-default-dir="desc">Kriegs★</th>
                 <th data-sort="num" data-default-dir="desc">Raid %</th>
@@ -152,9 +176,6 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                 const ratioDisp = recv === 0 ? (give > 0 ? '∞' : '–') : ratio.toFixed(1);
                 const ratioColor = ratio >= 1 ? 'var(--green)' : ratio > 0 ? 'var(--gold)' : 'var(--red)';
                 const hero  = (nm: string) => (m.profile?.heroes ?? []).find((h:any)=>h.name===nm);
-                const bk    = hero('Barbarian King');
-                const aq    = hero('Archer Queen');
-                const gw    = hero('Grand Warden');
                 const rc    = hero('Royal Champion');
                 const an    = analytics[m.tag] ?? {};
                 const raidRate  = Math.round((an.raids?.rate ?? 0) * 100);
@@ -163,8 +184,8 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                 const tag   = m.tag.replace('#','');
                 return (
                   <tr data-row>
-                    <td class="rank-num" data-val={i+1}>
-                      {i+1}
+                    <td class="rank-num" data-val={m.clanRank ?? i+1}>
+                      {m.clanRank ?? i+1}
                       {rankDiff < 0 && <span class="rank-change-up"> ▲{Math.abs(rankDiff)}</span>}
                       {rankDiff > 0 && <span class="rank-change-down"> ▼{rankDiff}</span>}
                     </td>
@@ -174,17 +195,14 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                         <span>{esc(m.name)}</span>
                       </a>
                     </td>
-                    <td data-val={m.role} set:html={rolePill(m.role)} />
+                    <td data-val={ROLE_RANK[m.role] ?? 3} set:html={rolePill(m.role)} />
                     <td data-val={m.townHallLevel ?? 0}>{m.townHallLevel ?? '–'}</td>
                     <td data-val={m.trophies ?? 0}>{fmtNum(m.trophies)}</td>
-                    <td data-val={m.league?.name ?? ''}>{esc(m.league?.name ?? '–')}</td>
+                    <td data-val={LEAGUE_RANK[m.league?.name ?? ''] ?? 0}>{esc(m.league?.name ?? '–')}</td>
                     <td data-val={m.expLevel ?? 0}>{m.expLevel ?? m.profile?.expLevel ?? '–'}</td>
                     <td data-val={give} class="c-green">{fmtNum(give)}</td>
                     <td data-val={recv} class="c-red">{fmtNum(recv)}</td>
                     <td data-val={ratio.toFixed(2)} style={`color:${ratioColor};font-weight:700`}>{ratioDisp}</td>
-                    <td data-val={bk?.level ?? -1} class={bk ? 'c-gold' : 'c-muted'}>{bk ? bk.level : '–'}</td>
-                    <td data-val={aq?.level ?? -1} class={aq ? 'c-gold' : 'c-muted'}>{aq ? aq.level : '–'}</td>
-                    <td data-val={gw?.level ?? -1} class={gw ? 'c-gold' : 'c-muted'}>{gw ? gw.level : '–'}</td>
                     <td data-val={rc?.level ?? -1} class={rc ? 'c-gold' : 'c-muted'}>{rc ? rc.level : '–'}</td>
                     <td data-val={m.profile?.warStars ?? 0}>{m.profile ? fmtNum(m.profile.warStars) : '–'}</td>
                     <td data-val={raidRate}>
@@ -205,52 +223,47 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
       </div>
     </div>
 
-    <!-- ══ WAR ══ -->
-    <div class="tab-panel" id="tab-war">
-      {war._error || war.state === 'notInWar' ? (
-        <div class="card"><p class="c-muted" style="text-align:center;padding:2rem">Clan ist aktuell in keinem Krieg.</p></div>
-      ) : (
-        <>
+    <!-- ══ WAR LOG ══ -->
+    <div class="tab-panel" id="tab-warlog">
+
+      {/* Aktueller Krieg ganz oben, wenn aktiv oder gerade beendet */}
+      {!war._error && war.state && war.state !== 'notInWar' && (() => {
+        const stateLabel = ({'preparation':'Vorbereitung','inWar':'Im Krieg','warEnded':'Beendet'} as any)[war.state] ?? war.state;
+        const maxA = war.attacksPerMember ?? 2;
+        return (
           <div class="card">
-            <div class="card-title">
-              Aktueller Krieg — {({'preparation':'Vorbereitung','inWar':'Im Krieg','warEnded':'Beendet'} as any)[war.state] ?? war.state}
+            <div class="accordion-header open" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>
+                Aktueller Krieg — {esc(war.opponent?.name ?? '?')}
+                <span class={`pill ${war.state === 'warEnded' ? 'pill-tie' : 'pill-member'}`} style="margin-left:.5rem">{stateLabel}</span>
+              </span>
+              <span class="c-muted" style="font-size:.8rem">{war.clan?.stars ?? 0} ✦ – {war.opponent?.stars ?? 0} ✦ &nbsp;·&nbsp; {war.teamSize ?? '–'}v{war.teamSize ?? '–'}</span>
             </div>
-            <div class="kpi-grid">
-              <div class="kpi"><div class="kpi-val green">{war.clan?.stars ?? 0} ✦</div><div class="kpi-label">Unsere Sterne</div></div>
-              <div class="kpi"><div class="kpi-val red">{war.opponent?.stars ?? 0} ✦</div><div class="kpi-label">Gegner Sterne</div></div>
-              <div class="kpi"><div class="kpi-val">{(war.clan?.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Zerstörung</div></div>
-              <div class="kpi"><div class="kpi-val plain">{(war.opponent?.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Gegner Zerstörung</div></div>
-              <div class="kpi"><div class="kpi-val plain">{war.teamSize ?? '–'}v{war.teamSize ?? '–'}</div><div class="kpi-label">Teamgröße</div></div>
-              <div class="kpi"><div class="kpi-val plain" style="font-size:.9rem">{fmtDate(war.startTime)}</div><div class="kpi-label">Startzeit</div></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">Angriffs-Auswertung — {esc(war.clan?.name)} vs {esc(war.opponent?.name)}</div>
-            <div class="chart-wrap" style={`height:${Math.max(220,(war.clan?.members?.length??0)*26+60)}px`}>
-              <canvas id="war-chart"></canvas>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">Detail-Tabelle</div>
-            <div class="table-wrap">
-              <table data-sortable>
-                <thead>
-                  <tr>
-                    <th data-sort="num">Pos</th>
-                    <th data-sort="str">Name</th>
-                    <th data-sort="num" data-default-dir="desc">TH</th>
-                    <th data-sort="num" data-default-dir="desc">Angriffe</th>
-                    <th data-sort="num" data-default-dir="desc">Sterne</th>
-                    <th data-sort="num" data-default-dir="desc">Ø Zerstörung</th>
-                    <th data-sort="num">Gegner-Angriffe</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {(war.clan?.members ?? [])
-                    .sort((a:any,b:any)=>(a.mapPosition??0)-(b.mapPosition??0))
-                    .map((m: any) => {
+            <div class="accordion-body open">
+              <div class="kpi-grid" style="margin:.5rem 0 1rem">
+                <div class="kpi"><div class="kpi-val green">{war.clan?.stars ?? 0} ✦</div><div class="kpi-label">Unsere Sterne</div></div>
+                <div class="kpi"><div class="kpi-val red">{war.opponent?.stars ?? 0} ✦</div><div class="kpi-label">Gegner Sterne</div></div>
+                <div class="kpi"><div class="kpi-val">{(war.clan?.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Unsere Zerstörung</div></div>
+                <div class="kpi"><div class="kpi-val plain">{(war.opponent?.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Gegner Zerstörung</div></div>
+                <div class="kpi"><div class="kpi-val plain" style="font-size:.9rem">{fmtDate(war.startTime)}</div><div class="kpi-label">Startzeit</div></div>
+                <div class="kpi"><div class="kpi-val plain" style="font-size:.9rem">{fmtDate(war.endTime)}</div><div class="kpi-label">Endzeit</div></div>
+              </div>
+              <div class="table-wrap">
+                <table data-sortable>
+                  <thead>
+                    <tr>
+                      <th data-sort="num">Pos</th>
+                      <th data-sort="str">Name</th>
+                      <th data-sort="num" data-default-dir="desc">TH</th>
+                      <th data-sort="num" data-default-dir="desc">Angriffe</th>
+                      <th data-sort="num" data-default-dir="desc">Sterne</th>
+                      <th data-sort="num" data-default-dir="desc">Ø Zerstörung</th>
+                      <th data-sort="num">Gegner-Angriffe</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(war.clan?.members ?? []).sort((a:any,b:any)=>(a.mapPosition??0)-(b.mapPosition??0)).map((m: any) => {
                       const atks = m.attacks ?? [];
-                      const maxA = war.attacksPerMember ?? 2;
                       const stars = atks.reduce((s:number,a:any)=>s+a.stars,0);
                       const avgDest = atks.length ? (atks.reduce((s:number,a:any)=>s+a.destructionPercentage,0)/atks.length).toFixed(1) : '–';
                       return (
@@ -258,66 +271,96 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
                           <td data-val={m.mapPosition}>{m.mapPosition}</td>
                           <td data-val={m.name}><strong>{esc(m.name)}</strong></td>
                           <td data-val={m.townhallLevel ?? 0}>{m.townhallLevel ?? '–'}</td>
-                          <td data-val={atks.length} class={atks.length >= maxA ? 'c-green' : atks.length > 0 ? 'c-gold' : 'c-red'}>
-                            {atks.length}/{maxA}
-                          </td>
+                          <td data-val={atks.length} class={atks.length >= maxA ? 'c-green' : atks.length > 0 ? 'c-gold' : 'c-red'}>{atks.length}/{maxA}</td>
                           <td data-val={stars} class="c-gold">{stars} ✦</td>
                           <td data-val={parseFloat(avgDest)||0}>{avgDest}%</td>
                           <td data-val={m.opponentAttacks ?? 0} class="c-muted">{m.opponentAttacks ?? 0}</td>
                         </tr>
                       );
-                    })
-                  }
-                </tbody>
-              </table>
+                    })}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </>
-      )}
-    </div>
+        );
+      })()}
 
-    <!-- ══ WAR LOG ══ -->
-    <div class="tab-panel" id="tab-warlog">
-      <div class="card">
-        <div class="card-title">Kriegsverlauf — letzte {warlog.length} Kriege</div>
-        {warlog.length === 0 ? (
-          <p class="c-muted">Kriegslog ist privat oder keine Daten vorhanden.</p>
-        ) : (
-          <div class="table-wrap">
-            <table data-sortable>
-              <thead>
-                <tr>
-                  <th data-sort="str">Datum</th>
-                  <th data-sort="str">Gegner</th>
-                  <th data-sort="num">Größe</th>
-                  <th data-sort="num" data-default-dir="desc">Sterne</th>
-                  <th data-sort="num" data-default-dir="desc">Zerstörung</th>
-                  <th data-sort="str">Ergebnis</th>
-                </tr>
-              </thead>
-              <tbody>
-                {warlog.map((w: any) => {
-                  const us = w.clan; const them = w.opponent;
-                  return (
-                    <tr data-row>
-                      <td data-val={w.endTime}>{fmtDate(w.endTime)}</td>
-                      <td data-val={them?.name ?? ''}>{esc(them?.name ?? '?')}</td>
-                      <td data-val={w.teamSize ?? 0}>{w.teamSize ?? '–'}v{w.teamSize ?? '–'}</td>
-                      <td data-val={(us?.stars??0)*100+(them?.stars??0)} class="c-gold">
-                        {us?.stars ?? 0} – {them?.stars ?? 0}
-                      </td>
-                      <td data-val={us?.destructionPercentage ?? 0}>
-                        {(us?.destructionPercentage ?? 0).toFixed(1)}% – {(them?.destructionPercentage ?? 0).toFixed(1)}%
-                      </td>
-                      <td data-val={w.result} set:html={resultPill(w.result)} />
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+      {/* Vergangene Kriege aus dem Kriegslog */}
+      {warlog.length === 0 ? (
+        <div class="card"><p class="c-muted">Kriegslog ist privat oder keine Daten vorhanden.</p></div>
+      ) : warlog.map((w: any) => {
+        const us = w.clan; const them = w.opponent;
+        const histWar = historyWarsByEnd[w.endTime];
+        const histMaxA = histWar?.attacksPerMember ?? 2;
+        const ourSide  = histWar ? ([histWar.clan, histWar.opponent].find((c:any) =>
+          (c?.tag && clan.tag && c.tag === clan.tag) ||
+          (c?.members ?? []).some((m:any) => members.some((cm:any) => cm.tag === m.tag))
+        ) ?? histWar.clan) : null;
+        return (
+          <div class="card">
+            <div class="accordion-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>
+                {fmtDate(w.endTime)} — {esc(them?.name ?? '?')}
+                <span style="margin-left:.5rem" set:html={resultPill(w.result)} />
+                {histWar && <span class="pill pill-member" style="margin-left:.4rem;font-size:.7rem">Details</span>}
+              </span>
+              <span class="c-muted" style="font-size:.8rem">
+                {us?.stars ?? 0} – {them?.stars ?? 0} ✦ &nbsp;·&nbsp;
+                {(us?.destructionPercentage ?? 0).toFixed(1)}% – {(them?.destructionPercentage ?? 0).toFixed(1)}%
+                &nbsp;·&nbsp; {w.teamSize ?? '–'}v{w.teamSize ?? '–'}
+              </span>
+            </div>
+            <div class="accordion-body">
+              {histWar && ourSide ? (
+                <>
+                  <div class="kpi-grid" style="margin:.5rem 0 1rem">
+                    <div class="kpi"><div class="kpi-val green">{ourSide.stars ?? 0} ✦</div><div class="kpi-label">Unsere Sterne</div></div>
+                    <div class="kpi"><div class="kpi-val red">{(ourSide === histWar.clan ? histWar.opponent : histWar.clan)?.stars ?? 0} ✦</div><div class="kpi-label">Gegner Sterne</div></div>
+                    <div class="kpi"><div class="kpi-val">{(ourSide.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Unsere Zerstörung</div></div>
+                    <div class="kpi"><div class="kpi-val plain">{((ourSide === histWar.clan ? histWar.opponent : histWar.clan)?.destructionPercentage ?? 0).toFixed(1)}%</div><div class="kpi-label">Gegner Zerstörung</div></div>
+                  </div>
+                  <div class="table-wrap">
+                    <table data-sortable>
+                      <thead>
+                        <tr>
+                          <th data-sort="num">Pos</th>
+                          <th data-sort="str">Name</th>
+                          <th data-sort="num" data-default-dir="desc">TH</th>
+                          <th data-sort="num" data-default-dir="desc">Angriffe</th>
+                          <th data-sort="num" data-default-dir="desc">Sterne</th>
+                          <th data-sort="num" data-default-dir="desc">Ø Zerstörung</th>
+                          <th data-sort="num">Gegner-Angriffe</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(ourSide.members ?? []).sort((a:any,b:any)=>(a.mapPosition??0)-(b.mapPosition??0)).map((m:any) => {
+                          const atks = m.attacks ?? [];
+                          const stars = atks.reduce((s:number,a:any)=>s+a.stars,0);
+                          const avgDest = atks.length ? (atks.reduce((s:number,a:any)=>s+a.destructionPercentage,0)/atks.length).toFixed(1) : '–';
+                          return (
+                            <tr data-row>
+                              <td data-val={m.mapPosition}>{m.mapPosition}</td>
+                              <td data-val={m.name}><strong>{esc(m.name)}</strong></td>
+                              <td data-val={m.townhallLevel ?? 0}>{m.townhallLevel ?? '–'}</td>
+                              <td data-val={atks.length} class={atks.length >= histMaxA ? 'c-green' : atks.length > 0 ? 'c-gold' : 'c-red'}>{atks.length}/{histMaxA}</td>
+                              <td data-val={stars} class="c-gold">{stars} ✦</td>
+                              <td data-val={parseFloat(avgDest)||0}>{avgDest}%</td>
+                              <td data-val={m.opponentAttacks ?? 0} class="c-muted">{m.opponentAttacks ?? 0}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </>
+              ) : (
+                <p class="c-muted" style="padding:.5rem 0">Keine Detaildaten — werden ab dem nächsten Fetch gespeichert.</p>
+              )}
+            </div>
           </div>
-        )}
-      </div>
+        );
+      })}
     </div>
 
     <!-- ══ CWL ══ -->
@@ -496,53 +539,6 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
     _charts[id] = new (window as any).Chart(el, cfg);
   }
 
-  // ── War chart ──
-  const warData: any = (window as any).__WAR_DATA__;
-  const warJsonEl = document.getElementById('__war_json');
-  if (warJsonEl) {
-    const wd = JSON.parse(warJsonEl.textContent ?? '{}');
-    if (wd.state && wd.state !== 'notInWar' && !wd._error) {
-      const maxA  = wd.attacksPerMember ?? 2;
-      const maxSt = maxA * 3;
-      const cm = [...(wd.clan?.members ?? [])].sort((a:any,b:any)=>{
-        const sa = (a.attacks??[]).reduce((s:number,x:any)=>s+x.stars,0);
-        const sb = (b.attacks??[]).reduce((s:number,x:any)=>s+x.stars,0);
-        return sb - sa;
-      });
-      mkChart('war-chart', {
-        type:'bar',
-        data:{
-          labels: cm.map((m:any)=>m.name),
-          datasets:[
-            {
-              label:'Sterne ✦',
-              data: cm.map((m:any)=>(m.attacks??[]).reduce((s:number,a:any)=>s+a.stars,0)),
-              backgroundColor: cm.map((m:any)=>{
-                const u = (m.attacks??[]).length;
-                return u===0 ? '#ff4d6d' : u<maxA ? '#f0a500' : '#00c9a7';
-              }),
-              borderRadius:3,
-            },
-            {
-              label:'Nicht erreicht',
-              data: cm.map((m:any)=>maxSt-(m.attacks??[]).reduce((s:number,a:any)=>s+a.stars,0)),
-              backgroundColor:'rgba(26,34,51,0.8)',
-              borderRadius:3,
-            }
-          ]
-        },
-        options:{
-          indexAxis:'y', responsive:true, maintainAspectRatio:false,
-          plugins:{legend:{position:'top',labels:{color:'#8892a4'}}},
-          scales:{
-            x:{...SCALE, stacked:true, max:maxSt, ticks:{stepSize:1,color:'#8892a4'}},
-            y:{...SCALE, stacked:true, ticks:{color:'#dde4f0'}},
-          }
-        }
-      });
-    }
-  }
-
   // ── CWL chart ──
   const cwlJsonEl = document.getElementById('__cwl_json');
   if (cwlJsonEl) {
@@ -663,6 +659,5 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
 </script>
 
 <!-- Embedded JSON for client-side charts (avoids re-fetching) -->
-<script id="__war_json" type="application/json" set:text={JSON.stringify(war)} />
 <script id="__cwl_json" type="application/json" set:text={JSON.stringify(cwl)} />
 <script id="__raids_json" type="application/json" set:text={JSON.stringify(raids)} />

@@ -170,6 +170,31 @@ function computeAnalytics(memberItems, raidSeasons, cwlWars) {
   return analytics;
 }
 
+// ── History ─────────────────────────────────────────────────────────────────
+
+// CoC times look like "20260808T000000.000Z" → "2026-08-08"
+function cocDateKey(cocTime) {
+  const m = String(cocTime ?? '').match(/^(\d{4})(\d{2})(\d{2})/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : String(cocTime ?? 'unknown');
+}
+
+function saveHistory(type, key, data) {
+  const dir  = path.join(__dirname, '..', 'data', 'history', type);
+  fs.mkdirSync(dir, { recursive: true });
+  const file = path.join(dir, `${key}.json`);
+
+  if (fs.existsSync(file)) {
+    const existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+    // Never overwrite a finished war with an in-progress one
+    if (type === 'wars' && existing.state === 'warEnded' && data.state !== 'warEnded') return;
+    // Never overwrite a raid snapshot that has more member detail
+    if (type === 'raids' && (existing.members?.length ?? 0) > (data.members?.length ?? 0)) return;
+  }
+
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  console.log(`  ✓ history/${type}/${key}.json`);
+}
+
 // ── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -248,6 +273,31 @@ async function main() {
   console.log('Computing analytics...');
   const analytics = computeAnalytics(enriched, raidSeasons, cwlWars);
 
+  // ── Save history snapshots ────────────────────────────────────────────────
+  console.log('Saving history snapshots...');
+
+  // Raids: save every season that still has individual member data
+  for (const season of raidSeasons) {
+    if ((season.members ?? []).length > 0) {
+      saveHistory('raids', cocDateKey(season.startTime), season);
+    }
+  }
+
+  // Current war: save when active or finished (not "notInWar")
+  if (warData && !warData._error && warData.state && warData.state !== 'notInWar') {
+    const warKey = cocDateKey(warData.preparationStartTime ?? warData.startTime);
+    saveHistory('wars', warKey, warData);
+  }
+
+  // CWL: save the full group + all resolved war details
+  if (cwlData && !cwlData._error) {
+    const cwlKey = cwlData.season ?? new Date().toISOString().slice(0, 7);
+    saveHistory('cwl', cwlKey, {
+      ...cwlData,
+      wars: Object.values(cwlWars).filter(w => !w?._error),
+    });
+  }
+
   const output = {
     lastUpdated: new Date().toISOString(),
     clan:        clanData,
@@ -261,7 +311,7 @@ async function main() {
 
   const outPath = path.join(__dirname, '..', 'data', 'data.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(output));
+  fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
   console.log('✓ data/data.json geschrieben');
   console.log(`  Profile: ${enriched.filter(m=>m.profile).length}/${enriched.length}`);
   console.log(`  CWL-Kriege: ${Object.keys(cwlWars).length}`);
