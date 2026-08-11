@@ -6,6 +6,13 @@
     "node": ">=18"
   },
   "scripts": {
-    "fetch": "node scripts/fetch.js"
+    "fetch": "node scripts/fetch.js",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "type": "module",
+  "dependencies": {
+    "astro": "^4.16.0"
   }
 }

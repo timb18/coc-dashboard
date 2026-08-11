@@ -1,34 +1,58 @@
-name: Fetch CoC Data
+name: Fetch & Deploy
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # alle 30 Minuten
-  workflow_dispatch:           # manueller Start über GitHub UI
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  fetch:
+  fetch-build-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Fetch data
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch CoC data
         run: node scripts/fetch.js
         env:
           COC_EMAIL:    ${{ secrets.COC_EMAIL }}
           COC_PASSWORD: ${{ secrets.COC_PASSWORD }}
           COC_CLAN_TAG: ${{ secrets.COC_CLAN_TAG }}
 
-      - name: Commit updated data
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/data.json
-          git diff --staged --quiet || git commit -m "chore: update clan data"
-          git push
+      - name: Build Astro site
+        run: npm run build
+        env:
+          SITE: ${{ vars.SITE_URL }}
+          BASE: ${{ vars.SITE_BASE || '/coc-dashboard' }}
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

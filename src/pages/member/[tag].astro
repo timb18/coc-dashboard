@@ -1,0 +1,333 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import rawData from '../../../data/data.json';
+
+export function getStaticPaths() {
+  const data = rawData as any;
+  const members = (data.members?.items ?? []) as any[];
+  return members.map((m: any) => ({
+    params: { tag: m.tag.replace('#', '') },
+    props: { memberTag: m.tag },
+  }));
+}
+
+const { memberTag } = Astro.props;
+const data      = rawData as any;
+const members   = (data.members?.items ?? []) as any[];
+const member    = members.find((m: any) => m.tag === memberTag)!;
+const analytics = (data.analytics ?? {})[memberTag] ?? {};
+const raids     = (data.raids?.items ?? []) as any[];
+const cwl       = data.cwl ?? {};
+const cwlWars   = Array.isArray(cwl.wars) ? cwl.wars.filter((w: any) => !w?._error) : [];
+const base      = import.meta.env.BASE_URL;
+
+function esc(v: any) {
+  return String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function fmtDate(iso: string) {
+  if (!iso) return '–';
+  return new Date(iso.replace(/^(\d{4})(\d{2})(\d{2})T.*/,'$1-$2-$3')).toLocaleDateString('de-DE');
+}
+function fmtNum(n: any) { return Number(n ?? 0).toLocaleString('de-DE'); }
+
+const profile   = member?.profile ?? null;
+const score     = analytics.activityScore ?? 0;
+const raidStats = analytics.raids ?? {};
+const cwlStats  = analytics.cwl   ?? {};
+
+const heroNames = ['Barbarian King','Archer Queen','Grand Warden','Royal Champion'];
+const heroCls   = ['hero-bk','hero-aq','hero-gw','hero-rc'];
+const heroes    = heroNames.map(n => profile?.heroes?.find((h: any) => h.name === n) ?? null);
+
+function rolePill(role: string) {
+  const m: Record<string,string[]> = {
+    leader:   ['Anführer','pill-leader'],
+    coLeader: ['Co-Anführer','pill-coleader'],
+    admin:    ['Ältester','pill-elder'],
+    member:   ['Mitglied','pill-member'],
+  };
+  const [l,c] = m[role] ?? [role,'pill-member'];
+  return `<span class="pill ${c}">${l}</span>`;
+}
+
+function actColor(s: number) {
+  return s >= 70 ? 'var(--green)' : s >= 40 ? 'var(--gold)' : 'var(--red)';
+}
+
+// Raid history for this member
+const raidHistory = (raidStats.history ?? []) as any[];
+
+// CWL history for this member
+const cwlHistory = (cwlStats.history ?? []) as any[];
+
+// CWL per-war detail from stored wars
+const cwlWarDetails = cwlWars.map((w: any, wi: number) => {
+  const ourSide  = [w.clan, w.opponent].find((c: any) =>
+    (c?.members ?? []).some((m: any) => m.tag === memberTag)
+  );
+  if (!ourSide) return null;
+  const memberEntry = ourSide.members?.find((m: any) => m.tag === memberTag);
+  if (!memberEntry) return null;
+  const atks  = memberEntry.attacks ?? [];
+  const them  = ourSide === w.clan ? w.opponent : w.clan;
+  return {
+    round:  wi + 1,
+    vs:     them?.name ?? '?',
+    state:  w.state,
+    attacks: atks.length,
+    maxAttacks: 1,
+    stars:  atks.reduce((s: number, a: any) => s + a.stars, 0),
+    destruction: atks.length ? (atks.reduce((s: number, a: any) => s + a.destructionPercentage, 0) / atks.length).toFixed(1) : '–',
+  };
+}).filter(Boolean) as any[];
+
+const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
+---
+
+<Layout title={pageTitle}>
+
+  <header class="site-header">
+    <a class="back-link" href={base}>← Zurück zum Dashboard</a>
+    <span class="last-updated" style="margin-left:auto;font-size:.75rem;color:var(--dim)">
+      Stand: {data.lastUpdated ? new Date(data.lastUpdated).toLocaleString('de-DE') : '–'}
+    </span>
+  </header>
+
+  <main style="padding-top:1.5rem">
+
+    <!-- MEMBER HERO SECTION -->
+    <div class="member-hero">
+      <div class="member-hero-badge">
+        {member?.league?.iconUrls?.medium
+          ? <img src={member.league.iconUrls.medium} alt="" />
+          : <span style="font-size:1.5rem">⚔️</span>
+        }
+      </div>
+      <div style="flex:1">
+        <h1 class="member-hero-info"><span>{esc(member?.name)}</span></h1>
+        <div class="member-hero-meta">
+          <span set:html={rolePill(member?.role)} />
+          <span class="th-badge">TH {member?.townHallLevel ?? '–'}</span>
+          <span class="th-badge">{esc(member?.league?.name ?? '–')}</span>
+          <span class="th-badge c-muted">{member?.tag}</span>
+        </div>
+      </div>
+      <div style="text-align:center;flex-shrink:0">
+        <div class="score-ring" style={`--pct:${score}%;width:64px;height:64px`}>
+          <span style={`color:${actColor(score)};font-size:.85rem;font-weight:900`}>{score}</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);margin-top:.3rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase">Aktivität</div>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kpi-val">{fmtNum(member?.trophies)}</div><div class="kpi-label">Trophäen</div></div>
+      <div class="kpi"><div class="kpi-val plain">{fmtNum(profile?.bestTrophies ?? member?.trophies)}</div><div class="kpi-label">Best Trophäen</div></div>
+      <div class="kpi"><div class="kpi-val plain">{fmtNum(member?.builderBaseTrophies ?? 0)}</div><div class="kpi-label">Builder Trophäen</div></div>
+      <div class="kpi"><div class="kpi-val plain">{member?.expLevel ?? profile?.expLevel ?? '–'}</div><div class="kpi-label">XP-Level</div></div>
+      <div class="kpi"><div class="kpi-val gold">{profile ? fmtNum(profile.warStars) : '–'}</div><div class="kpi-label">Kriegs-Sterne ✦</div></div>
+      <div class="kpi"><div class="kpi-val green">{profile ? fmtNum(profile.attackWins) : '–'}</div><div class="kpi-label">Angriffs-Siege</div></div>
+      <div class="kpi"><div class="kpi-val plain">{profile ? fmtNum(profile.defenseWins) : '–'}</div><div class="kpi-label">Verteidigungs-Siege</div></div>
+      <div class="kpi"><div class="kpi-val">{fmtNum(member?.donations)}</div><div class="kpi-label">Spenden ↑</div></div>
+      <div class="kpi"><div class="kpi-val red">{fmtNum(member?.donationsReceived)}</div><div class="kpi-label">Spenden ↓</div></div>
+      <div class="kpi">
+        <div class="kpi-val" style={`color:${(member?.donations??0)>=(member?.donationsReceived??0)?'var(--green)':'var(--red)'}`}>
+          {(member?.donationsReceived ?? 0) === 0
+            ? ((member?.donations ?? 0) > 0 ? '∞' : '–')
+            : ((member?.donations ?? 0) / (member?.donationsReceived ?? 1)).toFixed(1)
+          }
+        </div>
+        <div class="kpi-label">Senden-Ratio</div>
+      </div>
+    </div>
+
+    <!-- HEROES -->
+    {profile && (
+      <div class="card">
+        <div class="card-title">Helden</div>
+        <div class="heroes-grid">
+          {heroes.map((h: any, i: number) => (
+            <div class={`hero-card ${heroCls[i]}`}>
+              <div class="hero-name">{heroNames[i].replace('Barbarian ','').replace('Archer ','').replace('Grand ','').replace('Royal ','')}</div>
+              {h ? (
+                <>
+                  <div class="hero-level">{h.level}<span class="hero-max">/{h.maxLevel}</span></div>
+                  <div class="hero-bar">
+                    <div class="hero-bar-fill" style={`width:${Math.min(100,(h.level/h.maxLevel)*100).toFixed(1)}%`}></div>
+                  </div>
+                </>
+              ) : (
+                <div class="hero-level c-dim">–</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- RAID ANALYTICS -->
+    <div class="card">
+      <div class="card-title">Überfallwochenende — Analyse</div>
+      <div class="kpi-grid" style="margin-bottom:1rem">
+        <div class="kpi">
+          <div class="kpi-val" style={`color:${(raidStats.rate??0)>=.8?'var(--green)':(raidStats.rate??0)>=.5?'var(--gold)':'var(--red)'}`}>
+            {Math.round((raidStats.rate ?? 0) * 100)}%
+          </div>
+          <div class="kpi-label">Teilnahmequote</div>
+        </div>
+        <div class="kpi"><div class="kpi-val plain">{raidStats.attended ?? 0}/{raidStats.total ?? 0}</div><div class="kpi-label">Saisons dabei</div></div>
+        <div class="kpi"><div class="kpi-val green">{fmtNum(raidStats.totalAttacks ?? 0)}</div><div class="kpi-label">Gesamt-Angriffe</div></div>
+        <div class="kpi"><div class="kpi-val plain">{(raidStats.avgAttacks ?? 0).toFixed(1)}</div><div class="kpi-label">Ø Angriffe / Saison</div></div>
+        <div class="kpi"><div class="kpi-val gold">{fmtNum(raidStats.totalLoot ?? 0)}</div><div class="kpi-label">Gesamt-Gold</div></div>
+      </div>
+      {raidHistory.length > 0 && (
+        <div class="chart-wrap" style="height:180px;margin-bottom:1rem">
+          <canvas id="member-raid-chart"></canvas>
+        </div>
+      )}
+      <div class="table-wrap">
+        <table data-sortable>
+          <thead>
+            <tr>
+              <th data-sort="str">Saison</th>
+              <th data-sort="str">Teilgenommen</th>
+              <th data-sort="num" data-default-dir="desc">Angriffe</th>
+              <th data-sort="num" data-default-dir="desc">Gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            {raidHistory.map((h: any) => (
+              <tr data-row>
+                <td data-val={h.startTime}>{fmtDate(h.startTime)}</td>
+                <td data-val={h.attended ? 1 : 0}>
+                  {h.attended
+                    ? <span class="c-green">✓ Dabei</span>
+                    : <span class="c-red">✗ Nicht dabei</span>
+                  }
+                </td>
+                <td data-val={h.attacks} class={h.attacks >= (h.attackLimit ?? 5) ? 'c-green' : h.attacks > 0 ? 'c-gold' : 'c-muted'}>
+                  {h.attended ? `${h.attacks}/${h.attackLimit ?? 5}` : '–'}
+                </td>
+                <td data-val={h.loot} class="c-gold">{h.attended ? fmtNum(h.loot) : '–'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CWL ANALYTICS -->
+    <div class="card">
+      <div class="card-title">CWL — Analyse</div>
+      <div class="kpi-grid" style="margin-bottom:1rem">
+        <div class="kpi"><div class="kpi-val plain">{cwlStats.wars ?? 0}</div><div class="kpi-label">CWL-Kriege</div></div>
+        <div class="kpi"><div class="kpi-val green">{cwlStats.attacks ?? 0}/{cwlStats.wars ?? 0}</div><div class="kpi-label">Angriffe genutzt</div></div>
+        <div class="kpi"><div class="kpi-val gold">{cwlStats.stars ?? 0} ✦</div><div class="kpi-label">Gesamt-Sterne</div></div>
+        <div class="kpi"><div class="kpi-val plain">{(cwlStats.avgStars ?? 0).toFixed(2)}</div><div class="kpi-label">Ø Sterne / Krieg</div></div>
+      </div>
+      {cwlWarDetails.length > 0 ? (
+        <div class="table-wrap">
+          <table data-sortable>
+            <thead>
+              <tr>
+                <th data-sort="num">Runde</th>
+                <th data-sort="str">Gegen</th>
+                <th data-sort="str">Status</th>
+                <th data-sort="num" data-default-dir="desc">Angriff</th>
+                <th data-sort="num" data-default-dir="desc">Sterne</th>
+                <th data-sort="num" data-default-dir="desc">Zerstörung</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cwlWarDetails.map((h: any) => (
+                <tr data-row>
+                  <td data-val={h.round}>{h.round}</td>
+                  <td data-val={h.vs}>{esc(h.vs)}</td>
+                  <td data-val={h.state} class="c-muted">
+                    {({'preparation':'Vorbereitung','inWar':'Im Krieg','warEnded':'Beendet'} as any)[h.state] ?? h.state}
+                  </td>
+                  <td data-val={h.attacks} class={h.attacks >= h.maxAttacks ? 'c-green' : 'c-red'}>
+                    {h.attacks}/{h.maxAttacks}
+                  </td>
+                  <td data-val={h.stars} class="c-gold">{h.stars} ✦</td>
+                  <td data-val={parseFloat(h.destruction)||0}>{h.destruction}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="c-muted" style="font-size:.85rem">Keine CWL-Daten für diese Saison vorhanden.</p>
+      )}
+    </div>
+
+  </main>
+</Layout>
+
+<script>
+  import { initSortable } from '../../scripts/sort.js';
+  initSortable();
+
+  Chart.defaults.color       = '#8892a4';
+  Chart.defaults.borderColor = 'rgba(240,165,0,0.08)';
+  const SCALE = { grid: { color: 'rgba(240,165,0,0.06)' } };
+
+  const el = document.getElementById('__member_data');
+  if (el) {
+    const d = JSON.parse(el.textContent ?? '{}');
+    const history = d.raidHistory ?? [];
+    if (history.length > 0) {
+      const canvas = document.getElementById('member-raid-chart') as HTMLCanvasElement | null;
+      if (canvas) {
+        new (window as any).Chart(canvas, {
+          data: {
+            labels: history.map((h: any) => {
+              const s = (h.startTime ?? '').replace(/^(\d{4})(\d{2})(\d{2})T.*/,'$1-$2-$3');
+              return s ? new Date(s).toLocaleDateString('de-DE',{day:'2-digit',month:'short'}) : '?';
+            }),
+            datasets: [
+              {
+                type: 'bar',
+                label: 'Angriffe',
+                data: history.map((h: any) => h.attacks ?? 0),
+                backgroundColor: history.map((h: any) =>
+                  !h.attended ? 'rgba(255,77,109,0.3)' :
+                  h.attacks >= (h.attackLimit ?? 5) ? 'rgba(0,201,167,0.7)' : 'rgba(240,165,0,0.7)'
+                ),
+                yAxisID: 'y',
+                order: 2,
+              },
+              {
+                type: 'line',
+                label: 'Gold (K)',
+                data: history.map((h: any) => Math.round((h.loot ?? 0) / 1000)),
+                borderColor: '#f0a500',
+                backgroundColor: 'transparent',
+                yAxisID: 'y2',
+                tension: .3,
+                pointRadius: 4,
+                pointBackgroundColor: '#f0a500',
+                order: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top', labels: { color: '#8892a4' } } },
+            scales: {
+              x:  { ...SCALE, ticks: { color: '#8892a4' } },
+              y:  { ...SCALE, ticks: { color: '#8892a4' }, title: { display: true, text: 'Angriffe', color: '#8892a4' } },
+              y2: { position: 'right', grid: { display: false }, ticks: { color: '#8892a4' }, title: { display: true, text: 'Gold (K)', color: '#8892a4' } },
+            },
+          },
+        });
+      }
+    }
+  }
+</script>
+
+<script id="__member_data" type="application/json" set:text={JSON.stringify({
+  raidHistory: analytics.raids?.history ?? [],
+})} />
