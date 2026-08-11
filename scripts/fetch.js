@@ -120,7 +120,7 @@ async function main() {
     cocGet(`/clans/${tag}/currentwar`, token),
     cocGet(`/clans/${tag}/warlog`, token, { limit: 20 }),
     cocGet(`/clans/${tag}/currentwar/leaguegroup`, token),
-    cocGet(`/clans/${tag}/capitalraidseasons`, token, { limit: 5 }),
+    cocGet(`/clans/${tag}/capitalraidseasons`, token, { limit: 12 }),
   ]);
 
   const result = (settled) =>

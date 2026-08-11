@@ -59,12 +59,14 @@
               <th>Rolle</th>
               <th>TH</th>
               <th>Trophäen</th>
+              <th>Liga</th>
               <th>Spenden ↑</th>
               <th>Spenden ↓</th>
+              <th>Ratio ↑/↓</th>
             </tr>
           </thead>
           <tbody id="members-body">
-            <tr><td colspan="7" class="loading">Lade</td></tr>
+            <tr><td colspan="9" class="loading">Lade</td></tr>
           </tbody>
         </table>
       </div>
@@ -111,12 +113,14 @@
 
   <!-- Raid Weekend -->
   <div class="tab-panel" id="tab-raids">
+    <div id="raids-yearly"></div>
     <div id="raids-content">
       <div class="card"><div class="loading">Lade</div></div>
     </div>
   </div>
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,3 +1,12 @@
+// ===== Chart management =====
+const _charts = {};
+function mkChart(id, cfg) {
+  if (_charts[id]) _charts[id].destroy();
+  const el = document.getElementById(id);
+  if (!el) return;
+  _charts[id] = new Chart(el, cfg);
+}
+
 // ===== Tab Logic =====
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -53,8 +62,9 @@ function checkError(data) {
   return null;
 }
 
-// ===== Render functions =====
+const CHART_SCALE = { grid: { color: '#30363d' } };
 
+// ===== Render: Clan Overview =====
 function renderClan(d) {
   const grid = document.getElementById('stats-grid');
   const desc = document.getElementById('clan-desc');
@@ -73,15 +83,17 @@ function renderClan(d) {
   desc.textContent = d.description || 'Keine Beschreibung.';
 
   const stats = [
-    { val: d.clanLevel          ?? '–', label: 'Clan-Level' },
-    { val: d.members            ?? '–', label: 'Mitglieder' },
-    { val: d.clanPoints         ?? '–', label: 'Clan-Punkte' },
+    { val: d.clanLevel           ?? '–', label: 'Clan-Level' },
+    { val: d.members             ?? '–', label: 'Mitglieder' },
+    { val: d.clanPoints          ?? '–', label: 'Clan-Punkte' },
     { val: d.clanBuilderBasePoints ?? d.clanVersusPoints ?? '–', label: 'Builder-Punkte' },
-    { val: d.warWins            ?? '–', label: 'Kriegssiege' },
-    { val: d.warWinStreak       ?? '–', label: 'Siegesserie' },
-    { val: d.warLeague?.name    ?? '–', label: 'Kriegs-Liga' },
+    { val: d.warWins             ?? '–', label: 'Kriegssiege' },
+    { val: d.warTies             ?? '–', label: 'Unentschieden' },
+    { val: d.warLosses           ?? '–', label: 'Niederlagen' },
+    { val: d.warWinStreak        ?? '–', label: 'Siegesserie' },
+    { val: d.warLeague?.name     ?? '–', label: 'Kriegs-Liga' },
     { val: d.capitalLeague?.name ?? '–', label: 'Capital-Liga' },
-    { val: d.requiredTrophies   ?? '–', label: 'Min. Trophäen' },
+    { val: d.requiredTrophies    ?? '–', label: 'Min. Trophäen' },
   ];
 
   grid.innerHTML = stats.map(s =>
@@ -89,29 +101,43 @@ function renderClan(d) {
   ).join('');
 }
 
+// ===== Render: Members (Liga + Ratio) =====
 function renderMembers(d) {
   const tbody = document.getElementById('members-body');
   const err   = checkError(d);
-  if (err) { tbody.innerHTML = `<tr><td colspan="7">${errBox(err)}</td></tr>`; return; }
+  if (err) { tbody.innerHTML = `<tr><td colspan="9">${errBox(err)}</td></tr>`; return; }
 
   const items = d.items ?? [];
   if (!items.length) {
-    tbody.innerHTML = `<tr><td colspan="7" style="color:var(--muted);padding:1rem">Keine Mitglieder gefunden.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9" style="color:var(--muted);padding:1rem">Keine Mitglieder gefunden.</td></tr>`;
     return;
   }
 
-  tbody.innerHTML = items.map((m, i) => `
+  tbody.innerHTML = items.map((m, i) => {
+    const give    = m.donations ?? 0;
+    const receive = m.donationsReceived ?? 0;
+    const ratio   = receive === 0 ? give > 0 ? '∞' : '–' : (give / receive).toFixed(1);
+    const ratioColor = receive === 0 ? 'var(--text)' : give / receive >= 1 ? 'var(--green)' : 'var(--red)';
+    const leagueIcon = m.league?.iconUrls?.tiny
+      ? `<img src="${m.league.iconUrls.tiny}" style="width:16px;height:16px;vertical-align:middle;margin-right:3px">`
+      : '';
+    const leagueName = m.league?.name ?? '–';
+    return `
     <tr>
       <td style="color:var(--muted)">${i + 1}</td>
       <td><strong>${esc(m.name)}</strong><br/><span style="font-size:0.7rem;color:var(--muted)">${m.tag}</span></td>
       <td>${rolePill(m.role)}</td>
       <td>${m.townHallLevel ?? '–'}</td>
       <td>${(m.trophies ?? 0).toLocaleString('de-DE')}</td>
-      <td style="color:var(--green)">${(m.donations ?? 0).toLocaleString('de-DE')}</td>
-      <td style="color:var(--red)">${(m.donationsReceived ?? 0).toLocaleString('de-DE')}</td>
-    </tr>`).join('');
+      <td>${leagueIcon}${esc(leagueName)}</td>
+      <td style="color:var(--green)">${give.toLocaleString('de-DE')}</td>
+      <td style="color:var(--red)">${receive.toLocaleString('de-DE')}</td>
+      <td style="color:${ratioColor};font-weight:600">${ratio}</td>
+    </tr>`;
+  }).join('');
 }
 
+// ===== Render: Current War + Chart =====
 function renderWar(d) {
   const container = document.getElementById('war-content');
   const err = checkError(d);
@@ -120,31 +146,34 @@ function renderWar(d) {
     return;
   }
 
-  const us   = d.clan;
-  const them = d.opponent;
-  const state = { preparation: 'Vorbereitung', inWar: 'Im Krieg', warEnded: 'Beendet' }[d.state] ?? d.state;
+  const us        = d.clan;
+  const them      = d.opponent;
+  const maxAtt    = d.attacksPerMember ?? 2;
+  const maxStars  = maxAtt * 3;
+  const state     = { preparation: 'Vorbereitung', inWar: 'Im Krieg', warEnded: 'Beendet' }[d.state] ?? d.state;
 
-  const memberRows = (us.members ?? [])
-    .sort((a, b) => (a.mapPosition ?? 0) - (b.mapPosition ?? 0))
-    .map(m => {
-      const attacks    = m.attacks ?? [];
-      const maxAttacks = d.attacksPerMember ?? 2;
-      const totalStars = attacks.reduce((s, a) => s + a.stars, 0);
-      const avgDest    = attacks.length
-        ? (attacks.reduce((s, a) => s + a.destructionPercentage, 0) / attacks.length).toFixed(1)
-        : '–';
-      return `
-      <tr>
-        <td>${m.mapPosition}</td>
-        <td><strong>${esc(m.name)}</strong></td>
-        <td>${m.townhallLevel ?? '–'}</td>
-        <td style="color:${attacks.length > 0 ? 'var(--green)' : 'var(--red)'}">
-          ${attacks.length}/${maxAttacks}
-        </td>
-        <td>${totalStars} ✦</td>
-        <td>${avgDest}%</td>
-      </tr>`;
-    }).join('');
+  const tableMembers = (us.members ?? []).sort((a, b) => (a.mapPosition ?? 0) - (b.mapPosition ?? 0));
+
+  const memberRows = tableMembers.map(m => {
+    const attacks    = m.attacks ?? [];
+    const totalStars = attacks.reduce((s, a) => s + a.stars, 0);
+    const avgDest    = attacks.length
+      ? (attacks.reduce((s, a) => s + a.destructionPercentage, 0) / attacks.length).toFixed(1)
+      : '–';
+    return `
+    <tr>
+      <td>${m.mapPosition}</td>
+      <td><strong>${esc(m.name)}</strong></td>
+      <td>${m.townhallLevel ?? '–'}</td>
+      <td style="color:${attacks.length > 0 ? 'var(--green)' : 'var(--red)'}">
+        ${attacks.length}/${maxAtt}
+      </td>
+      <td>${totalStars} ✦</td>
+      <td>${avgDest}%</td>
+    </tr>`;
+  }).join('');
+
+  const chartHeight = Math.max(200, tableMembers.length * 26 + 60);
 
   container.innerHTML = `
     <h2>Aktueller Krieg – ${state}</h2>
@@ -156,17 +185,69 @@ function renderWar(d) {
       <div class="stat-item"><div class="val">${d.teamSize ?? '–'}</div><div class="label">Teamgröße</div></div>
       <div class="stat-item"><div class="val">${fmtDate(d.startTime)}</div><div class="label">Startzeit</div></div>
     </div>
-    <h3 style="color:var(--accent);font-size:0.85rem;margin-bottom:0.5rem;text-transform:uppercase">
-      ${esc(us.name)} vs ${esc(them.name)}
+
+    <h3 style="color:var(--accent);font-size:0.85rem;margin-bottom:0.75rem;text-transform:uppercase">
+      Angriffs-Auswertung – ${esc(us.name)} vs ${esc(them.name)}
     </h3>
+    <div style="height:${chartHeight}px;margin-bottom:1.5rem">
+      <canvas id="war-chart"></canvas>
+    </div>
+
     <div class="table-wrap">
       <table>
         <thead><tr><th>Pos</th><th>Name</th><th>TH</th><th>Angriffe</th><th>Sterne</th><th>Ø Zerstörung</th></tr></thead>
         <tbody>${memberRows}</tbody>
       </table>
     </div>`;
+
+  // Sort by stars DESC for chart readability
+  const cm = [...tableMembers].sort((a, b) => {
+    const sa = (a.attacks ?? []).reduce((s, atk) => s + atk.stars, 0);
+    const sb = (b.attacks ?? []).reduce((s, atk) => s + atk.stars, 0);
+    return sb - sa;
+  });
+
+  mkChart('war-chart', {
+    type: 'bar',
+    data: {
+      labels: cm.map(m => m.name),
+      datasets: [
+        {
+          label: 'Sterne ✦',
+          data: cm.map(m => (m.attacks ?? []).reduce((s, a) => s + a.stars, 0)),
+          backgroundColor: cm.map(m => {
+            const used = (m.attacks ?? []).length;
+            if (used === 0)       return '#f85149';
+            if (used < maxAtt)    return '#d29922';
+            return '#3fb950';
+          }),
+          borderRadius: 3,
+        },
+        {
+          label: 'Nicht erreicht',
+          data: cm.map(m => maxStars - (m.attacks ?? []).reduce((s, a) => s + a.stars, 0)),
+          backgroundColor: '#21262d',
+          borderRadius: 3,
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#8b949e' } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}` } },
+      },
+      scales: {
+        x: { ...CHART_SCALE, stacked: true, max: maxStars, ticks: { stepSize: 1, color: '#8b949e' } },
+        y: { ...CHART_SCALE, stacked: true, ticks: { color: '#e6edf3' } },
+      },
+    },
+  });
 }
 
+// ===== Render: War Log =====
 function renderWarlog(d) {
   const tbody = document.getElementById('warlog-body');
   const err   = checkError(d);
@@ -193,6 +274,7 @@ function renderWarlog(d) {
   }).join('');
 }
 
+// ===== Render: CWL =====
 function renderCwl(d) {
   const container = document.getElementById('cwl-content');
   const err = checkError(d);
@@ -201,9 +283,8 @@ function renderCwl(d) {
     return;
   }
 
-  const clans = d.clans ?? [];
-  const seen  = new Set();
-  const members = clans
+  const seen    = new Set();
+  const members = (d.clans ?? [])
     .flatMap(c => c.members ?? [])
     .filter(m => { if (seen.has(m.tag)) return false; seen.add(m.tag); return true; })
     .sort((a, b) => (b.townHallLevel ?? 0) - (a.townHallLevel ?? 0));
@@ -230,25 +311,43 @@ function renderCwl(d) {
     </div>`;
 }
 
+// ===== Render: Raids (Yearly Chart + Per-Season Chart) =====
+let _raidSeasons = [];
+
 function renderRaids(d) {
   const container = document.getElementById('raids-content');
-  const err = checkError(d);
+  const yearly    = document.getElementById('raids-yearly');
+  const err       = checkError(d);
+
   if (err) {
+    yearly.innerHTML = '';
     container.innerHTML = `<div class="card" style="color:var(--muted);text-align:center;padding:2rem">${err}</div>`;
     return;
   }
 
   const seasons = d.items ?? [];
+  _raidSeasons  = seasons;
+
   if (!seasons.length) {
+    yearly.innerHTML = '';
     container.innerHTML = `<div class="card" style="color:var(--muted);text-align:center;padding:2rem">Keine Überfallwochenenden gefunden.</div>`;
     return;
   }
 
+  // Yearly overview chart card
+  yearly.innerHTML = `
+    <div class="card">
+      <h2>Jahresübersicht – Überfallwochenenden</h2>
+      <div style="height:220px"><canvas id="raids-yearly-chart"></canvas></div>
+    </div>`;
+
+  // Season detail cards
   container.innerHTML = seasons.map((season, si) => {
     const members         = season.members ?? [];
     const notParticipated = (season.memberCount ?? 0) - members.length;
+    const chartH          = Math.max(80, members.length * 22 + 40);
 
-    const memberRows = members
+    const memberRows = [...members]
       .sort((a, b) => (b.capitalResourcesLooted ?? 0) - (a.capitalResourcesLooted ?? 0))
       .map((m, i) => `
         <tr>
@@ -260,7 +359,7 @@ function renderRaids(d) {
 
     return `
       <div class="card">
-        <div class="season-header" onclick="toggleSeason(this)">
+        <div class="season-header" onclick="toggleSeason(this, ${si})">
           <span>
             ${fmtDate(season.startTime)} – ${fmtDate(season.endTime)}
             &nbsp;<span class="pill ${season.state === 'ended' ? 'pill-win' : 'pill-member'}">${season.state === 'ended' ? 'Beendet' : season.state ?? '?'}</span>
@@ -277,6 +376,9 @@ function renderRaids(d) {
             <div class="stat-item"><div class="val">${members.length}</div><div class="label">Teilnehmer</div></div>
             <div class="stat-item"><div class="val" style="color:var(--red)">${notParticipated}</div><div class="label">Nicht dabei</div></div>
           </div>
+          <div style="height:${chartH}px;margin-bottom:1rem">
+            <canvas id="raid-chart-${si}"></canvas>
+          </div>
           <div class="table-wrap">
             <table>
               <thead><tr><th>#</th><th>Name</th><th>Angriffe</th><th>Gold</th></tr></thead>
@@ -286,10 +388,98 @@ function renderRaids(d) {
         </div>
       </div>`;
   }).join('');
+
+  requestAnimationFrame(() => {
+    renderYearlyRaidChart(seasons);
+    renderRaidSeasonChart(0);
+  });
 }
 
-function toggleSeason(header) {
-  header.nextElementSibling.classList.toggle('open');
+function renderYearlyRaidChart(seasons) {
+  const rev = [...seasons].reverse();
+  mkChart('raids-yearly-chart', {
+    data: {
+      labels: rev.map(s => fmtDate(s.startTime)),
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Teilnehmer',
+          data: rev.map(s => (s.members ?? []).length),
+          backgroundColor: '#f0a500',
+          yAxisID: 'y',
+          order: 2,
+        },
+        {
+          type: 'line',
+          label: 'Gesamt-Angriffe',
+          data: rev.map(s => s.totalAttacks ?? 0),
+          borderColor: '#3fb950',
+          backgroundColor: 'transparent',
+          yAxisID: 'y2',
+          tension: 0.3,
+          pointRadius: 4,
+          pointBackgroundColor: '#3fb950',
+          order: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', labels: { color: '#8b949e' } } },
+      scales: {
+        x:  { ...CHART_SCALE, ticks: { color: '#8b949e' } },
+        y:  { ...CHART_SCALE, ticks: { color: '#8b949e' }, title: { display: true, text: 'Teilnehmer', color: '#8b949e' } },
+        y2: { position: 'right', grid: { display: false }, ticks: { color: '#8b949e' }, title: { display: true, text: 'Angriffe', color: '#8b949e' } },
+      },
+    },
+  });
+}
+
+function renderRaidSeasonChart(si) {
+  const season = _raidSeasons[si];
+  if (!season) return;
+  const members = [...(season.members ?? [])].sort((a, b) => (b.attacks ?? 0) - (a.attacks ?? 0));
+
+  mkChart(`raid-chart-${si}`, {
+    type: 'bar',
+    data: {
+      labels: members.map(m => m.name),
+      datasets: [{
+        label: 'Angriffe',
+        data: members.map(m => m.attacks ?? 0),
+        backgroundColor: members.map(m => {
+          const att   = m.attacks ?? 0;
+          const limit = m.attackLimit ?? 5;
+          if (att === 0)       return '#f85149';
+          if (att < limit)     return '#d29922';
+          return '#3fb950';
+        }),
+        borderRadius: 3,
+      }],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ...CHART_SCALE, max: 6, ticks: { stepSize: 1, color: '#8b949e' } },
+        y: { ...CHART_SCALE, ticks: { color: '#e6edf3' } },
+      },
+    },
+  });
+}
+
+function toggleSeason(header, si) {
+  const body    = header.nextElementSibling;
+  const wasOpen = body.classList.contains('open');
+  body.classList.toggle('open');
+  // Render chart on first open (lazy), resize if already rendered
+  if (!wasOpen) {
+    if (_charts[`raid-chart-${si}`]) _charts[`raid-chart-${si}`].resize();
+    else renderRaidSeasonChart(si);
+  }
 }
 
 // ===== Load =====
