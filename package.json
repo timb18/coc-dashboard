@@ -1,0 +1,11 @@
+{
+  "name": "coc-clan-dashboard",
+  "version": "1.0.0",
+  "description": "Clash of Clans Clan Dashboard",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch.js"
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoC Clan Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div id="clan-badge">
+    <img class="badge-img" id="clan-badge-img" src="" alt="" style="display:none" />
+    <div>
+      <h1 id="clan-name">Lade...</h1>
+      <div style="font-size:0.75rem;color:var(--muted)" id="clan-tag"></div>
+    </div>
+  </div>
+  <div style="margin-left:auto;display:flex;gap:0.5rem;align-items:center">
+    <span id="last-updated"></span>
+    <button id="refresh-btn" onclick="loadAll()">&#8635; Aktualisieren</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="overview">Übersicht</button>
+  <button class="tab-btn" data-tab="members">Mitglieder</button>
+  <button class="tab-btn" data-tab="war">Krieg</button>
+  <button class="tab-btn" data-tab="warlog">Kriegslog</button>
+  <button class="tab-btn" data-tab="cwl">CWL</button>
+  <button class="tab-btn" data-tab="raids">Überfallwochenende</button>
+</nav>
+
+<main>
+  <!-- Overview -->
+  <div class="tab-panel active" id="tab-overview">
+    <div class="card">
+      <h2>Clan-Statistiken</h2>
+      <div class="stats-grid" id="stats-grid">
+        <div class="loading">Lade</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Beschreibung</h2>
+      <p id="clan-desc" style="font-size:0.9rem;color:var(--muted);line-height:1.6"></p>
+    </div>
+  </div>
+
+  <!-- Members -->
+  <div class="tab-panel" id="tab-members">
+    <div class="card">
+      <h2>Mitglieder-Liste</h2>
+      <div class="table-wrap">
+        <table id="members-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Rolle</th>
+              <th>TH</th>
+              <th>Trophäen</th>
+              <th>Spenden ↑</th>
+              <th>Spenden ↓</th>
+            </tr>
+          </thead>
+          <tbody id="members-body">
+            <tr><td colspan="7" class="loading">Lade</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current War -->
+  <div class="tab-panel" id="tab-war">
+    <div id="war-content" class="card">
+      <div class="loading">Lade</div>
+    </div>
+  </div>
+
+  <!-- War Log -->
+  <div class="tab-panel" id="tab-warlog">
+    <div class="card">
+      <h2>Kriegsverlauf</h2>
+      <div class="table-wrap">
+        <table id="warlog-table">
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Gegner</th>
+              <th>Größe</th>
+              <th>Sterne ✦</th>
+              <th>Zerstörung %</th>
+              <th>Ergebnis</th>
+            </tr>
+          </thead>
+          <tbody id="warlog-body">
+            <tr><td colspan="6" class="loading">Lade</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- CWL -->
+  <div class="tab-panel" id="tab-cwl">
+    <div id="cwl-content">
+      <div class="card"><div class="loading">Lade</div></div>
+    </div>
+  </div>
+
+  <!-- Raid Weekend -->
+  <div class="tab-panel" id="tab-raids">
+    <div id="raids-content">
+      <div class="card"><div class="loading">Lade</div></div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
