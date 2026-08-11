@@ -610,29 +610,29 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
       const rev = [...(rd as any[])].reverse();
       mkChart('raids-yearly-chart', {
         type: 'bar',
-        data:{
-          labels: rev.map((s:any)=>{
-            const d = s.startTime?.replace(/^(\d{4})(\d{2})(\d{2})T.*/,'$1-$2-$3');
-            return d ? new Date(d).toLocaleDateString('de-DE',{day:'2-digit',month:'short'}) : '?';
+        data: {
+          labels: rev.map((s: any) => {
+            const d = s.startTime?.replace(/^(\d{4})(\d{2})(\d{2})T.*/, '$1-$2-$3');
+            return d ? new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: 'short' }) : '?';
           }),
-          datasets:[
-            {type:'bar',label:'Teilnehmer',data:rev.map((s:any)=>(s.members??[]).length),
-              backgroundColor:'rgba(240,165,0,0.7)',yAxisID:'y',order:2},
-            {type:'line',label:'Gesamt-Angriffe',data:rev.map((s:any)=>s.totalAttacks??0),
-              borderColor:'#00c9a7',backgroundColor:'transparent',yAxisID:'y2',
-              tension:.3,pointRadius:4,pointBackgroundColor:'#00c9a7',order:1},
-          ]
+          datasets: [{
+            label: 'Teilnehmer',
+            data: rev.map((s: any) => (s.members ?? []).length),
+            backgroundColor: 'rgba(240,165,0,0.75)',
+            borderColor: '#f0a500',
+            borderWidth: 1,
+            borderRadius: 4,
+          }],
         },
-        options:{
-          responsive:true, maintainAspectRatio:false,
-          plugins:{legend:{position:'top',labels:{color:'#8892a4'}}},
-          scales:{
-            x:{...SCALE, ticks:{color:'#8892a4'}},
-            y:{...SCALE, ticks:{color:'#8892a4'}, title:{display:true,text:'Teilnehmer',color:'#8892a4'}},
-            y2:{position:'right',grid:{display:false},ticks:{color:'#8892a4'},
-              title:{display:true,text:'Angriffe',color:'#8892a4'}},
-          }
-        }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ...SCALE, ticks: { color: '#8892a4' } },
+            y: { ...SCALE, beginAtZero: true, ticks: { stepSize: 1, color: '#8892a4' } },
+          },
+        },
       });
     };
 
@@ -672,5 +672,5 @@ const cwlWars = Array.isArray(cwl.wars) ? cwl.wars.filter((w:any)=>!w?._error) :
 </script>
 
 <!-- Embedded JSON for client-side charts (avoids re-fetching) -->
-<script id="__cwl_json" type="application/json" set:text={JSON.stringify(cwl)} />
-<script id="__raids_json" type="application/json" set:text={JSON.stringify(raids)} />
+<script id="__cwl_json"   type="application/json" set:html={JSON.stringify(cwl)} />
+<script id="__raids_json" type="application/json" set:html={JSON.stringify(raids)} />

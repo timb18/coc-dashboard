@@ -276,12 +276,14 @@ const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
 
   const el = document.getElementById('__member_data');
   if (el) {
-    const d = JSON.parse(el.textContent ?? '{}');
+    let d: any = {};
+    try { d = JSON.parse(el.textContent ?? '{}'); } catch {}
     const history = d.raidHistory ?? [];
     if (history.length > 0) {
       const canvas = document.getElementById('member-raid-chart') as HTMLCanvasElement | null;
       if (canvas) {
         new (window as any).Chart(canvas, {
+          type: 'bar',
           data: {
             labels: history.map((h: any) => {
               const s = (h.startTime ?? '').replace(/^(\d{4})(\d{2})(\d{2})T.*/,'$1-$2-$3');
@@ -329,6 +331,6 @@ const pageTitle = `${member?.name ?? 'Mitglied'} · CoC Dashboard`;
   }
 </script>
 
-<script id="__member_data" type="application/json" set:text={JSON.stringify({
+<script id="__member_data" type="application/json" set:html={JSON.stringify({
   raidHistory: analytics.raids?.history ?? [],
 })} />
