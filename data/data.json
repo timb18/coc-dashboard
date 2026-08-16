@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-15T04:08:22.195Z",
+  "lastUpdated": "2026-08-16T04:11:58.479Z",
   "clan": {
     "tag": "#2G2YYV9J0",
     "name": "DieEleganten",
@@ -19,7 +19,7 @@
     },
     "clanLevel": 13,
     "clanPoints": 72850,
-    "clanBuilderBasePoints": 31624,
+    "clanBuilderBasePoints": 31610,
     "clanCapitalPoints": 1844,
     "capitalLeague": {
       "id": 85000009,
@@ -27,8 +27,8 @@
     },
     "requiredTrophies": 0,
     "warFrequency": "moreThanOncePerWeek",
-    "warWinStreak": 0,
-    "warWins": 82,
+    "warWinStreak": 1,
+    "warWins": 83,
     "warTies": 1,
     "warLosses": 65,
     "isWarLogPublic": true,
@@ -60,12 +60,12 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/VFqkaQimExWtSmIf9PC8WEpj4Vd58oLjPWyZqfVb5VE.png"
           }
         },
-        "trophies": 762,
+        "trophies": 777,
         "builderBaseTrophies": 3085,
         "clanRank": 1,
         "previousClanRank": 1,
         "donations": 673,
-        "donationsReceived": 724,
+        "donationsReceived": 779,
         "playerHouse": {
           "elements": [
             {
@@ -114,12 +114,12 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/iX8uNhG6jBcQATWFS8a0gtidGy9O1PRYtXZZMTtUK3U.png"
           }
         },
-        "trophies": 326,
+        "trophies": 351,
         "builderBaseTrophies": 4336,
         "clanRank": 2,
         "previousClanRank": 2,
         "donations": 170,
-        "donationsReceived": 589,
+        "donationsReceived": 764,
         "playerHouse": {
           "elements": [
             {
@@ -171,8 +171,8 @@
         "builderBaseTrophies": 4180,
         "clanRank": 3,
         "previousClanRank": 3,
-        "donations": 433,
-        "donationsReceived": 836,
+        "donations": 518,
+        "donationsReceived": 870,
         "playerHouse": {
           "elements": [
             {
@@ -221,8 +221,8 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/g7m9aF8YoYj9b0olPsyT4eUIxyYEmkqr53wYxWmzpE4.png"
           }
         },
-        "trophies": 541,
-        "builderBaseTrophies": 3221,
+        "trophies": 559,
+        "builderBaseTrophies": 3246,
         "clanRank": 4,
         "previousClanRank": 4,
         "donations": 496,
@@ -274,7 +274,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/g7m9aF8YoYj9b0olPsyT4eUIxyYEmkqr53wYxWmzpE4.png"
           }
         },
-        "trophies": 392,
+        "trophies": 417,
         "builderBaseTrophies": 2767,
         "clanRank": 5,
         "previousClanRank": 5,
@@ -331,7 +331,7 @@
         "builderBaseTrophies": 3763,
         "clanRank": 6,
         "previousClanRank": 6,
-        "donations": 15,
+        "donations": 151,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -359,59 +359,6 @@
         }
       },
       {
-        "tag": "#LQJGJ220Q",
-        "name": "maxiswat",
-        "role": "coLeader",
-        "townHallLevel": 17,
-        "expLevel": 210,
-        "league": {
-          "id": 29000000,
-          "name": "Unranked",
-          "iconUrls": {
-            "small": "https://api-assets.clashofclans.com/leagues/72/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png",
-            "tiny": "https://api-assets.clashofclans.com/leagues/36/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png"
-          }
-        },
-        "leagueTier": {
-          "id": 105000028,
-          "name": "Dragon League 28",
-          "iconUrls": {
-            "small": "https://api-assets.clashofclans.com/leaguetiers/125/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png",
-            "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
-          }
-        },
-        "trophies": 486,
-        "builderBaseTrophies": 3850,
-        "clanRank": 7,
-        "previousClanRank": 7,
-        "donations": 1000,
-        "donationsReceived": 457,
-        "playerHouse": {
-          "elements": [
-            {
-              "type": "ground",
-              "id": 82000004
-            },
-            {
-              "type": "walls",
-              "id": 82000051
-            },
-            {
-              "type": "roof",
-              "id": 82000020
-            },
-            {
-              "type": "decoration",
-              "id": 82000066
-            }
-          ]
-        },
-        "builderBaseLeague": {
-          "id": 44000029,
-          "name": "Titanium League III"
-        }
-      },
-      {
         "tag": "#QYQPGJ8PL",
         "name": "xS4MU3Lx",
         "role": "admin",
@@ -433,9 +380,9 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
           }
         },
-        "trophies": 463,
+        "trophies": 656,
         "builderBaseTrophies": 2915,
-        "clanRank": 8,
+        "clanRank": 7,
         "previousClanRank": 8,
         "donations": 305,
         "donationsReceived": 85,
@@ -465,6 +412,59 @@
         }
       },
       {
+        "tag": "#LQJGJ220Q",
+        "name": "maxiswat",
+        "role": "coLeader",
+        "townHallLevel": 17,
+        "expLevel": 210,
+        "league": {
+          "id": 29000000,
+          "name": "Unranked",
+          "iconUrls": {
+            "small": "https://api-assets.clashofclans.com/leagues/72/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png",
+            "tiny": "https://api-assets.clashofclans.com/leagues/36/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png"
+          }
+        },
+        "leagueTier": {
+          "id": 105000028,
+          "name": "Dragon League 28",
+          "iconUrls": {
+            "small": "https://api-assets.clashofclans.com/leaguetiers/125/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png",
+            "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
+          }
+        },
+        "trophies": 500,
+        "builderBaseTrophies": 3850,
+        "clanRank": 8,
+        "previousClanRank": 7,
+        "donations": 1119,
+        "donationsReceived": 554,
+        "playerHouse": {
+          "elements": [
+            {
+              "type": "ground",
+              "id": 82000004
+            },
+            {
+              "type": "walls",
+              "id": 82000051
+            },
+            {
+              "type": "roof",
+              "id": 82000020
+            },
+            {
+              "type": "decoration",
+              "id": 82000066
+            }
+          ]
+        },
+        "builderBaseLeague": {
+          "id": 44000029,
+          "name": "Titanium League III"
+        }
+      },
+      {
         "tag": "#PR9P90G8P",
         "name": "Horscht",
         "role": "admin",
@@ -486,7 +486,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
           }
         },
-        "trophies": 131,
+        "trophies": 139,
         "builderBaseTrophies": 2915,
         "clanRank": 9,
         "previousClanRank": 9,
@@ -594,10 +594,10 @@
           }
         },
         "trophies": 0,
-        "builderBaseTrophies": 3658,
+        "builderBaseTrophies": 3607,
         "clanRank": 11,
         "previousClanRank": 11,
-        "donations": 850,
+        "donations": 905,
         "donationsReceived": 114,
         "playerHouse": {
           "elements": [
@@ -699,7 +699,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/yIfqSgrhiYRcuMbAPCoeCj1FTmfylCLxnrAljEZc8K0.png"
           }
         },
-        "trophies": 441,
+        "trophies": 488,
         "builderBaseTrophies": 2593,
         "clanRank": 13,
         "previousClanRank": 13,
@@ -758,7 +758,7 @@
         "clanRank": 14,
         "previousClanRank": 14,
         "donations": 116,
-        "donationsReceived": 0,
+        "donationsReceived": 86,
         "playerHouse": {
           "elements": [
             {
@@ -807,7 +807,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/iTWXPUUFQy0uEb7NDpMTyzGMFOJvlC4SLAqlHYgC8do.png"
           }
         },
-        "trophies": 234,
+        "trophies": 243,
         "builderBaseTrophies": 2698,
         "clanRank": 15,
         "previousClanRank": 15,
@@ -861,11 +861,11 @@
           }
         },
         "trophies": 565,
-        "builderBaseTrophies": 2928,
+        "builderBaseTrophies": 2888,
         "clanRank": 16,
         "previousClanRank": 16,
-        "donations": 94,
-        "donationsReceived": 365,
+        "donations": 140,
+        "donationsReceived": 445,
         "playerHouse": {
           "elements": [
             {
@@ -968,7 +968,7 @@
           }
         },
         "trophies": 370,
-        "builderBaseTrophies": 2619,
+        "builderBaseTrophies": 2657,
         "clanRank": 18,
         "previousClanRank": 18,
         "donations": 0,
@@ -1003,7 +1003,7 @@
         "name": "Tim",
         "role": "member",
         "townHallLevel": 15,
-        "expLevel": 134,
+        "expLevel": 135,
         "league": {
           "id": 29000000,
           "name": "Unranked",
@@ -1024,7 +1024,7 @@
         "builderBaseTrophies": 2451,
         "clanRank": 19,
         "previousClanRank": 19,
-        "donations": 4,
+        "donations": 34,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -1074,11 +1074,11 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/GeLamlTvRYNnZp5lEW64pyaORN30rCdrxTjU7oJoTN8.png"
           }
         },
-        "trophies": 470,
+        "trophies": 499,
         "builderBaseTrophies": 2131,
         "clanRank": 20,
         "previousClanRank": 20,
-        "donations": 111,
+        "donations": 167,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -1342,7 +1342,7 @@
           }
         },
         "trophies": 0,
-        "builderBaseTrophies": 2249,
+        "builderBaseTrophies": 2293,
         "clanRank": 25,
         "previousClanRank": 25,
         "donations": 42,
@@ -2553,12 +2553,12 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/VFqkaQimExWtSmIf9PC8WEpj4Vd58oLjPWyZqfVb5VE.png"
           }
         },
-        "trophies": 762,
+        "trophies": 777,
         "builderBaseTrophies": 3085,
         "clanRank": 1,
         "previousClanRank": 1,
         "donations": 673,
-        "donationsReceived": 724,
+        "donationsReceived": 779,
         "playerHouse": {
           "elements": [
             {
@@ -2647,12 +2647,12 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/iX8uNhG6jBcQATWFS8a0gtidGy9O1PRYtXZZMTtUK3U.png"
           }
         },
-        "trophies": 326,
+        "trophies": 351,
         "builderBaseTrophies": 4336,
         "clanRank": 2,
         "previousClanRank": 2,
         "donations": 170,
-        "donationsReceived": 589,
+        "donationsReceived": 764,
         "playerHouse": {
           "elements": [
             {
@@ -2678,7 +2678,7 @@
           "name": "Titanium League I"
         },
         "profile": {
-          "warStars": 1367,
+          "warStars": 1373,
           "attackWins": 7,
           "defenseWins": 3,
           "bestTrophies": 5252,
@@ -2692,7 +2692,7 @@
             },
             {
               "name": "Archer Queen",
-              "level": 104,
+              "level": 105,
               "maxLevel": 110
             },
             {
@@ -2744,8 +2744,8 @@
         "builderBaseTrophies": 4180,
         "clanRank": 3,
         "previousClanRank": 3,
-        "donations": 433,
-        "donationsReceived": 836,
+        "donations": 518,
+        "donationsReceived": 870,
         "playerHouse": {
           "elements": [
             {
@@ -2771,7 +2771,7 @@
           "name": "Titanium League II"
         },
         "profile": {
-          "warStars": 642,
+          "warStars": 645,
           "attackWins": 0,
           "defenseWins": 0,
           "bestTrophies": 3870,
@@ -2834,8 +2834,8 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/g7m9aF8YoYj9b0olPsyT4eUIxyYEmkqr53wYxWmzpE4.png"
           }
         },
-        "trophies": 541,
-        "builderBaseTrophies": 3221,
+        "trophies": 559,
+        "builderBaseTrophies": 3246,
         "clanRank": 4,
         "previousClanRank": 4,
         "donations": 496,
@@ -2927,7 +2927,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/g7m9aF8YoYj9b0olPsyT4eUIxyYEmkqr53wYxWmzpE4.png"
           }
         },
-        "trophies": 392,
+        "trophies": 417,
         "builderBaseTrophies": 2767,
         "clanRank": 5,
         "previousClanRank": 5,
@@ -3024,7 +3024,7 @@
         "builderBaseTrophies": 3763,
         "clanRank": 6,
         "previousClanRank": 6,
-        "donations": 15,
+        "donations": 151,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -3092,99 +3092,6 @@
         }
       },
       {
-        "tag": "#LQJGJ220Q",
-        "name": "maxiswat",
-        "role": "coLeader",
-        "townHallLevel": 17,
-        "expLevel": 210,
-        "league": {
-          "id": 29000000,
-          "name": "Unranked",
-          "iconUrls": {
-            "small": "https://api-assets.clashofclans.com/leagues/72/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png",
-            "tiny": "https://api-assets.clashofclans.com/leagues/36/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png"
-          }
-        },
-        "leagueTier": {
-          "id": 105000028,
-          "name": "Dragon League 28",
-          "iconUrls": {
-            "small": "https://api-assets.clashofclans.com/leaguetiers/125/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png",
-            "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
-          }
-        },
-        "trophies": 486,
-        "builderBaseTrophies": 3850,
-        "clanRank": 7,
-        "previousClanRank": 7,
-        "donations": 1000,
-        "donationsReceived": 457,
-        "playerHouse": {
-          "elements": [
-            {
-              "type": "ground",
-              "id": 82000004
-            },
-            {
-              "type": "walls",
-              "id": 82000051
-            },
-            {
-              "type": "roof",
-              "id": 82000020
-            },
-            {
-              "type": "decoration",
-              "id": 82000066
-            }
-          ]
-        },
-        "builderBaseLeague": {
-          "id": 44000029,
-          "name": "Titanium League III"
-        },
-        "profile": {
-          "warStars": 681,
-          "attackWins": 0,
-          "defenseWins": 0,
-          "bestTrophies": 5162,
-          "expLevel": 210,
-          "townHallWeaponLevel": 5,
-          "heroes": [
-            {
-              "name": "Barbarian King",
-              "level": 81,
-              "maxLevel": 110
-            },
-            {
-              "name": "Archer Queen",
-              "level": 92,
-              "maxLevel": 110
-            },
-            {
-              "name": "Grand Warden",
-              "level": 69,
-              "maxLevel": 85
-            },
-            {
-              "name": "Royal Champion",
-              "level": 48,
-              "maxLevel": 55
-            },
-            {
-              "name": "Minion Prince",
-              "level": 70,
-              "maxLevel": 95
-            },
-            {
-              "name": "Dragon Duke",
-              "level": 15,
-              "maxLevel": 25
-            }
-          ]
-        }
-      },
-      {
         "tag": "#QYQPGJ8PL",
         "name": "xS4MU3Lx",
         "role": "admin",
@@ -3206,9 +3113,9 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
           }
         },
-        "trophies": 463,
+        "trophies": 656,
         "builderBaseTrophies": 2915,
-        "clanRank": 8,
+        "clanRank": 7,
         "previousClanRank": 8,
         "donations": 305,
         "donationsReceived": 85,
@@ -3278,6 +3185,99 @@
         }
       },
       {
+        "tag": "#LQJGJ220Q",
+        "name": "maxiswat",
+        "role": "coLeader",
+        "townHallLevel": 17,
+        "expLevel": 210,
+        "league": {
+          "id": 29000000,
+          "name": "Unranked",
+          "iconUrls": {
+            "small": "https://api-assets.clashofclans.com/leagues/72/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png",
+            "tiny": "https://api-assets.clashofclans.com/leagues/36/e--YMyIexEQQhE4imLoJcwhYn6Uy8KqlgyY3_kFV6t4.png"
+          }
+        },
+        "leagueTier": {
+          "id": 105000028,
+          "name": "Dragon League 28",
+          "iconUrls": {
+            "small": "https://api-assets.clashofclans.com/leaguetiers/125/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png",
+            "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
+          }
+        },
+        "trophies": 500,
+        "builderBaseTrophies": 3850,
+        "clanRank": 8,
+        "previousClanRank": 7,
+        "donations": 1119,
+        "donationsReceived": 554,
+        "playerHouse": {
+          "elements": [
+            {
+              "type": "ground",
+              "id": 82000004
+            },
+            {
+              "type": "walls",
+              "id": 82000051
+            },
+            {
+              "type": "roof",
+              "id": 82000020
+            },
+            {
+              "type": "decoration",
+              "id": 82000066
+            }
+          ]
+        },
+        "builderBaseLeague": {
+          "id": 44000029,
+          "name": "Titanium League III"
+        },
+        "profile": {
+          "warStars": 681,
+          "attackWins": 0,
+          "defenseWins": 0,
+          "bestTrophies": 5162,
+          "expLevel": 210,
+          "townHallWeaponLevel": 5,
+          "heroes": [
+            {
+              "name": "Barbarian King",
+              "level": 81,
+              "maxLevel": 110
+            },
+            {
+              "name": "Archer Queen",
+              "level": 92,
+              "maxLevel": 110
+            },
+            {
+              "name": "Grand Warden",
+              "level": 69,
+              "maxLevel": 85
+            },
+            {
+              "name": "Royal Champion",
+              "level": 48,
+              "maxLevel": 55
+            },
+            {
+              "name": "Minion Prince",
+              "level": 70,
+              "maxLevel": 95
+            },
+            {
+              "name": "Dragon Duke",
+              "level": 15,
+              "maxLevel": 25
+            }
+          ]
+        }
+      },
+      {
         "tag": "#PR9P90G8P",
         "name": "Horscht",
         "role": "admin",
@@ -3299,7 +3299,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/YCZ7O_3_c8eCBYvX-92qiWeLc6Md6eNJ5A8O-2vUg7I.png"
           }
         },
-        "trophies": 131,
+        "trophies": 139,
         "builderBaseTrophies": 2915,
         "clanRank": 9,
         "previousClanRank": 9,
@@ -3442,7 +3442,7 @@
             },
             {
               "name": "Grand Warden",
-              "level": 79,
+              "level": 80,
               "maxLevel": 85
             },
             {
@@ -3487,10 +3487,10 @@
           }
         },
         "trophies": 0,
-        "builderBaseTrophies": 3658,
+        "builderBaseTrophies": 3607,
         "clanRank": 11,
         "previousClanRank": 11,
-        "donations": 850,
+        "donations": 905,
         "donationsReceived": 114,
         "playerHouse": {
           "elements": [
@@ -3519,7 +3519,7 @@
         "profile": {
           "warStars": 1563,
           "attackWins": 0,
-          "defenseWins": 10,
+          "defenseWins": 11,
           "bestTrophies": 5103,
           "expLevel": 215,
           "townHallWeaponLevel": null,
@@ -3672,7 +3672,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/yIfqSgrhiYRcuMbAPCoeCj1FTmfylCLxnrAljEZc8K0.png"
           }
         },
-        "trophies": 441,
+        "trophies": 488,
         "builderBaseTrophies": 2593,
         "clanRank": 13,
         "previousClanRank": 13,
@@ -3771,7 +3771,7 @@
         "clanRank": 14,
         "previousClanRank": 14,
         "donations": 116,
-        "donationsReceived": 0,
+        "donationsReceived": 86,
         "playerHouse": {
           "elements": [
             {
@@ -3797,7 +3797,7 @@
           "name": "Iron League III"
         },
         "profile": {
-          "warStars": 817,
+          "warStars": 820,
           "attackWins": 0,
           "defenseWins": 17,
           "bestTrophies": 3093,
@@ -3860,7 +3860,7 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/iTWXPUUFQy0uEb7NDpMTyzGMFOJvlC4SLAqlHYgC8do.png"
           }
         },
-        "trophies": 234,
+        "trophies": 243,
         "builderBaseTrophies": 2698,
         "clanRank": 15,
         "previousClanRank": 15,
@@ -3893,7 +3893,7 @@
         "profile": {
           "warStars": 115,
           "attackWins": 12,
-          "defenseWins": 2,
+          "defenseWins": 3,
           "bestTrophies": 2236,
           "expLevel": 141,
           "townHallWeaponLevel": 1,
@@ -3915,7 +3915,7 @@
             },
             {
               "name": "Royal Champion",
-              "level": 26,
+              "level": 27,
               "maxLevel": 55
             },
             {
@@ -3954,11 +3954,11 @@
           }
         },
         "trophies": 565,
-        "builderBaseTrophies": 2928,
+        "builderBaseTrophies": 2888,
         "clanRank": 16,
         "previousClanRank": 16,
-        "donations": 94,
-        "donationsReceived": 365,
+        "donations": 140,
+        "donationsReceived": 445,
         "playerHouse": {
           "elements": [
             {
@@ -4141,7 +4141,7 @@
           }
         },
         "trophies": 370,
-        "builderBaseTrophies": 2619,
+        "builderBaseTrophies": 2657,
         "clanRank": 18,
         "previousClanRank": 18,
         "donations": 0,
@@ -4190,7 +4190,7 @@
             },
             {
               "name": "Grand Warden",
-              "level": 26,
+              "level": 27,
               "maxLevel": 85
             },
             {
@@ -4211,7 +4211,7 @@
         "name": "Tim",
         "role": "member",
         "townHallLevel": 15,
-        "expLevel": 134,
+        "expLevel": 135,
         "league": {
           "id": 29000000,
           "name": "Unranked",
@@ -4232,7 +4232,7 @@
         "builderBaseTrophies": 2451,
         "clanRank": 19,
         "previousClanRank": 19,
-        "donations": 4,
+        "donations": 34,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -4263,7 +4263,7 @@
           "attackWins": 0,
           "defenseWins": 0,
           "bestTrophies": 2809,
-          "expLevel": 134,
+          "expLevel": 135,
           "townHallWeaponLevel": 1,
           "heroes": [
             {
@@ -4317,11 +4317,11 @@
             "large": "https://api-assets.clashofclans.com/leaguetiers/326/GeLamlTvRYNnZp5lEW64pyaORN30rCdrxTjU7oJoTN8.png"
           }
         },
-        "trophies": 470,
+        "trophies": 499,
         "builderBaseTrophies": 2131,
         "clanRank": 20,
         "previousClanRank": 20,
-        "donations": 111,
+        "donations": 167,
         "donationsReceived": 0,
         "playerHouse": {
           "elements": [
@@ -4348,7 +4348,7 @@
           "name": "Brass League III"
         },
         "profile": {
-          "warStars": 265,
+          "warStars": 268,
           "attackWins": 0,
           "defenseWins": 0,
           "bestTrophies": 2525,
@@ -4716,12 +4716,12 @@
           "heroes": [
             {
               "name": "Barbarian King",
-              "level": 78,
+              "level": 79,
               "maxLevel": 110
             },
             {
               "name": "Archer Queen",
-              "level": 79,
+              "level": 80,
               "maxLevel": 110
             },
             {
@@ -4765,7 +4765,7 @@
           }
         },
         "trophies": 0,
-        "builderBaseTrophies": 2249,
+        "builderBaseTrophies": 2293,
         "clanRank": 25,
         "previousClanRank": 25,
         "donations": 42,
@@ -6625,7 +6625,7 @@
     ]
   },
   "war": {
-    "state": "inWar",
+    "state": "warEnded",
     "teamSize": 10,
     "attacksPerMember": 2,
     "battleModifier": "none",
@@ -6641,15 +6641,25 @@
         "medium": "https://api-assets.clashofclans.com/badges/200/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png"
       },
       "clanLevel": 13,
-      "attacks": 5,
-      "stars": 12,
-      "destructionPercentage": 40,
+      "attacks": 10,
+      "stars": 27,
+      "destructionPercentage": 90,
       "members": [
         {
           "tag": "#G8GRLGR8L",
           "name": "Jonas",
           "townhallLevel": 15,
           "mapPosition": 9,
+          "attacks": [
+            {
+              "attackerTag": "#G8GRLGR8L",
+              "defenderTag": "#YURJURL9L",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 15,
+              "duration": 141
+            }
+          ],
           "opponentAttacks": 1,
           "bestOpponentAttack": {
             "attackerTag": "#89UJCGRC0",
@@ -6665,7 +6675,33 @@
           "name": "Philipp1893",
           "townhallLevel": 18,
           "mapPosition": 1,
-          "opponentAttacks": 0
+          "attacks": [
+            {
+              "attackerTag": "#8PQUL9U2C",
+              "defenderTag": "#P0QUCPG89",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 16,
+              "duration": 162
+            },
+            {
+              "attackerTag": "#8PQUL9U2C",
+              "defenderTag": "#Q8LYY8U9U",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 18,
+              "duration": 132
+            }
+          ],
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#P0QUCPG89",
+            "defenderTag": "#8PQUL9U2C",
+            "stars": 1,
+            "destructionPercentage": 92,
+            "order": 11,
+            "duration": 180
+          }
         },
         {
           "tag": "#G99GVVL2Q",
@@ -6720,14 +6756,30 @@
           "name": "klabusa",
           "townhallLevel": 18,
           "mapPosition": 2,
-          "opponentAttacks": 0
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#P0QUCPG89",
+            "defenderTag": "#20GYJLR9",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 12,
+            "duration": 147
+          }
         },
         {
           "tag": "#LQJGJ220Q",
           "name": "maxiswat",
           "townhallLevel": 17,
           "mapPosition": 6,
-          "opponentAttacks": 0
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#Q8LYY8U9U",
+            "defenderTag": "#LQJGJ220Q",
+            "stars": 2,
+            "destructionPercentage": 91,
+            "order": 14,
+            "duration": 97
+          }
         },
         {
           "tag": "#QGUPRJLLG",
@@ -6790,6 +6842,14 @@
               "destructionPercentage": 100,
               "order": 10,
               "duration": 91
+            },
+            {
+              "attackerTag": "#LLGVJURJ",
+              "defenderTag": "#YL80Q29",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 19,
+              "duration": 82
             }
           ],
           "opponentAttacks": 0
@@ -6799,7 +6859,25 @@
           "name": "Gronkihts",
           "townhallLevel": 17,
           "mapPosition": 5,
-          "opponentAttacks": 0
+          "attacks": [
+            {
+              "attackerTag": "#LJ89CLP8R",
+              "defenderTag": "#Q0J8VUC0R",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 17,
+              "duration": 102
+            }
+          ],
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#Q8LYY8U9U",
+            "defenderTag": "#LJ89CLP8R",
+            "stars": 2,
+            "destructionPercentage": 92,
+            "order": 13,
+            "duration": 97
+          }
         }
       ]
     },
@@ -6812,23 +6890,57 @@
         "medium": "https://api-assets.clashofclans.com/badges/200/n83LxAUc_3uc9nA6yUAii3dqCu5MJ0edWAsmsjo0Aj4.png"
       },
       "clanLevel": 24,
-      "attacks": 5,
-      "stars": 12,
-      "destructionPercentage": 43.9,
+      "attacks": 9,
+      "stars": 20,
+      "destructionPercentage": 81.4,
       "members": [
         {
           "tag": "#YURJURL9L",
           "name": "Pekka guy",
           "townhallLevel": 16,
           "mapPosition": 9,
-          "opponentAttacks": 0
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#G8GRLGR8L",
+            "defenderTag": "#YURJURL9L",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 15,
+            "duration": 141
+          }
         },
         {
           "tag": "#Q8LYY8U9U",
           "name": "דורון",
           "townhallLevel": 18,
           "mapPosition": 2,
-          "opponentAttacks": 0
+          "attacks": [
+            {
+              "attackerTag": "#Q8LYY8U9U",
+              "defenderTag": "#LJ89CLP8R",
+              "stars": 2,
+              "destructionPercentage": 92,
+              "order": 13,
+              "duration": 97
+            },
+            {
+              "attackerTag": "#Q8LYY8U9U",
+              "defenderTag": "#LQJGJ220Q",
+              "stars": 2,
+              "destructionPercentage": 91,
+              "order": 14,
+              "duration": 97
+            }
+          ],
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#8PQUL9U2C",
+            "defenderTag": "#Q8LYY8U9U",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 18,
+            "duration": 132
+          }
         },
         {
           "tag": "#999YPRJ0G",
@@ -6850,14 +6962,48 @@
           "name": "Caballero",
           "townhallLevel": 17,
           "mapPosition": 4,
-          "opponentAttacks": 0
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#LLGVJURJ",
+            "defenderTag": "#YL80Q29",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 19,
+            "duration": 82
+          }
         },
         {
           "tag": "#P0QUCPG89",
           "name": "TERMINATORX1000",
           "townhallLevel": 18,
           "mapPosition": 1,
-          "opponentAttacks": 0
+          "attacks": [
+            {
+              "attackerTag": "#P0QUCPG89",
+              "defenderTag": "#8PQUL9U2C",
+              "stars": 1,
+              "destructionPercentage": 92,
+              "order": 11,
+              "duration": 180
+            },
+            {
+              "attackerTag": "#P0QUCPG89",
+              "defenderTag": "#20GYJLR9",
+              "stars": 3,
+              "destructionPercentage": 100,
+              "order": 12,
+              "duration": 147
+            }
+          ],
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#8PQUL9U2C",
+            "defenderTag": "#P0QUCPG89",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 16,
+            "duration": 162
+          }
         },
         {
           "tag": "#Q0J8VUC0R",
@@ -6874,7 +7020,15 @@
               "duration": 102
             }
           ],
-          "opponentAttacks": 0
+          "opponentAttacks": 1,
+          "bestOpponentAttack": {
+            "attackerTag": "#LJ89CLP8R",
+            "defenderTag": "#Q0J8VUC0R",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 17,
+            "duration": 102
+          }
         },
         {
           "tag": "#89UJCGRC0",
@@ -6969,6 +7123,39 @@
   },
   "warlog": {
     "items": [
+      {
+        "result": "win",
+        "endTime": "20260815T171846.000Z",
+        "teamSize": 10,
+        "attacksPerMember": 2,
+        "battleModifier": "none",
+        "clan": {
+          "tag": "#2G2YYV9J0",
+          "name": "DieEleganten",
+          "badgeUrls": {
+            "small": "https://api-assets.clashofclans.com/badges/70/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+            "large": "https://api-assets.clashofclans.com/badges/512/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+            "medium": "https://api-assets.clashofclans.com/badges/200/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png"
+          },
+          "clanLevel": 13,
+          "attacks": 10,
+          "stars": 27,
+          "destructionPercentage": 90,
+          "expEarned": 207
+        },
+        "opponent": {
+          "tag": "#2Y2Q2J9CU",
+          "name": "barbarian king",
+          "badgeUrls": {
+            "small": "https://api-assets.clashofclans.com/badges/70/n83LxAUc_3uc9nA6yUAii3dqCu5MJ0edWAsmsjo0Aj4.png",
+            "large": "https://api-assets.clashofclans.com/badges/512/n83LxAUc_3uc9nA6yUAii3dqCu5MJ0edWAsmsjo0Aj4.png",
+            "medium": "https://api-assets.clashofclans.com/badges/200/n83LxAUc_3uc9nA6yUAii3dqCu5MJ0edWAsmsjo0Aj4.png"
+          },
+          "clanLevel": 24,
+          "stars": 20,
+          "destructionPercentage": 81.4
+        }
+      },
       {
         "result": "lose",
         "endTime": "20260809T054704.000Z",
@@ -7585,39 +7772,6 @@
           "stars": 90,
           "destructionPercentage": 100
         }
-      },
-      {
-        "result": "win",
-        "endTime": "20260315T154110.000Z",
-        "teamSize": 20,
-        "attacksPerMember": 2,
-        "battleModifier": "none",
-        "clan": {
-          "tag": "#2G2YYV9J0",
-          "name": "DieEleganten",
-          "badgeUrls": {
-            "small": "https://api-assets.clashofclans.com/badges/70/nc_v39d-3T2Y_WhF7uCh7zsEdPOybkPT1wpTUdBUEk0.png",
-            "large": "https://api-assets.clashofclans.com/badges/512/nc_v39d-3T2Y_WhF7uCh7zsEdPOybkPT1wpTUdBUEk0.png",
-            "medium": "https://api-assets.clashofclans.com/badges/200/nc_v39d-3T2Y_WhF7uCh7zsEdPOybkPT1wpTUdBUEk0.png"
-          },
-          "clanLevel": 11,
-          "attacks": 31,
-          "stars": 59,
-          "destructionPercentage": 99.75,
-          "expEarned": 308
-        },
-        "opponent": {
-          "tag": "#2JQ8RL9LQ",
-          "name": "Grupo 5 de Medi",
-          "badgeUrls": {
-            "small": "https://api-assets.clashofclans.com/badges/70/tC_DoKSX02zsYwyIVY8MjbNlryrRXf6LZIeFHllyh_g.png",
-            "large": "https://api-assets.clashofclans.com/badges/512/tC_DoKSX02zsYwyIVY8MjbNlryrRXf6LZIeFHllyh_g.png",
-            "medium": "https://api-assets.clashofclans.com/badges/200/tC_DoKSX02zsYwyIVY8MjbNlryrRXf6LZIeFHllyh_g.png"
-          },
-          "clanLevel": 5,
-          "stars": 59,
-          "destructionPercentage": 98.2
-        }
       }
     ],
     "paging": {
@@ -7635,10 +7789,10 @@
         "state": "ongoing",
         "startTime": "20260814T070000.000Z",
         "endTime": "20260817T070000.000Z",
-        "capitalTotalLoot": 105719,
-        "raidsCompleted": 1,
-        "totalAttacks": 42,
-        "enemyDistrictsDestroyed": 12,
+        "capitalTotalLoot": 183267,
+        "raidsCompleted": 2,
+        "totalAttacks": 72,
+        "enemyDistrictsDestroyed": 22,
         "offensiveReward": 0,
         "defensiveReward": 0,
         "members": [
@@ -7653,18 +7807,18 @@
           {
             "tag": "#QGLCP0VUY",
             "name": "Tim",
-            "attacks": 5,
+            "attacks": 6,
             "attackLimit": 5,
             "bonusAttackLimit": 1,
-            "capitalResourcesLooted": 14689
+            "capitalResourcesLooted": 17224
           },
           {
             "tag": "#2VQ90UVU",
             "name": "WhereIsSummer",
-            "attacks": 1,
+            "attacks": 4,
             "attackLimit": 5,
             "bonusAttackLimit": 1,
-            "capitalResourcesLooted": 4125
+            "capitalResourcesLooted": 10936
           },
           {
             "tag": "#GY2CLY9LJ",
@@ -7683,6 +7837,14 @@
             "capitalResourcesLooted": 14002
           },
           {
+            "tag": "#8PQUL9U2C",
+            "name": "Philipp1893",
+            "attacks": 5,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "capitalResourcesLooted": 15234
+          },
+          {
             "tag": "#G99GVVL2Q",
             "name": "lörris",
             "attacks": 6,
@@ -7697,6 +7859,38 @@
             "attackLimit": 5,
             "bonusAttackLimit": 1,
             "capitalResourcesLooted": 19751
+          },
+          {
+            "tag": "#LQJGJ220Q",
+            "name": "maxiswat",
+            "attacks": 3,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "capitalResourcesLooted": 6492
+          },
+          {
+            "tag": "#GU98GC0YP",
+            "name": "Martin",
+            "attacks": 6,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "capitalResourcesLooted": 16369
+          },
+          {
+            "tag": "#U0VPCGRV",
+            "name": "Roman",
+            "attacks": 6,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "capitalResourcesLooted": 18815
+          },
+          {
+            "tag": "#R8Q8CRC8C",
+            "name": "Martin2",
+            "attacks": 6,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "capitalResourcesLooted": 11292
           },
           {
             "tag": "#2JJUGY8U",
@@ -8032,18 +8226,60 @@
                 "medium": "https://api-assets.clashofclans.com/badges/200/jhvfrh1FgSIqo-Hff5Y4p2a8crAtviLfYU582Ir64vg.png"
               }
             },
-            "attackCount": 16,
+            "attackCount": 27,
             "districtCount": 8,
-            "districtsDestroyed": 4,
+            "districtsDestroyed": 8,
             "districts": [
               {
                 "id": 70000000,
                 "name": "Capital Peak",
                 "districtHallLevel": 8,
-                "destructionPercent": 0,
-                "stars": 0,
-                "attackCount": 0,
-                "totalLooted": 0
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 5,
+                "totalLooted": 10710,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 62,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 50,
+                    "stars": 1
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 38,
+                    "stars": 0
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 17,
+                    "stars": 0
+                  }
+                ]
               },
               {
                 "id": 70000001,
@@ -8100,11 +8336,27 @@
                 "id": 70000002,
                 "name": "Wizard Valley",
                 "districtHallLevel": 4,
-                "destructionPercent": 37,
-                "stars": 0,
-                "attackCount": 1,
-                "totalLooted": 1800,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 7234,
                 "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#8PQUL9U2C",
+                      "name": "Philipp1893"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#LQJGJ220Q",
+                      "name": "maxiswat"
+                    },
+                    "destructionPercent": 69,
+                    "stars": 2
+                  },
                   {
                     "attacker": {
                       "tag": "#GY2CLY9LJ",
@@ -8181,10 +8433,36 @@
                 "id": 70000005,
                 "name": "Dragon Cliffs",
                 "districtHallLevel": 3,
-                "destructionPercent": 0,
-                "stars": 0,
-                "attackCount": 0,
-                "totalLooted": 0
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 6646,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#QGLCP0VUY",
+                      "name": "Tim"
+                    },
+                    "destructionPercent": 56,
+                    "stars": 1
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#LQJGJ220Q",
+                      "name": "maxiswat"
+                    },
+                    "destructionPercent": 27,
+                    "stars": 0
+                  }
+                ]
               },
               {
                 "id": 70000006,
@@ -8225,11 +8503,19 @@
                 "id": 70000007,
                 "name": "Skeleton Park",
                 "districtHallLevel": 2,
-                "destructionPercent": 92,
-                "stars": 2,
-                "attackCount": 2,
-                "totalLooted": 6310,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 7601,
                 "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#R8Q8CRC8C",
+                      "name": "Martin2"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
                   {
                     "attacker": {
                       "tag": "#QGLCP0VUY",
@@ -8245,6 +8531,261 @@
                     },
                     "destructionPercent": 53,
                     "stars": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "defender": {
+              "tag": "#2Q8UR9LYQ",
+              "name": "NsH",
+              "level": 13,
+              "badgeUrls": {
+                "small": "https://api-assets.clashofclans.com/badges/70/5z34TcY0VoRHNjIBT9vsFkbmEA3QwdV300Bu1oUZ7lY.png",
+                "large": "https://api-assets.clashofclans.com/badges/512/5z34TcY0VoRHNjIBT9vsFkbmEA3QwdV300Bu1oUZ7lY.png",
+                "medium": "https://api-assets.clashofclans.com/badges/200/5z34TcY0VoRHNjIBT9vsFkbmEA3QwdV300Bu1oUZ7lY.png"
+              }
+            },
+            "attackCount": 19,
+            "districtCount": 8,
+            "districtsDestroyed": 6,
+            "districts": [
+              {
+                "id": 70000000,
+                "name": "Capital Peak",
+                "districtHallLevel": 8,
+                "destructionPercent": 0,
+                "stars": 0,
+                "attackCount": 0,
+                "totalLooted": 0
+              },
+              {
+                "id": 70000001,
+                "name": "Barbarian Camp",
+                "districtHallLevel": 4,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 9347,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 76,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 42,
+                    "stars": 0
+                  }
+                ]
+              },
+              {
+                "id": 70000002,
+                "name": "Wizard Valley",
+                "districtHallLevel": 3,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 6811,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#2VQ90UVU",
+                      "name": "WhereIsSummer"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#2VQ90UVU",
+                      "name": "WhereIsSummer"
+                    },
+                    "destructionPercent": 63,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#2VQ90UVU",
+                      "name": "WhereIsSummer"
+                    },
+                    "destructionPercent": 33,
+                    "stars": 0
+                  }
+                ]
+              },
+              {
+                "id": 70000003,
+                "name": "Balloon Lagoon",
+                "districtHallLevel": 3,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 8012,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#8PQUL9U2C",
+                      "name": "Philipp1893"
+                    },
+                    "destructionPercent": 86,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#8PQUL9U2C",
+                      "name": "Philipp1893"
+                    },
+                    "destructionPercent": 46,
+                    "stars": 1
+                  }
+                ]
+              },
+              {
+                "id": 70000004,
+                "name": "Builder's Workshop",
+                "districtHallLevel": 3,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 8582,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#LQJGJ220Q",
+                      "name": "maxiswat"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#8PQUL9U2C",
+                      "name": "Philipp1893"
+                    },
+                    "destructionPercent": 75,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#8PQUL9U2C",
+                      "name": "Philipp1893"
+                    },
+                    "destructionPercent": 38,
+                    "stars": 0
+                  }
+                ]
+              },
+              {
+                "id": 70000005,
+                "name": "Dragon Cliffs",
+                "districtHallLevel": 2,
+                "destructionPercent": 87,
+                "stars": 2,
+                "attackCount": 2,
+                "totalLooted": 5550,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 87,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#GU98GC0YP",
+                      "name": "Martin"
+                    },
+                    "destructionPercent": 37,
+                    "stars": 0
+                  }
+                ]
+              },
+              {
+                "id": 70000006,
+                "name": "Golem Quarry",
+                "districtHallLevel": 3,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 3,
+                "totalLooted": 8059,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 74,
+                    "stars": 2
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 37,
+                    "stars": 0
+                  }
+                ]
+              },
+              {
+                "id": 70000007,
+                "name": "Skeleton Park",
+                "districtHallLevel": 2,
+                "destructionPercent": 100,
+                "stars": 3,
+                "attackCount": 2,
+                "totalLooted": 7106,
+                "attacks": [
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 100,
+                    "stars": 3
+                  },
+                  {
+                    "attacker": {
+                      "tag": "#U0VPCGRV",
+                      "name": "Roman"
+                    },
+                    "destructionPercent": 46,
+                    "stars": 1
                   }
                 ]
               }
@@ -12983,21 +13524,21 @@
     },
     "#8PQUL9U2C": {
       "raids": {
-        "attended": 0,
+        "attended": 1,
         "total": 1,
-        "rate": 0,
-        "totalAttacks": 0,
-        "totalLoot": 0,
-        "avgAttacks": 0,
+        "rate": 1,
+        "totalAttacks": 5,
+        "totalLoot": 15234,
+        "avgAttacks": 5,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
-            "attended": false,
-            "attacks": 0,
+            "attended": true,
+            "attacks": 5,
             "attackLimit": 5,
-            "bonusAttackLimit": 0,
-            "loot": 0
+            "bonusAttackLimit": 1,
+            "loot": 15234
           }
         ]
       },
@@ -13008,7 +13549,7 @@
         "avgStars": 0,
         "history": []
       },
-      "activityScore": 0
+      "activityScore": 60
     },
     "#LLGVJURJ": {
       "raids": {
@@ -13041,21 +13582,21 @@
     },
     "#GU98GC0YP": {
       "raids": {
-        "attended": 0,
+        "attended": 1,
         "total": 1,
-        "rate": 0,
-        "totalAttacks": 0,
-        "totalLoot": 0,
-        "avgAttacks": 0,
+        "rate": 1,
+        "totalAttacks": 6,
+        "totalLoot": 16369,
+        "avgAttacks": 6,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
-            "attended": false,
-            "attacks": 0,
+            "attended": true,
+            "attacks": 6,
             "attackLimit": 5,
-            "bonusAttackLimit": 0,
-            "loot": 0
+            "bonusAttackLimit": 1,
+            "loot": 16369
           }
         ]
       },
@@ -13066,7 +13607,7 @@
         "avgStars": 0,
         "history": []
       },
-      "activityScore": 0
+      "activityScore": 60
     },
     "#PPCQ9LY8": {
       "raids": {
@@ -13126,35 +13667,6 @@
       },
       "activityScore": 0
     },
-    "#LQJGJ220Q": {
-      "raids": {
-        "attended": 0,
-        "total": 1,
-        "rate": 0,
-        "totalAttacks": 0,
-        "totalLoot": 0,
-        "avgAttacks": 0,
-        "history": [
-          {
-            "startTime": "20260814T070000.000Z",
-            "endTime": "20260817T070000.000Z",
-            "attended": false,
-            "attacks": 0,
-            "attackLimit": 5,
-            "bonusAttackLimit": 0,
-            "loot": 0
-          }
-        ]
-      },
-      "cwl": {
-        "wars": 0,
-        "attacks": 0,
-        "stars": 0,
-        "avgStars": 0,
-        "history": []
-      },
-      "activityScore": 0
-    },
     "#QYQPGJ8PL": {
       "raids": {
         "attended": 0,
@@ -13183,6 +13695,35 @@
         "history": []
       },
       "activityScore": 0
+    },
+    "#LQJGJ220Q": {
+      "raids": {
+        "attended": 1,
+        "total": 1,
+        "rate": 1,
+        "totalAttacks": 3,
+        "totalLoot": 6492,
+        "avgAttacks": 3,
+        "history": [
+          {
+            "startTime": "20260814T070000.000Z",
+            "endTime": "20260817T070000.000Z",
+            "attended": true,
+            "attacks": 3,
+            "attackLimit": 5,
+            "bonusAttackLimit": 1,
+            "loot": 6492
+          }
+        ]
+      },
+      "cwl": {
+        "wars": 0,
+        "attacks": 0,
+        "stars": 0,
+        "avgStars": 0,
+        "history": []
+      },
+      "activityScore": 60
     },
     "#PR9P90G8P": {
       "raids": {
@@ -13244,21 +13785,21 @@
     },
     "#U0VPCGRV": {
       "raids": {
-        "attended": 0,
+        "attended": 1,
         "total": 1,
-        "rate": 0,
-        "totalAttacks": 0,
-        "totalLoot": 0,
-        "avgAttacks": 0,
+        "rate": 1,
+        "totalAttacks": 6,
+        "totalLoot": 18815,
+        "avgAttacks": 6,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
-            "attended": false,
-            "attacks": 0,
+            "attended": true,
+            "attacks": 6,
             "attackLimit": 5,
-            "bonusAttackLimit": 0,
-            "loot": 0
+            "bonusAttackLimit": 1,
+            "loot": 18815
           }
         ]
       },
@@ -13269,7 +13810,7 @@
         "avgStars": 0,
         "history": []
       },
-      "activityScore": 0
+      "activityScore": 60
     },
     "#YUJ2GVJQG": {
       "raids": {
@@ -13447,21 +13988,21 @@
     },
     "#R8Q8CRC8C": {
       "raids": {
-        "attended": 0,
+        "attended": 1,
         "total": 1,
-        "rate": 0,
-        "totalAttacks": 0,
-        "totalLoot": 0,
-        "avgAttacks": 0,
+        "rate": 1,
+        "totalAttacks": 6,
+        "totalLoot": 11292,
+        "avgAttacks": 6,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
-            "attended": false,
-            "attacks": 0,
+            "attended": true,
+            "attacks": 6,
             "attackLimit": 5,
-            "bonusAttackLimit": 0,
-            "loot": 0
+            "bonusAttackLimit": 1,
+            "loot": 11292
           }
         ]
       },
@@ -13472,25 +14013,25 @@
         "avgStars": 0,
         "history": []
       },
-      "activityScore": 0
+      "activityScore": 60
     },
     "#QGLCP0VUY": {
       "raids": {
         "attended": 1,
         "total": 1,
         "rate": 1,
-        "totalAttacks": 5,
-        "totalLoot": 14689,
-        "avgAttacks": 5,
+        "totalAttacks": 6,
+        "totalLoot": 17224,
+        "avgAttacks": 6,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
             "attended": true,
-            "attacks": 5,
+            "attacks": 6,
             "attackLimit": 5,
             "bonusAttackLimit": 1,
-            "loot": 14689
+            "loot": 17224
           }
         ]
       },
@@ -14059,18 +14600,18 @@
         "attended": 1,
         "total": 1,
         "rate": 1,
-        "totalAttacks": 1,
-        "totalLoot": 4125,
-        "avgAttacks": 1,
+        "totalAttacks": 4,
+        "totalLoot": 10936,
+        "avgAttacks": 4,
         "history": [
           {
             "startTime": "20260814T070000.000Z",
             "endTime": "20260817T070000.000Z",
             "attended": true,
-            "attacks": 1,
+            "attacks": 4,
             "attackLimit": 5,
             "bonusAttackLimit": 1,
-            "loot": 4125
+            "loot": 10936
           }
         ]
       },
