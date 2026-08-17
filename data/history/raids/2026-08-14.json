@@ -2,10 +2,10 @@
   "state": "ongoing",
   "startTime": "20260814T070000.000Z",
   "endTime": "20260817T070000.000Z",
-  "capitalTotalLoot": 183267,
-  "raidsCompleted": 2,
-  "totalAttacks": 72,
-  "enemyDistrictsDestroyed": 22,
+  "capitalTotalLoot": 211824,
+  "raidsCompleted": 3,
+  "totalAttacks": 84,
+  "enemyDistrictsDestroyed": 25,
   "offensiveReward": 0,
   "defensiveReward": 0,
   "members": [
@@ -52,10 +52,10 @@
     {
       "tag": "#8PQUL9U2C",
       "name": "Philipp1893",
-      "attacks": 5,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 15234
+      "capitalResourcesLooted": 16904
     },
     {
       "tag": "#G99GVVL2Q",
@@ -64,6 +64,14 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 16036
+    },
+    {
+      "tag": "#L28CVCUJ8",
+      "name": "☢DerHauptmann ☢",
+      "attacks": 2,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 7340
     },
     {
       "tag": "#20GYJLR9",
@@ -76,10 +84,10 @@
     {
       "tag": "#LQJGJ220Q",
       "name": "maxiswat",
-      "attacks": 3,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 6492
+      "capitalResourcesLooted": 13464
     },
     {
       "tag": "#GU98GC0YP",
@@ -96,6 +104,14 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 18815
+    },
+    {
+      "tag": "#QYQPGJ8PL",
+      "name": "xS4MU3Lx",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 12575
     },
     {
       "tag": "#R8Q8CRC8C",
@@ -760,18 +776,52 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/5z34TcY0VoRHNjIBT9vsFkbmEA3QwdV300Bu1oUZ7lY.png"
         }
       },
-      "attackCount": 19,
+      "attackCount": 24,
       "districtCount": 8,
-      "districtsDestroyed": 6,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 10655,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#L28CVCUJ8",
+                "name": "☢DerHauptmann ☢"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8PQUL9U2C",
+                "name": "Philipp1893"
+              },
+              "destructionPercent": 81,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#LQJGJ220Q",
+                "name": "maxiswat"
+              },
+              "destructionPercent": 56,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#LQJGJ220Q",
+                "name": "maxiswat"
+              },
+              "destructionPercent": 34,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000001,
@@ -917,11 +967,19 @@
           "id": 70000005,
           "name": "Dragon Cliffs",
           "districtHallLevel": 2,
-          "destructionPercent": 87,
-          "stars": 2,
-          "attackCount": 2,
-          "totalLooted": 5550,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 6937,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#LQJGJ220Q",
+                "name": "maxiswat"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#GU98GC0YP",
@@ -1003,7 +1061,385 @@
           ]
         }
       ]
+    },
+    {
+      "defender": {
+        "tag": "#2J0YYR00L",
+        "name": "lets clash new",
+        "level": 11,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/yqqTLEwqUQ1qo1nnVilFxrGPVcklDpd_UJ2vJ2vuqf8.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/yqqTLEwqUQ1qo1nnVilFxrGPVcklDpd_UJ2vJ2vuqf8.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/yqqTLEwqUQ1qo1nnVilFxrGPVcklDpd_UJ2vJ2vuqf8.png"
+        }
+      },
+      "attackCount": 7,
+      "districtCount": 8,
+      "districtsDestroyed": 1,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 9145,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 82,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#L28CVCUJ8",
+                "name": "☢DerHauptmann ☢"
+              },
+              "destructionPercent": 56,
+              "stars": 2
+            }
+          ]
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 96,
+          "stars": 2,
+          "attackCount": 4,
+          "totalLooted": 7370,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 96,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 85,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 64,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 44,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        }
+      ]
     }
   ],
-  "defenseLog": []
+  "defenseLog": [
+    {
+      "attacker": {
+        "tag": "#2JG9R80RG",
+        "name": "محله امام رضا",
+        "level": 11,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/e1v5y7N7N0KfOKi8K0TYhPz670Sxn2o05C5gBF1A5Lw.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/e1v5y7N7N0KfOKi8K0TYhPz670Sxn2o05C5gBF1A5Lw.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/e1v5y7N7N0KfOKi8K0TYhPz670Sxn2o05C5gBF1A5Lw.png"
+        }
+      },
+      "attackCount": 17,
+      "districtCount": 7,
+      "districtsDestroyed": 4,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 7,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 94,
+          "stars": 2,
+          "attackCount": 4,
+          "totalLooted": 8515,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 94,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 94,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#YRPQ8JGY2",
+                "name": "پسر"
+              },
+              "destructionPercent": 55,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#YRPQ8JGY2",
+                "name": "پسر"
+              },
+              "destructionPercent": 22,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7441,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 86,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 41,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8066,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#Q9QLQYL8J",
+                "name": "کوروش"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#YRPQ8JGY2",
+                "name": "پسر"
+              },
+              "destructionPercent": 71,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#YRPQ8JGY2",
+                "name": "پسر"
+              },
+              "destructionPercent": 30,
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8986,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 79,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 43,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 2,
+          "destructionPercent": 27,
+          "stars": 0,
+          "attackCount": 1,
+          "totalLooted": 1805,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#YRPQ8JGY2",
+                "name": "پسر"
+              },
+              "destructionPercent": 27,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 6857,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 73,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8VU2QRR",
+                "name": "Arshia"
+              },
+              "destructionPercent": 32,
+              "stars": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
