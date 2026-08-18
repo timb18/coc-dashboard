@@ -1,13 +1,13 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20260814T070000.000Z",
   "endTime": "20260817T070000.000Z",
-  "capitalTotalLoot": 211824,
+  "capitalTotalLoot": 248844,
   "raidsCompleted": 3,
-  "totalAttacks": 84,
-  "enemyDistrictsDestroyed": 25,
-  "offensiveReward": 0,
-  "defensiveReward": 0,
+  "totalAttacks": 98,
+  "enemyDistrictsDestroyed": 30,
+  "offensiveReward": 129,
+  "defensiveReward": 114,
   "members": [
     {
       "tag": "#2PCJJCCC",
@@ -28,10 +28,10 @@
     {
       "tag": "#2VQ90UVU",
       "name": "WhereIsSummer",
-      "attacks": 4,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 10936
+      "capitalResourcesLooted": 14821
     },
     {
       "tag": "#GY2CLY9LJ",
@@ -106,12 +106,28 @@
       "capitalResourcesLooted": 18815
     },
     {
+      "tag": "#QGUPRJLLG",
+      "name": "Jan2",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 20099
+    },
+    {
       "tag": "#QYQPGJ8PL",
       "name": "xS4MU3Lx",
       "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 12575
+    },
+    {
+      "tag": "#LLGVJURJ",
+      "name": "jan",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 13036
     },
     {
       "tag": "#R8Q8CRC8C",
@@ -1073,9 +1089,9 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/yqqTLEwqUQ1qo1nnVilFxrGPVcklDpd_UJ2vJ2vuqf8.png"
         }
       },
-      "attackCount": 7,
+      "attackCount": 21,
       "districtCount": 8,
-      "districtsDestroyed": 1,
+      "districtsDestroyed": 6,
       "districts": [
         {
           "id": 70000000,
@@ -1125,11 +1141,19 @@
           "id": 70000002,
           "name": "Wizard Valley",
           "districtHallLevel": 4,
-          "destructionPercent": 96,
-          "stars": 2,
-          "attackCount": 4,
-          "totalLooted": 7370,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 8563,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#QYQPGJ8PL",
@@ -1168,46 +1192,160 @@
           "id": 70000003,
           "name": "Balloon Lagoon",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8272,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 88,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 49,
+              "stars": 1
+            }
+          ]
         },
         {
           "id": 70000004,
           "name": "Builder's Workshop",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8696,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 84,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 47,
+              "stars": 1
+            }
+          ]
         },
         {
           "id": 70000005,
           "name": "Dragon Cliffs",
           "districtHallLevel": 2,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 79,
+          "stars": 2,
+          "attackCount": 3,
+          "totalLooted": 5390,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 79,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 58,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 29,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000006,
           "name": "Golem Quarry",
           "districtHallLevel": 2,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 6644,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 52,
+              "stars": 1
+            }
+          ]
         },
         {
           "id": 70000007,
           "name": "Skeleton Park",
           "districtHallLevel": 2,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 6825,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 60,
+              "stars": 2
+            }
+          ]
         }
       ]
     }
