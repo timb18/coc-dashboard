@@ -1,0 +1,319 @@
+{
+  "state": "preparation",
+  "teamSize": 20,
+  "attacksPerMember": 2,
+  "battleModifier": "none",
+  "preparationStartTime": "20260823T072206.000Z",
+  "startTime": "20260824T062206.000Z",
+  "endTime": "20260825T062206.000Z",
+  "clan": {
+    "tag": "#2G2YYV9J0",
+    "name": "DieEleganten",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png"
+    },
+    "clanLevel": 13,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#2PCJJCCC",
+        "name": "Timm_11",
+        "townhallLevel": 16,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QGLCP0VUY",
+        "name": "Tim",
+        "townhallLevel": 15,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2VQ90UVU",
+        "name": "WhereIsSummer",
+        "townhallLevel": 16,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GY2CLY9LJ",
+        "name": "VanSik07",
+        "townhallLevel": 15,
+        "mapPosition": 17,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G8GRLGR8L",
+        "name": "Jonas",
+        "townhallLevel": 15,
+        "mapPosition": 16,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GYGL8PJCQ",
+        "name": "emma lokomotive",
+        "townhallLevel": 13,
+        "mapPosition": 20,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PQUL9U2C",
+        "name": "Philipp1893",
+        "townhallLevel": 18,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G99GVVL2Q",
+        "name": "lörris",
+        "townhallLevel": 15,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PPCQ9LY8",
+        "name": "reisus",
+        "townhallLevel": 17,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#20GYJLR9",
+        "name": "klabusa",
+        "townhallLevel": 18,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LQJGJ220Q",
+        "name": "maxiswat",
+        "townhallLevel": 17,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QC88LUQ0U",
+        "name": "jimknopf",
+        "townhallLevel": 18,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GU98GC0YP",
+        "name": "Martin",
+        "townhallLevel": 17,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#U0VPCGRV",
+        "name": "Roman",
+        "townhallLevel": 18,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QGUPRJLLG",
+        "name": "Jan2",
+        "townhallLevel": 14,
+        "mapPosition": 18,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QYQPGJ8PL",
+        "name": "xS4MU3Lx",
+        "townhallLevel": 17,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LLGVJURJ",
+        "name": "jan",
+        "townhallLevel": 18,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#R8Q8CRC8C",
+        "name": "Martin2",
+        "townhallLevel": 14,
+        "mapPosition": 19,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LJ89CLP8R",
+        "name": "Gronkihts",
+        "townhallLevel": 17,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PYLGRQRR",
+        "name": "Pain",
+        "townhallLevel": 18,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      }
+    ]
+  },
+  "opponent": {
+    "tag": "#2QVG290LR",
+    "name": "GALAXY",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/vupCsXMK_JplA4tcD27JJTtGATw98f1pb2Gm2FALJ34.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/vupCsXMK_JplA4tcD27JJTtGATw98f1pb2Gm2FALJ34.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/vupCsXMK_JplA4tcD27JJTtGATw98f1pb2Gm2FALJ34.png"
+    },
+    "clanLevel": 14,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#QLVQRL8PY",
+        "name": "Mahakal",
+        "townhallLevel": 15,
+        "mapPosition": 16,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G22JUCQRP",
+        "name": "_Parth_",
+        "townhallLevel": 14,
+        "mapPosition": 18,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GJR8QY8GU",
+        "name": "NB-Noyan",
+        "townhallLevel": 16,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GVU808982",
+        "name": "乂 ᴀᴘᴇx ʟᴇɢᴇɴᴅ 乂",
+        "townhallLevel": 16,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8VV20RR88",
+        "name": "Ruhit",
+        "townhallLevel": 18,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QYY0RGR92",
+        "name": "Suryabrata",
+        "townhallLevel": 18,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GL9YU08V2",
+        "name": "MONKEY D.LUFFY",
+        "townhallLevel": 18,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LJ2CGGV2Y",
+        "name": "DEAD DEVIL",
+        "townhallLevel": 15,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GRVYJ0RRL",
+        "name": "IND彡NAYEK",
+        "townhallLevel": 17,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G8ULQ8Y9V",
+        "name": "LOST D.ZORO",
+        "townhallLevel": 18,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GC9J8VCYR",
+        "name": "NOYAN-NB(1)",
+        "townhallLevel": 15,
+        "mapPosition": 17,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QG8CQYR8U",
+        "name": "Inactive soon",
+        "townhallLevel": 13,
+        "mapPosition": 20,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Q9LL90202",
+        "name": "DISHA",
+        "townhallLevel": 14,
+        "mapPosition": 19,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#L0PJGJUCP",
+        "name": "NB-NOYAN(2)",
+        "townhallLevel": 18,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QG2YVU8V9",
+        "name": "USNA",
+        "townhallLevel": 17,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9C2Q8GUQ0",
+        "name": "DarkKnight X",
+        "townhallLevel": 16,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Y2PYJPLLU",
+        "name": "RÃÁVÀÑ",
+        "townhallLevel": 16,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LPGRU2009",
+        "name": "Blue",
+        "townhallLevel": 18,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9CPQ0CLPP",
+        "name": "Parallax",
+        "townhallLevel": 17,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QUVU9QVG0",
+        "name": "MONKEY D.GARP",
+        "townhallLevel": 17,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      }
+    ]
+  }
+}
