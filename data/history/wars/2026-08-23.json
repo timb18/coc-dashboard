@@ -1,5 +1,5 @@
 {
-  "state": "inWar",
+  "state": "warEnded",
   "teamSize": 20,
   "attacksPerMember": 2,
   "battleModifier": "none",
@@ -15,9 +15,9 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png"
     },
     "clanLevel": 13,
-    "attacks": 16,
-    "stars": 37,
-    "destructionPercentage": 71.45,
+    "attacks": 18,
+    "stars": 43,
+    "destructionPercentage": 81.45,
     "members": [
       {
         "tag": "#2PCJJCCC",
@@ -112,14 +112,14 @@
             "duration": 146
           }
         ],
-        "opponentAttacks": 2,
+        "opponentAttacks": 3,
         "bestOpponentAttack": {
-          "attackerTag": "#GC9J8VCYR",
+          "attackerTag": "#L0PJGJUCP",
           "defenderTag": "#G8GRLGR8L",
-          "stars": 2,
-          "destructionPercentage": 74,
-          "order": 38,
-          "duration": 162
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 42,
+          "duration": 80
         }
       },
       {
@@ -152,7 +152,7 @@
             "duration": 114
           }
         ],
-        "opponentAttacks": 3,
+        "opponentAttacks": 4,
         "bestOpponentAttack": {
           "attackerTag": "#LPGRU2009",
           "defenderTag": "#8PQUL9U2C",
@@ -233,6 +233,24 @@
         "name": "klabusa",
         "townhallLevel": 18,
         "mapPosition": 3,
+        "attacks": [
+          {
+            "attackerTag": "#20GYJLR9",
+            "defenderTag": "#QYY0RGR92",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 44,
+            "duration": 171
+          },
+          {
+            "attackerTag": "#20GYJLR9",
+            "defenderTag": "#8VV20RR88",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 45,
+            "duration": 135
+          }
+        ],
         "opponentAttacks": 1,
         "bestOpponentAttack": {
           "attackerTag": "#QYY0RGR92",
@@ -476,9 +494,9 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/vupCsXMK_JplA4tcD27JJTtGATw98f1pb2Gm2FALJ34.png"
     },
     "clanLevel": 14,
-    "attacks": 25,
-    "stars": 59,
-    "destructionPercentage": 98.7,
+    "attacks": 27,
+    "stars": 60,
+    "destructionPercentage": 100,
     "members": [
       {
         "tag": "#QLVQRL8PY",
@@ -573,7 +591,15 @@
         "name": "Ruhit",
         "townhallLevel": 18,
         "mapPosition": 5,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#20GYJLR9",
+          "defenderTag": "#8VV20RR88",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 45,
+          "duration": 135
+        }
       },
       {
         "tag": "#QYY0RGR92",
@@ -598,7 +624,15 @@
             "duration": 121
           }
         ],
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#20GYJLR9",
+          "defenderTag": "#QYY0RGR92",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 44,
+          "duration": 171
+        }
       },
       {
         "tag": "#GL9YU08V2",
@@ -802,6 +836,24 @@
         "name": "NB-NOYAN(2)",
         "townhallLevel": 18,
         "mapPosition": 3,
+        "attacks": [
+          {
+            "attackerTag": "#L0PJGJUCP",
+            "defenderTag": "#G8GRLGR8L",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 42,
+            "duration": 80
+          },
+          {
+            "attackerTag": "#L0PJGJUCP",
+            "defenderTag": "#8PQUL9U2C",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 43,
+            "duration": 147
+          }
+        ],
         "opponentAttacks": 1,
         "bestOpponentAttack": {
           "attackerTag": "#U0VPCGRV",
