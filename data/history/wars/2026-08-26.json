@@ -1,0 +1,249 @@
+{
+  "state": "preparation",
+  "teamSize": 15,
+  "attacksPerMember": 2,
+  "battleModifier": "none",
+  "preparationStartTime": "20260826T113926.000Z",
+  "startTime": "20260827T103926.000Z",
+  "endTime": "20260828T103926.000Z",
+  "clan": {
+    "tag": "#2G2YYV9J0",
+    "name": "DieEleganten",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/veiQRUo1Txjh-oB5acIjANWjA5fUJdFjsW27UatPXLk.png"
+    },
+    "clanLevel": 13,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#2VQ90UVU",
+        "name": "WhereIsSummer",
+        "townhallLevel": 16,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GY2CLY9LJ",
+        "name": "VanSik07",
+        "townhallLevel": 15,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G8GRLGR8L",
+        "name": "Jonas",
+        "townhallLevel": 15,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PQUL9U2C",
+        "name": "Philipp1893",
+        "townhallLevel": 18,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PPCQ9LY8",
+        "name": "reisus",
+        "townhallLevel": 17,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#20GYJLR9",
+        "name": "klabusa",
+        "townhallLevel": 18,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LQJGJ220Q",
+        "name": "maxiswat",
+        "townhallLevel": 17,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QC88LUQ0U",
+        "name": "jimknopf",
+        "townhallLevel": 18,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GU98GC0YP",
+        "name": "Martin",
+        "townhallLevel": 17,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#U0VPCGRV",
+        "name": "Roman",
+        "townhallLevel": 18,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QGUPRJLLG",
+        "name": "Jan2",
+        "townhallLevel": 14,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QYQPGJ8PL",
+        "name": "xS4MU3Lx",
+        "townhallLevel": 17,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LLGVJURJ",
+        "name": "jan",
+        "townhallLevel": 18,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LJ89CLP8R",
+        "name": "Gronkihts",
+        "townhallLevel": 17,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PYLGRQRR",
+        "name": "Pain",
+        "townhallLevel": 18,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      }
+    ]
+  },
+  "opponent": {
+    "tag": "#2RCULGLCP",
+    "name": "-SolidSoldiers-",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/glW7GwnMujf6J-EityZBeXKq3bbq5oWD9tARXG-GsYo.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/glW7GwnMujf6J-EityZBeXKq3bbq5oWD9tARXG-GsYo.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/glW7GwnMujf6J-EityZBeXKq3bbq5oWD9tARXG-GsYo.png"
+    },
+    "clanLevel": 12,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#QRURYJJRR",
+        "name": "DISASTER",
+        "townhallLevel": 13,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G2JP0GQGL",
+        "name": "\"sKy*",
+        "townhallLevel": 18,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PLPGUR8YV",
+        "name": "mandungus!",
+        "townhallLevel": 17,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2G0U8QPLJ",
+        "name": "Wallace",
+        "townhallLevel": 15,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QGY0PLLVJ",
+        "name": "⚡⚡kyrieQt⚡⚡",
+        "townhallLevel": 18,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LPVYLP8J",
+        "name": "Nouzenzen",
+        "townhallLevel": 18,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Q89LVUUL",
+        "name": "renren",
+        "townhallLevel": 18,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#P0UUY8R2Q",
+        "name": "ZAKI",
+        "townhallLevel": 18,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QVUVUQGGG",
+        "name": "jeck2.0",
+        "townhallLevel": 17,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QQ2PC2VCU",
+        "name": "EMEJV",
+        "townhallLevel": 17,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GQ02RYQLU",
+        "name": "Jerick",
+        "townhallLevel": 16,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#R2LYULGUV",
+        "name": "ethan",
+        "townhallLevel": 15,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GP2Y9R002",
+        "name": "Ryujin",
+        "townhallLevel": 17,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#9CL08LUUG",
+        "name": "RoXsieVeN",
+        "townhallLevel": 17,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G0Q2V8YCU",
+        "name": "rody",
+        "townhallLevel": 17,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      }
+    ]
+  }
+}
