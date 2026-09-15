@@ -1,13 +1,13 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20260911T070000.000Z",
   "endTime": "20260914T070000.000Z",
   "capitalTotalLoot": 321272,
   "raidsCompleted": 4,
   "totalAttacks": 124,
   "enemyDistrictsDestroyed": 35,
-  "offensiveReward": 0,
-  "defensiveReward": 0,
+  "offensiveReward": 128,
+  "defensiveReward": 36,
   "members": [
     {
       "tag": "#QGLCP0VUY",
