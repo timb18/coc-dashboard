@@ -1,12 +1,12 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20260918T070000.000Z",
   "endTime": "20260921T070000.000Z",
-  "capitalTotalLoot": 263214,
-  "raidsCompleted": 3,
-  "totalAttacks": 101,
-  "enemyDistrictsDestroyed": 31,
-  "offensiveReward": 0,
+  "capitalTotalLoot": 279394,
+  "raidsCompleted": 4,
+  "totalAttacks": 107,
+  "enemyDistrictsDestroyed": 33,
+  "offensiveReward": 137,
   "defensiveReward": 0,
   "members": [
     {
@@ -96,6 +96,14 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 20045
+    },
+    {
+      "tag": "#QGUPRJLLG",
+      "name": "Jan2",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 16180
     },
     {
       "tag": "#QYQPGJ8PL",
@@ -1097,19 +1105,43 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/eP7tTl-AYAMy-vOOFyNmpxm5pRWvy3xdl9-59Hd0-iQ.png"
         }
       },
-      "attackCount": 23,
+      "attackCount": 26,
       "districtCount": 8,
-      "districtsDestroyed": 7,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 25,
-          "stars": 0,
-          "attackCount": 1,
-          "totalLooted": 2340,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 10680,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 70,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 45,
+              "stars": 0
+            },
             {
               "attacker": {
                 "tag": "#LQJGJ220Q",
@@ -1374,6 +1406,121 @@
           ]
         }
       ]
+    },
+    {
+      "defender": {
+        "tag": "#2QUGPLLLU",
+        "name": "GTown",
+        "level": 12,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/V7q9IGTVE1sbRlCa3uyrEzVofjpziyocuPujHeHG6dk.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/V7q9IGTVE1sbRlCa3uyrEzVofjpziyocuPujHeHG6dk.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/V7q9IGTVE1sbRlCa3uyrEzVofjpziyocuPujHeHG6dk.png"
+        }
+      },
+      "attackCount": 3,
+      "districtCount": 8,
+      "districtsDestroyed": 1,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7840,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 86,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 44,
+              "stars": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "defenseLog": [
@@ -1386,6 +1533,95 @@
           "small": "https://api-assets.clashofclans.com/badges/70/zgLasXJy9w0Oe9PcRYKO2h_Mc6nQRMQUZENyTasm9gE.png",
           "large": "https://api-assets.clashofclans.com/badges/512/zgLasXJy9w0Oe9PcRYKO2h_Mc6nQRMQUZENyTasm9gE.png",
           "medium": "https://api-assets.clashofclans.com/badges/200/zgLasXJy9w0Oe9PcRYKO2h_Mc6nQRMQUZENyTasm9gE.png"
+        }
+      },
+      "attackCount": 0,
+      "districtCount": 8,
+      "districtsDestroyed": 0,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        }
+      ]
+    },
+    {
+      "attacker": {
+        "tag": "#2LRCRLRV8",
+        "name": "SAMAL II",
+        "level": 15,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/sk2ztNFLA0I6Ux9I8QOyO6unaC4-UuHvu6LVAYsiEJw.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/sk2ztNFLA0I6Ux9I8QOyO6unaC4-UuHvu6LVAYsiEJw.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/sk2ztNFLA0I6Ux9I8QOyO6unaC4-UuHvu6LVAYsiEJw.png"
         }
       },
       "attackCount": 0,
