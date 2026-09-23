@@ -1,11 +1,11 @@
 {
-  "state": "preparation",
+  "state": "inWar",
   "teamSize": 20,
   "attacksPerMember": 2,
   "battleModifier": "none",
   "preparationStartTime": "20260921T185512.000Z",
-  "startTime": "20260922T175512.000Z",
-  "endTime": "20260923T175512.000Z",
+  "startTime": "20260922T182527.000Z",
+  "endTime": "20260923T182527.000Z",
   "clan": {
     "tag": "#2G2YYV9J0",
     "name": "DieEleganten",
@@ -15,9 +15,9 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/Gd32HORi6b5EOPSVFqtbw5xbs-v-YkDr0ogtaXlykCE.png"
     },
     "clanLevel": 14,
-    "attacks": 0,
-    "stars": 0,
-    "destructionPercentage": 0,
+    "attacks": 5,
+    "stars": 12,
+    "destructionPercentage": 22.3,
     "members": [
       {
         "tag": "#2PCJJCCC",
@@ -38,6 +38,16 @@
         "name": "WhereIsSummer",
         "townhallLevel": 16,
         "mapPosition": 13,
+        "attacks": [
+          {
+            "attackerTag": "#2VQ90UVU",
+            "defenderTag": "#88PY02VPL",
+            "stars": 2,
+            "destructionPercentage": 71,
+            "order": 2,
+            "duration": 180
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -73,7 +83,15 @@
         "name": "reisus",
         "townhallLevel": 17,
         "mapPosition": 9,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#Y2JRYGP8Y",
+          "defenderTag": "#PPCQ9LY8",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 1,
+          "duration": 159
+        }
       },
       {
         "tag": "#20GYJLR9",
@@ -87,6 +105,24 @@
         "name": "maxiswat",
         "townhallLevel": 17,
         "mapPosition": 8,
+        "attacks": [
+          {
+            "attackerTag": "#LQJGJ220Q",
+            "defenderTag": "#QJ9RR0GV",
+            "stars": 2,
+            "destructionPercentage": 98,
+            "order": 3,
+            "duration": 146
+          },
+          {
+            "attackerTag": "#LQJGJ220Q",
+            "defenderTag": "#8CYVURCRR",
+            "stars": 2,
+            "destructionPercentage": 77,
+            "order": 4,
+            "duration": 151
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -150,6 +186,24 @@
         "name": "Gronkihts",
         "townhallLevel": 17,
         "mapPosition": 10,
+        "attacks": [
+          {
+            "attackerTag": "#LJ89CLP8R",
+            "defenderTag": "#2YJJYCP22",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 5,
+            "duration": 137
+          },
+          {
+            "attackerTag": "#LJ89CLP8R",
+            "defenderTag": "#URRJPGRV",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 6,
+            "duration": 140
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -170,9 +224,9 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/oCsoNQeN3r7Y8uQCz0o2UiLUnAYSasUMX_OHeWjgCls.png"
     },
     "clanLevel": 29,
-    "attacks": 0,
-    "stars": 0,
-    "destructionPercentage": 0,
+    "attacks": 1,
+    "stars": 3,
+    "destructionPercentage": 5,
     "members": [
       {
         "tag": "#G9JC0CGLU",
@@ -193,7 +247,15 @@
         "name": "IHAN",
         "townhallLevel": 15,
         "mapPosition": 12,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LJ89CLP8R",
+          "defenderTag": "#2YJJYCP22",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 5,
+          "duration": 137
+        }
       },
       {
         "tag": "#P2GGVYP8Q",
@@ -214,6 +276,16 @@
         "name": "ARIF",
         "townhallLevel": 18,
         "mapPosition": 5,
+        "attacks": [
+          {
+            "attackerTag": "#Y2JRYGP8Y",
+            "defenderTag": "#PPCQ9LY8",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 1,
+            "duration": 159
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -221,7 +293,15 @@
         "name": "Spaikar",
         "townhallLevel": 17,
         "mapPosition": 9,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LQJGJ220Q",
+          "defenderTag": "#QJ9RR0GV",
+          "stars": 2,
+          "destructionPercentage": 98,
+          "order": 3,
+          "duration": 146
+        }
       },
       {
         "tag": "#R0YGUURUV",
@@ -256,21 +336,45 @@
         "name": "SHARK",
         "townhallLevel": 17,
         "mapPosition": 10,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#2VQ90UVU",
+          "defenderTag": "#88PY02VPL",
+          "stars": 2,
+          "destructionPercentage": 71,
+          "order": 2,
+          "duration": 180
+        }
       },
       {
         "tag": "#URRJPGRV",
         "name": "omi 3",
         "townhallLevel": 15,
         "mapPosition": 13,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LJ89CLP8R",
+          "defenderTag": "#URRJPGRV",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 6,
+          "duration": 140
+        }
       },
       {
         "tag": "#8CYVURCRR",
         "name": "sparrow",
         "townhallLevel": 16,
         "mapPosition": 11,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LQJGJ220Q",
+          "defenderTag": "#8CYVURCRR",
+          "stars": 2,
+          "destructionPercentage": 77,
+          "order": 4,
+          "duration": 151
+        }
       },
       {
         "tag": "#QLYRYQ8YY",
