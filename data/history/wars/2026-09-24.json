@@ -1,5 +1,5 @@
 {
-  "state": "preparation",
+  "state": "inWar",
   "teamSize": 20,
   "attacksPerMember": 2,
   "battleModifier": "none",
@@ -15,9 +15,9 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/Gd32HORi6b5EOPSVFqtbw5xbs-v-YkDr0ogtaXlykCE.png"
     },
     "clanLevel": 14,
-    "attacks": 0,
-    "stars": 0,
-    "destructionPercentage": 0,
+    "attacks": 2,
+    "stars": 5,
+    "destructionPercentage": 9.9,
     "members": [
       {
         "tag": "#2PCJJCCC",
@@ -52,7 +52,15 @@
         "name": "Jonas",
         "townhallLevel": 15,
         "mapPosition": 17,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#QPRPP922G",
+          "defenderTag": "#G8GRLGR8L",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 1,
+          "duration": 170
+        }
       },
       {
         "tag": "#GYGL8PJCQ",
@@ -66,14 +74,30 @@
         "name": "Philipp1893",
         "townhallLevel": 18,
         "mapPosition": 1,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#YG2R09LGY",
+          "defenderTag": "#8PQUL9U2C",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 6,
+          "duration": 117
+        }
       },
       {
         "tag": "#G99GVVL2Q",
         "name": "lörris",
         "townhallLevel": 15,
         "mapPosition": 14,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#Q2VQQU08U",
+          "defenderTag": "#G99GVVL2Q",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 8,
+          "duration": 153
+        }
       },
       {
         "tag": "#PPCQ9LY8",
@@ -94,6 +118,24 @@
         "name": "maxiswat",
         "townhallLevel": 17,
         "mapPosition": 8,
+        "attacks": [
+          {
+            "attackerTag": "#LQJGJ220Q",
+            "defenderTag": "#R299VG20C",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 2,
+            "duration": 90
+          },
+          {
+            "attackerTag": "#LQJGJ220Q",
+            "defenderTag": "#GJY2998LL",
+            "stars": 2,
+            "destructionPercentage": 98,
+            "order": 4,
+            "duration": 104
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -101,7 +143,15 @@
         "name": "jimknopf",
         "townhallLevel": 18,
         "mapPosition": 3,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#8YYPCYJ2P",
+          "defenderTag": "#QC88LUQ0U",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 7,
+          "duration": 133
+        }
       },
       {
         "tag": "#GU98GC0YP",
@@ -115,7 +165,15 @@
         "name": "Roman",
         "townhallLevel": 18,
         "mapPosition": 6,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#GLQ92PUU8",
+          "defenderTag": "#U0VPCGRV",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 3,
+          "duration": 148
+        }
       },
       {
         "tag": "#QYQPGJ8PL",
@@ -136,7 +194,15 @@
         "name": "Martin2",
         "townhallLevel": 15,
         "mapPosition": 19,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#20RRCPUG9",
+          "defenderTag": "#R8Q8CRC8C",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 5,
+          "duration": 144
+        }
       },
       {
         "tag": "#Y9UJG29RC",
@@ -170,15 +236,25 @@
       "medium": "https://api-assets.clashofclans.com/badges/200/9H2ycX0FfIjMiYqISb8ENkJIltDB95QsrFhAMUvcE64.png"
     },
     "clanLevel": 25,
-    "attacks": 0,
-    "stars": 0,
-    "destructionPercentage": 0,
+    "attacks": 6,
+    "stars": 18,
+    "destructionPercentage": 30,
     "members": [
       {
         "tag": "#QPRPP922G",
         "name": "CHEFE",
         "townhallLevel": 15,
         "mapPosition": 17,
+        "attacks": [
+          {
+            "attackerTag": "#QPRPP922G",
+            "defenderTag": "#G8GRLGR8L",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 1,
+            "duration": 170
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -200,6 +276,16 @@
         "name": "lautert93",
         "townhallLevel": 16,
         "mapPosition": 14,
+        "attacks": [
+          {
+            "attackerTag": "#Q2VQQU08U",
+            "defenderTag": "#G99GVVL2Q",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 8,
+            "duration": 153
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -235,6 +321,16 @@
         "name": "愛Yumi Takahashi",
         "townhallLevel": 17,
         "mapPosition": 6,
+        "attacks": [
+          {
+            "attackerTag": "#GLQ92PUU8",
+            "defenderTag": "#U0VPCGRV",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 3,
+            "duration": 148
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -249,13 +345,31 @@
         "name": "ALKI_sp2",
         "townhallLevel": 18,
         "mapPosition": 13,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LQJGJ220Q",
+          "defenderTag": "#R299VG20C",
+          "stars": 3,
+          "destructionPercentage": 100,
+          "order": 2,
+          "duration": 90
+        }
       },
       {
         "tag": "#8YYPCYJ2P",
         "name": "Rendrigue 2",
         "townhallLevel": 18,
         "mapPosition": 3,
+        "attacks": [
+          {
+            "attackerTag": "#8YYPCYJ2P",
+            "defenderTag": "#QC88LUQ0U",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 7,
+            "duration": 133
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -277,6 +391,16 @@
         "name": "™D@N¥£Lԅ☜ (↼_↼)",
         "townhallLevel": 15,
         "mapPosition": 19,
+        "attacks": [
+          {
+            "attackerTag": "#20RRCPUG9",
+            "defenderTag": "#R8Q8CRC8C",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 5,
+            "duration": 144
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -284,6 +408,16 @@
         "name": "Rendrigue",
         "townhallLevel": 18,
         "mapPosition": 1,
+        "attacks": [
+          {
+            "attackerTag": "#YG2R09LGY",
+            "defenderTag": "#8PQUL9U2C",
+            "stars": 3,
+            "destructionPercentage": 100,
+            "order": 6,
+            "duration": 117
+          }
+        ],
         "opponentAttacks": 0
       },
       {
@@ -305,7 +439,15 @@
         "name": "ALKI_sp",
         "townhallLevel": 17,
         "mapPosition": 9,
-        "opponentAttacks": 0
+        "opponentAttacks": 1,
+        "bestOpponentAttack": {
+          "attackerTag": "#LQJGJ220Q",
+          "defenderTag": "#GJY2998LL",
+          "stars": 2,
+          "destructionPercentage": 98,
+          "order": 4,
+          "duration": 104
+        }
       },
       {
         "tag": "#GJC9GLYL9",
