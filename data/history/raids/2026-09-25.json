@@ -1,13 +1,13 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20260925T070000.000Z",
   "endTime": "20260928T070000.000Z",
-  "capitalTotalLoot": 207843,
-  "raidsCompleted": 3,
-  "totalAttacks": 83,
-  "enemyDistrictsDestroyed": 23,
-  "offensiveReward": 0,
-  "defensiveReward": 0,
+  "capitalTotalLoot": 230428,
+  "raidsCompleted": 4,
+  "totalAttacks": 90,
+  "enemyDistrictsDestroyed": 25,
+  "offensiveReward": 127,
+  "defensiveReward": 138,
   "members": [
     {
       "tag": "#2PCJJCCC",
@@ -84,10 +84,10 @@
     {
       "tag": "#20GYJLR9",
       "name": "klabusa",
-      "attacks": 1,
+      "attacks": 6,
       "attackLimit": 5,
-      "bonusAttackLimit": 0,
-      "capitalResourcesLooted": 3575
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 21519
     },
     {
       "tag": "#LQJGJ220Q",
@@ -124,10 +124,10 @@
     {
       "tag": "#LLGVJURJ",
       "name": "jan",
-      "attacks": 4,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 8313
+      "capitalResourcesLooted": 12954
     },
     {
       "tag": "#2JJUGY8U",
@@ -824,19 +824,27 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/RqXOXEZkzC56979qYcMGVtUle7G0Yu0DaOLKoJQvEVw.png"
         }
       },
-      "attackCount": 25,
+      "attackCount": 26,
       "districtCount": 8,
-      "districtsDestroyed": 7,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 92,
-          "stars": 2,
-          "attackCount": 4,
-          "totalLooted": 9150,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 11171,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#U0VPCGRV",
@@ -1113,6 +1121,149 @@
               },
               "destructionPercent": 60,
               "stars": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "defender": {
+        "tag": "#YCG2RQ8P",
+        "name": "HAMRO NEPAL",
+        "level": 18,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/qRshaYRk4PWMhVV9jmw9B6QiOpdaYz49FOOwQH8_wBE.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/qRshaYRk4PWMhVV9jmw9B6QiOpdaYz49FOOwQH8_wBE.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/qRshaYRk4PWMhVV9jmw9B6QiOpdaYz49FOOwQH8_wBE.png"
+        }
+      },
+      "attackCount": 6,
+      "districtCount": 8,
+      "districtsDestroyed": 1,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 8099,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 54,
+              "stars": 2
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 78,
+          "stars": 1,
+          "attackCount": 2,
+          "totalLooted": 6380,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 78,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 41,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 79,
+          "stars": 2,
+          "attackCount": 2,
+          "totalLooted": 6085,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 79,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 41,
+              "stars": 0
             }
           ]
         }
