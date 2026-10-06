@@ -1,13 +1,13 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20261002T070000.000Z",
   "endTime": "20261005T070000.000Z",
-  "capitalTotalLoot": 267262,
-  "raidsCompleted": 3,
-  "totalAttacks": 103,
-  "enemyDistrictsDestroyed": 31,
-  "offensiveReward": 0,
-  "defensiveReward": 0,
+  "capitalTotalLoot": 281352,
+  "raidsCompleted": 4,
+  "totalAttacks": 109,
+  "enemyDistrictsDestroyed": 32,
+  "offensiveReward": 138,
+  "defensiveReward": 26,
   "members": [
     {
       "tag": "#2PCJJCCC",
@@ -112,6 +112,14 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 15229
+    },
+    {
+      "tag": "#U0VPCGRV",
+      "name": "Roman",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 14090
     },
     {
       "tag": "#QGUPRJLLG",
@@ -1113,18 +1121,60 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/bJ5SBEac1IO9idyflhzzyLi71QgUodksRzOt9BmrMT4.png"
         }
       },
-      "attackCount": 24,
+      "attackCount": 29,
       "districtCount": 8,
-      "districtsDestroyed": 7,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 11050,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 81,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 49,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 45,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 14,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000001,
@@ -1394,6 +1444,105 @@
               "stars": 1
             }
           ]
+        }
+      ]
+    },
+    {
+      "defender": {
+        "tag": "#2YVCVURJ9",
+        "name": "WorldUnhinged",
+        "level": 12,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/_PC9M0t1lLqTpbvL7zB_T90oeVRI7DBevEAbAidpreE.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/_PC9M0t1lLqTpbvL7zB_T90oeVRI7DBevEAbAidpreE.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/_PC9M0t1lLqTpbvL7zB_T90oeVRI7DBevEAbAidpreE.png"
+        }
+      },
+      "attackCount": 1,
+      "districtCount": 8,
+      "districtsDestroyed": 0,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 40,
+          "stars": 0,
+          "attackCount": 1,
+          "totalLooted": 3040,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#U0VPCGRV",
+                "name": "Roman"
+              },
+              "destructionPercent": 40,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
         }
       ]
     }
