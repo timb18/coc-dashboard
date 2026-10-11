@@ -2,10 +2,10 @@
   "state": "ongoing",
   "startTime": "20261009T070000.000Z",
   "endTime": "20261012T070000.000Z",
-  "capitalTotalLoot": 128406,
-  "raidsCompleted": 2,
-  "totalAttacks": 47,
-  "enemyDistrictsDestroyed": 15,
+  "capitalTotalLoot": 184819,
+  "raidsCompleted": 3,
+  "totalAttacks": 66,
+  "enemyDistrictsDestroyed": 19,
   "offensiveReward": 0,
   "defensiveReward": 0,
   "members": [
@@ -34,12 +34,20 @@
       "capitalResourcesLooted": 21865
     },
     {
-      "tag": "#20GYJLR9",
-      "name": "klabusa",
-      "attacks": 5,
+      "tag": "#G99GVVL2Q",
+      "name": "lörris",
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 17869
+      "capitalResourcesLooted": 14916
+    },
+    {
+      "tag": "#20GYJLR9",
+      "name": "klabusa",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 20429
     },
     {
       "tag": "#LQJGJ220Q",
@@ -58,12 +66,28 @@
       "capitalResourcesLooted": 12136
     },
     {
+      "tag": "#GU98GC0YP",
+      "name": "Martin",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 19085
+    },
+    {
       "tag": "#QYQPGJ8PL",
       "name": "xS4MU3Lx",
       "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 13273
+    },
+    {
+      "tag": "#R8Q8CRC8C",
+      "name": "Martin2",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 19852
     },
     {
       "tag": "#YUJ2GVJQG",
@@ -399,18 +423,60 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/vU41onUVN9jp__vB4R40-6YqQrSiOE5eimmNrJjHAf4.png"
         }
       },
-      "attackCount": 21,
+      "attackCount": 26,
       "districtCount": 8,
-      "districtsDestroyed": 7,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 11026,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 92,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 78,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 61,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 49,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000001,
@@ -653,6 +719,219 @@
                 "name": "x_Jan_x"
               },
               "destructionPercent": 48,
+              "stars": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "defender": {
+        "tag": "#LRP2PRC0",
+        "name": "Geng Royoq",
+        "level": 15,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/5-QEal2777DxO7zVFK4h2vQIVXzYBkWv8JB1AcH64SQ.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/5-QEal2777DxO7zVFK4h2vQIVXzYBkWv8JB1AcH64SQ.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/5-QEal2777DxO7zVFK4h2vQIVXzYBkWv8JB1AcH64SQ.png"
+        }
+      },
+      "attackCount": 14,
+      "districtCount": 8,
+      "districtsDestroyed": 3,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 78,
+          "stars": 2,
+          "attackCount": 2,
+          "totalLooted": 6905,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 78,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 36,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7910,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 47,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 80,
+          "stars": 1,
+          "attackCount": 2,
+          "totalLooted": 6585,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 80,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 33,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8607,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 67,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#R8Q8CRC8C",
+                "name": "Martin2"
+              },
+              "destructionPercent": 34,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8090,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 80,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#20GYJLR9",
+                "name": "klabusa"
+              },
+              "destructionPercent": 34,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 95,
+          "stars": 2,
+          "attackCount": 2,
+          "totalLooted": 7290,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GU98GC0YP",
+                "name": "Martin"
+              },
+              "destructionPercent": 95,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#G99GVVL2Q",
+                "name": "lörris"
+              },
+              "destructionPercent": 46,
               "stars": 1
             }
           ]
