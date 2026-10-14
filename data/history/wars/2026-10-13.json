@@ -1,11 +1,11 @@
 {
-  "state": "preparation",
+  "state": "inWar",
   "teamSize": 15,
   "attacksPerMember": 2,
   "battleModifier": "none",
   "preparationStartTime": "20261013T005314.000Z",
-  "startTime": "20261013T235314.000Z",
-  "endTime": "20261014T235314.000Z",
+  "startTime": "20261014T002835.000Z",
+  "endTime": "20261015T002835.000Z",
   "clan": {
     "tag": "#2G2YYV9J0",
     "name": "DieEleganten",
@@ -57,7 +57,7 @@
       {
         "tag": "#PPCQ9LY8",
         "name": "reisus",
-        "townhallLevel": 17,
+        "townhallLevel": 18,
         "mapPosition": 6,
         "opponentAttacks": 0
       },
