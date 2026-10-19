@@ -2,10 +2,10 @@
   "state": "ongoing",
   "startTime": "20261016T070000.000Z",
   "endTime": "20261019T070000.000Z",
-  "capitalTotalLoot": 191194,
-  "raidsCompleted": 2,
-  "totalAttacks": 72,
-  "enemyDistrictsDestroyed": 22,
+  "capitalTotalLoot": 266429,
+  "raidsCompleted": 3,
+  "totalAttacks": 100,
+  "enemyDistrictsDestroyed": 30,
   "offensiveReward": 0,
   "defensiveReward": 0,
   "members": [
@@ -34,12 +34,28 @@
       "capitalResourcesLooted": 12890
     },
     {
+      "tag": "#G8GRLGR8L",
+      "name": "Jonas",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 12305
+    },
+    {
       "tag": "#8PQUL9U2C",
       "name": "Philipp1893",
       "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 18366
+    },
+    {
+      "tag": "#PPCQ9LY8",
+      "name": "reisus",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 17634
     },
     {
       "tag": "#20GYJLR9",
@@ -52,18 +68,18 @@
     {
       "tag": "#LQJGJ220Q",
       "name": "maxiswat",
-      "attacks": 4,
+      "attacks": 6,
       "attackLimit": 5,
-      "bonusAttackLimit": 0,
-      "capitalResourcesLooted": 12500
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 17066
     },
     {
       "tag": "#QCRP22CUU",
       "name": "Daradi",
-      "attacks": 5,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 10804
+      "capitalResourcesLooted": 12404
     },
     {
       "tag": "#GU98GC0YP",
@@ -108,10 +124,26 @@
     {
       "tag": "#YUJ2GVJQG",
       "name": "x_Jan_x",
-      "attacks": 3,
+      "attacks": 5,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 2547
+      "capitalResourcesLooted": 8083
+    },
+    {
+      "tag": "#LJ89CLP8R",
+      "name": "Gronkihts",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 22475
+    },
+    {
+      "tag": "#8PYLGRQRR",
+      "name": "Pain",
+      "attacks": 5,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 11119
     }
   ],
   "attackLog": [
@@ -760,18 +792,60 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/NnGIbNFz-tZ7_RpWRSOY2c3AvxLe63jyLiCJHlEyGC4.png"
         }
       },
-      "attackCount": 19,
+      "attackCount": 27,
       "districtCount": 8,
-      "districtsDestroyed": 6,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 11119,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#8PYLGRQRR",
+                "name": "Pain"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8PYLGRQRR",
+                "name": "Pain"
+              },
+              "destructionPercent": 80,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8PYLGRQRR",
+                "name": "Pain"
+              },
+              "destructionPercent": 65,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8PYLGRQRR",
+                "name": "Pain"
+              },
+              "destructionPercent": 45,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#8PYLGRQRR",
+                "name": "Pain"
+              },
+              "destructionPercent": 29,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000001,
@@ -925,10 +999,36 @@
           "id": 70000005,
           "name": "Dragon Cliffs",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7136,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#YUJ2GVJQG",
+                "name": "x_Jan_x"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#YUJ2GVJQG",
+                "name": "x_Jan_x"
+              },
+              "destructionPercent": 60,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#QCRP22CUU",
+                "name": "Daradi"
+              },
+              "destructionPercent": 27,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000006,
@@ -1001,7 +1101,440 @@
           ]
         }
       ]
+    },
+    {
+      "defender": {
+        "tag": "#2JQQYPCJR",
+        "name": "Pinoy Warriors",
+        "level": 16,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/KUMSOMEy-9wa-gOa3fKwpxrdneE2BQLSCoqVK-Rsgro.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/KUMSOMEy-9wa-gOa3fKwpxrdneE2BQLSCoqVK-Rsgro.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/KUMSOMEy-9wa-gOa3fKwpxrdneE2BQLSCoqVK-Rsgro.png"
+        }
+      },
+      "attackCount": 20,
+      "districtCount": 8,
+      "districtsDestroyed": 6,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 10065,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 91,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 68,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#LQJGJ220Q",
+                "name": "maxiswat"
+              },
+              "destructionPercent": 36,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8642,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 90,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 43,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7605,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 57,
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8992,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 85,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 34,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 74,
+          "stars": 2,
+          "attackCount": 3,
+          "totalLooted": 5425,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 74,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 46,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 25,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8546,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#LQJGJ220Q",
+                "name": "maxiswat"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 86,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 42,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7705,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#LJ89CLP8R",
+                "name": "Gronkihts"
+              },
+              "destructionPercent": 46,
+              "stars": 1
+            }
+          ]
+        }
+      ]
     }
   ],
-  "defenseLog": []
+  "defenseLog": [
+    {
+      "attacker": {
+        "tag": "#2P2YUPJLU",
+        "name": "clan du 82",
+        "level": 16,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/1WeuXugkQuc8NTEgaTsiURLLzMmBwexg70jVXlGKBQk.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/1WeuXugkQuc8NTEgaTsiURLLzMmBwexg70jVXlGKBQk.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/1WeuXugkQuc8NTEgaTsiURLLzMmBwexg70jVXlGKBQk.png"
+        }
+      },
+      "attackCount": 9,
+      "districtCount": 8,
+      "districtsDestroyed": 2,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 7585,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 97,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 48,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 27,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 53,
+          "stars": 2,
+          "attackCount": 2,
+          "totalLooted": 4360,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 53,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PJCQJ9Q28",
+                "name": "axel la miskine"
+              },
+              "destructionPercent": 19,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 44,
+          "stars": 0,
+          "attackCount": 1,
+          "totalLooted": 3625,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PUCJRQJQC",
+                "name": "EntoileGriezman"
+              },
+              "destructionPercent": 44,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7180,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PUCJRQJQC",
+                "name": "EntoileGriezman"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PUCJRQJQC",
+                "name": "EntoileGriezman"
+              },
+              "destructionPercent": 57,
+              "stars": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
