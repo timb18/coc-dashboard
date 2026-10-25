@@ -2,9 +2,9 @@
   "state": "ongoing",
   "startTime": "20261023T070000.000Z",
   "endTime": "20261026T070000.000Z",
-  "capitalTotalLoot": 111387,
+  "capitalTotalLoot": 118327,
   "raidsCompleted": 1,
-  "totalAttacks": 41,
+  "totalAttacks": 44,
   "enemyDistrictsDestroyed": 13,
   "offensiveReward": 0,
   "defensiveReward": 0,
@@ -76,10 +76,10 @@
     {
       "tag": "#2JJUGY8U",
       "name": "Babo",
-      "attacks": 3,
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 8254
+      "capitalResourcesLooted": 15194
     }
   ],
   "attackLog": [
@@ -415,7 +415,7 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/MTTky9KGVf9NuZDBOYC93ZBxninOI5ah39KOKsX-JZU.png"
         }
       },
-      "attackCount": 14,
+      "attackCount": 17,
       "districtCount": 8,
       "districtsDestroyed": 5,
       "districts": [
@@ -432,10 +432,36 @@
           "id": 70000001,
           "name": "Barbarian Camp",
           "districtHallLevel": 4,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 80,
+          "stars": 2,
+          "attackCount": 3,
+          "totalLooted": 6940,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#2JJUGY8U",
+                "name": "Babo"
+              },
+              "destructionPercent": 80,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2JJUGY8U",
+                "name": "Babo"
+              },
+              "destructionPercent": 60,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#2JJUGY8U",
+                "name": "Babo"
+              },
+              "destructionPercent": 40,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000002,
@@ -616,5 +642,147 @@
       ]
     }
   ],
-  "defenseLog": []
+  "defenseLog": [
+    {
+      "attacker": {
+        "tag": "#LPY9GCYL",
+        "name": "redgreenapples",
+        "level": 14,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/E5B6Ltwvexb_E-tmjIXF3e-_uTiuJoHfkjLcxKFC7mw.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/E5B6Ltwvexb_E-tmjIXF3e-_uTiuJoHfkjLcxKFC7mw.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/E5B6Ltwvexb_E-tmjIXF3e-_uTiuJoHfkjLcxKFC7mw.png"
+        }
+      },
+      "attackCount": 6,
+      "districtCount": 8,
+      "districtsDestroyed": 1,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 7462,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 86,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 56,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 27,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 45,
+          "stars": 1,
+          "attackCount": 2,
+          "totalLooted": 3610,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 45,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#2PQ8QVQU0",
+                "name": "maggie"
+              },
+              "destructionPercent": 28,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        }
+      ]
+    }
+  ]
 }
