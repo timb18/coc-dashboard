@@ -2,20 +2,20 @@
   "state": "ongoing",
   "startTime": "20261023T070000.000Z",
   "endTime": "20261026T070000.000Z",
-  "capitalTotalLoot": 118327,
-  "raidsCompleted": 1,
-  "totalAttacks": 44,
-  "enemyDistrictsDestroyed": 13,
+  "capitalTotalLoot": 148033,
+  "raidsCompleted": 2,
+  "totalAttacks": 60,
+  "enemyDistrictsDestroyed": 17,
   "offensiveReward": 0,
   "defensiveReward": 0,
   "members": [
     {
       "tag": "#2VQ90UVU",
       "name": "WhereIsSummer",
-      "attacks": 2,
+      "attacks": 6,
       "attackLimit": 5,
-      "bonusAttackLimit": 0,
-      "capitalResourcesLooted": 5990
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 15759
     },
     {
       "tag": "#GY2CLY9LJ",
@@ -24,6 +24,22 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 11267
+    },
+    {
+      "tag": "#G8GRLGR8L",
+      "name": "Jonas",
+      "attacks": 1,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 1116
+    },
+    {
+      "tag": "#L8PUG02YG",
+      "name": "PEPPER",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 13471
     },
     {
       "tag": "#20GYJLR9",
@@ -80,6 +96,14 @@
       "attackLimit": 5,
       "bonusAttackLimit": 1,
       "capitalResourcesLooted": 15194
+    },
+    {
+      "tag": "#QCP9P80GV",
+      "name": "lina",
+      "attacks": 5,
+      "attackLimit": 5,
+      "bonusAttackLimit": 0,
+      "capitalResourcesLooted": 5350
     }
   ],
   "attackLog": [
@@ -415,28 +439,102 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/MTTky9KGVf9NuZDBOYC93ZBxninOI5ah39KOKsX-JZU.png"
         }
       },
-      "attackCount": 17,
+      "attackCount": 30,
       "districtCount": 8,
-      "districtsDestroyed": 5,
+      "districtsDestroyed": 8,
       "districts": [
         {
           "id": 70000000,
           "name": "Capital Peak",
           "districtHallLevel": 8,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 8,
+          "totalLooted": 10876,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 84,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 80,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#QCP9P80GV",
+                "name": "lina"
+              },
+              "destructionPercent": 73,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#QCP9P80GV",
+                "name": "lina"
+              },
+              "destructionPercent": 49,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#QCP9P80GV",
+                "name": "lina"
+              },
+              "destructionPercent": 37,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#QCP9P80GV",
+                "name": "lina"
+              },
+              "destructionPercent": 0,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#QCP9P80GV",
+                "name": "lina"
+              },
+              "destructionPercent": 0,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000001,
           "name": "Barbarian Camp",
           "districtHallLevel": 4,
-          "destructionPercent": 80,
-          "stars": 2,
-          "attackCount": 3,
-          "totalLooted": 6940,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 9759,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#2JJUGY8U",
@@ -572,10 +670,44 @@
           "id": 70000005,
           "name": "Dragon Cliffs",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 8066,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#G8GRLGR8L",
+                "name": "Jonas"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 91,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 64,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#2VQ90UVU",
+                "name": "WhereIsSummer"
+              },
+              "destructionPercent": 30,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000006,
@@ -640,6 +772,121 @@
           ]
         }
       ]
+    },
+    {
+      "defender": {
+        "tag": "#PGQJVJC",
+        "name": "82pb Farmer",
+        "level": 17,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/qOJthn3mPfRRTWAetzFCjkVB32fcRftJ3pnCyuuYGKo.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/qOJthn3mPfRRTWAetzFCjkVB32fcRftJ3pnCyuuYGKo.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/qOJthn3mPfRRTWAetzFCjkVB32fcRftJ3pnCyuuYGKo.png"
+        }
+      },
+      "attackCount": 3,
+      "districtCount": 8,
+      "districtsDestroyed": 1,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7945,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 83,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#L8PUG02YG",
+                "name": "PEPPER"
+              },
+              "destructionPercent": 36,
+              "stars": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "defenseLog": [
@@ -654,9 +901,9 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/E5B6Ltwvexb_E-tmjIXF3e-_uTiuJoHfkjLcxKFC7mw.png"
         }
       },
-      "attackCount": 6,
+      "attackCount": 12,
       "districtCount": 8,
-      "districtsDestroyed": 1,
+      "districtsDestroyed": 3,
       "districts": [
         {
           "id": 70000000,
@@ -723,11 +970,27 @@
           "id": 70000003,
           "name": "Balloon Lagoon",
           "districtHallLevel": 4,
-          "destructionPercent": 45,
-          "stars": 1,
-          "attackCount": 2,
-          "totalLooted": 3610,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 9005,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 69,
+              "stars": 2
+            },
             {
               "attacker": {
                 "tag": "#2PQ8QVQU0",
@@ -750,10 +1013,44 @@
           "id": 70000004,
           "name": "Builder's Workshop",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 9302,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 90,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 67,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8QYLYQJV",
+                "name": "Sancocho"
+              },
+              "destructionPercent": 34,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000005,
