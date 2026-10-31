@@ -1,0 +1,591 @@
+{
+  "state": "ongoing",
+  "startTime": "20261030T070000.000Z",
+  "endTime": "20261102T070000.000Z",
+  "capitalTotalLoot": 43481,
+  "raidsCompleted": 1,
+  "totalAttacks": 18,
+  "enemyDistrictsDestroyed": 5,
+  "offensiveReward": 0,
+  "defensiveReward": 0,
+  "members": [
+    {
+      "tag": "#GY2CLY9LJ",
+      "name": "VanSik07",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 12017
+    },
+    {
+      "tag": "#PPCQ9LY8",
+      "name": "reisus",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 17538
+    },
+    {
+      "tag": "#QC88LUQ0U",
+      "name": "jimknopf",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 13926
+    }
+  ],
+  "attackLog": [
+    {
+      "defender": {
+        "tag": "#2YU9JVV9J",
+        "name": "nari kutam",
+        "level": 15,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/-Df7S3vTq92ulf5E886cLfivSv1NC1TXZXsadPcmlhU.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/-Df7S3vTq92ulf5E886cLfivSv1NC1TXZXsadPcmlhU.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/-Df7S3vTq92ulf5E886cLfivSv1NC1TXZXsadPcmlhU.png"
+        }
+      },
+      "attackCount": 18,
+      "districtCount": 8,
+      "districtsDestroyed": 5,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 0,
+          "stars": 0,
+          "attackCount": 0,
+          "totalLooted": 0
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 8369,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 86,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 67,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 37,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8560,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 59,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 36,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8978,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 90,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#PPCQ9LY8",
+                "name": "reisus"
+              },
+              "destructionPercent": 50,
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 20,
+          "stars": 0,
+          "attackCount": 1,
+          "totalLooted": 1515,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 20,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 8393,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#GY2CLY9LJ",
+                "name": "VanSik07"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 88,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 47,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 37,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7666,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 81,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QC88LUQ0U",
+                "name": "jimknopf"
+              },
+              "destructionPercent": 30,
+              "stars": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "defenseLog": [
+    {
+      "attacker": {
+        "tag": "#20G922L2Q",
+        "name": "♨KingdomOfWar♨",
+        "level": 16,
+        "badgeUrls": {
+          "small": "https://api-assets.clashofclans.com/badges/70/-h5RtATqb7CAm_BMXOBDaawbVtpKoRVKPb6gOTUnOcY.png",
+          "large": "https://api-assets.clashofclans.com/badges/512/-h5RtATqb7CAm_BMXOBDaawbVtpKoRVKPb6gOTUnOcY.png",
+          "medium": "https://api-assets.clashofclans.com/badges/200/-h5RtATqb7CAm_BMXOBDaawbVtpKoRVKPb6gOTUnOcY.png"
+        }
+      },
+      "attackCount": 25,
+      "districtCount": 8,
+      "districtsDestroyed": 8,
+      "districts": [
+        {
+          "id": 70000000,
+          "name": "Capital Peak",
+          "districtHallLevel": 8,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 11208,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#8V8RLVQ2C",
+                "name": "Dadskie"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#8V8RLVQ2C",
+                "name": "Dadskie"
+              },
+              "destructionPercent": 90,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#8V8RLVQ2C",
+                "name": "Dadskie"
+              },
+              "destructionPercent": 77,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#GPJRLQUPQ",
+                "name": "GuarDian"
+              },
+              "destructionPercent": 47,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000001,
+          "name": "Barbarian Camp",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 10082,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#GVRJRJCGV",
+                "name": "emty"
+              },
+              "destructionPercent": 98,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#GVRJRJCGV",
+                "name": "emty"
+              },
+              "destructionPercent": 59,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#GVRJRJCGV",
+                "name": "emty"
+              },
+              "destructionPercent": 24,
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 70000002,
+          "name": "Wizard Valley",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7192,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QJJPRR8RR",
+                "name": "19 UPS 35"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QCLL82G2V",
+                "name": "retired p1@boy"
+              },
+              "destructionPercent": 30,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000003,
+          "name": "Balloon Lagoon",
+          "districtHallLevel": 4,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8870,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 55,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 33,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000004,
+          "name": "Builder's Workshop",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 9020,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 72,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#98UVLPVGG",
+                "name": "MV JAID'Z"
+              },
+              "destructionPercent": 16,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000005,
+          "name": "Dragon Cliffs",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 5,
+          "totalLooted": 8010,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 92,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 50,
+              "stars": 1
+            },
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 37,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#9RG9PRYLQ",
+                "name": "Dyosa TALA©"
+              },
+              "destructionPercent": 20,
+              "stars": 0
+            }
+          ]
+        },
+        {
+          "id": 70000006,
+          "name": "Golem Quarry",
+          "districtHallLevel": 3,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7901,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QJJPRR8RR",
+                "name": "19 UPS 35"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QCLL82G2V",
+                "name": "retired p1@boy"
+              },
+              "destructionPercent": 50,
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 70000007,
+          "name": "Skeleton Park",
+          "districtHallLevel": 2,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 2,
+          "totalLooted": 7191,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QCLL82G2V",
+                "name": "retired p1@boy"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#QJJPRR8RR",
+                "name": "19 UPS 35"
+              },
+              "destructionPercent": 62,
+              "stars": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
