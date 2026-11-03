@@ -1,13 +1,13 @@
 {
-  "state": "ongoing",
+  "state": "ended",
   "startTime": "20261030T070000.000Z",
   "endTime": "20261102T070000.000Z",
-  "capitalTotalLoot": 246836,
+  "capitalTotalLoot": 270168,
   "raidsCompleted": 4,
-  "totalAttacks": 97,
-  "enemyDistrictsDestroyed": 25,
-  "offensiveReward": 0,
-  "defensiveReward": 0,
+  "totalAttacks": 107,
+  "enemyDistrictsDestroyed": 30,
+  "offensiveReward": 126,
+  "defensiveReward": 166,
   "members": [
     {
       "tag": "#2VQ90UVU",
@@ -106,12 +106,28 @@
       "capitalResourcesLooted": 18366
     },
     {
-      "tag": "#LLGVJURJ",
-      "name": "jan",
-      "attacks": 4,
+      "tag": "#QGUPRJLLG",
+      "name": "Jan2",
+      "attacks": 6,
       "attackLimit": 5,
       "bonusAttackLimit": 1,
-      "capitalResourcesLooted": 12045
+      "capitalResourcesLooted": 15831
+    },
+    {
+      "tag": "#QYQPGJ8PL",
+      "name": "xS4MU3Lx",
+      "attacks": 2,
+      "attackLimit": 5,
+      "bonusAttackLimit": 0,
+      "capitalResourcesLooted": 3615
+    },
+    {
+      "tag": "#LLGVJURJ",
+      "name": "jan",
+      "attacks": 6,
+      "attackLimit": 5,
+      "bonusAttackLimit": 1,
+      "capitalResourcesLooted": 15931
     },
     {
       "tag": "#R8Q8CRC8C",
@@ -1153,9 +1169,9 @@
           "medium": "https://api-assets.clashofclans.com/badges/200/NQxpJ90vY7sDiRhnYOGHQdx7IM-vb0XsXBpI3d44IIE.png"
         }
       },
-      "attackCount": 12,
+      "attackCount": 22,
       "districtCount": 8,
-      "districtsDestroyed": 1,
+      "districtsDestroyed": 6,
       "districts": [
         {
           "id": 70000000,
@@ -1170,20 +1186,62 @@
           "id": 70000001,
           "name": "Barbarian Camp",
           "districtHallLevel": 4,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 9626,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 60,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 40,
+              "stars": 0
+            },
+            {
+              "attacker": {
+                "tag": "#QYQPGJ8PL",
+                "name": "xS4MU3Lx"
+              },
+              "destructionPercent": 20,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000002,
           "name": "Wizard Valley",
           "districtHallLevel": 4,
-          "destructionPercent": 72,
-          "stars": 2,
-          "attackCount": 2,
-          "totalLooted": 6035,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8561,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#U0VPCGRV",
@@ -1206,11 +1264,19 @@
           "id": 70000003,
           "name": "Balloon Lagoon",
           "districtHallLevel": 4,
-          "destructionPercent": 80,
-          "stars": 2,
-          "attackCount": 3,
-          "totalLooted": 7420,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 4,
+          "totalLooted": 8954,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#20GYJLR9",
@@ -1241,11 +1307,19 @@
           "id": 70000004,
           "name": "Builder's Workshop",
           "districtHallLevel": 3,
-          "destructionPercent": 81,
-          "stars": 1,
-          "attackCount": 2,
-          "totalLooted": 6635,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 8866,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#LLGVJURJ",
+                "name": "jan"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#U0VPCGRV",
@@ -1268,10 +1342,28 @@
           "id": 70000005,
           "name": "Dragon Cliffs",
           "districtHallLevel": 3,
-          "destructionPercent": 0,
-          "stars": 0,
-          "attackCount": 0,
-          "totalLooted": 0
+          "destructionPercent": 74,
+          "stars": 2,
+          "attackCount": 2,
+          "totalLooted": 5775,
+          "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 74,
+              "stars": 2
+            },
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 28,
+              "stars": 0
+            }
+          ]
         },
         {
           "id": 70000006,
@@ -1312,11 +1404,19 @@
           "id": 70000007,
           "name": "Skeleton Park",
           "districtHallLevel": 2,
-          "destructionPercent": 83,
-          "stars": 2,
-          "attackCount": 2,
-          "totalLooted": 6335,
+          "destructionPercent": 100,
+          "stars": 3,
+          "attackCount": 3,
+          "totalLooted": 7975,
           "attacks": [
+            {
+              "attacker": {
+                "tag": "#QGUPRJLLG",
+                "name": "Jan2"
+              },
+              "destructionPercent": 100,
+              "stars": 3
+            },
             {
               "attacker": {
                 "tag": "#20GYJLR9",
