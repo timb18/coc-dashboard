@@ -1,0 +1,249 @@
+{
+  "state": "preparation",
+  "teamSize": 15,
+  "attacksPerMember": 2,
+  "battleModifier": "none",
+  "preparationStartTime": "20261123T133802.000Z",
+  "startTime": "20261124T123802.000Z",
+  "endTime": "20261125T123802.000Z",
+  "clan": {
+    "tag": "#2G2YYV9J0",
+    "name": "DieEleganten",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/Gd32HORi6b5EOPSVFqtbw5xbs-v-YkDr0ogtaXlykCE.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/Gd32HORi6b5EOPSVFqtbw5xbs-v-YkDr0ogtaXlykCE.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/Gd32HORi6b5EOPSVFqtbw5xbs-v-YkDr0ogtaXlykCE.png"
+    },
+    "clanLevel": 14,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#QGLCP0VUY",
+        "name": "Tim",
+        "townhallLevel": 16,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2VQ90UVU",
+        "name": "WhereIsSummer",
+        "townhallLevel": 17,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G8GRLGR8L",
+        "name": "Jonas",
+        "townhallLevel": 15,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8PQUL9U2C",
+        "name": "Philipp1893",
+        "townhallLevel": 19,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G99GVVL2Q",
+        "name": "lörris",
+        "townhallLevel": 16,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PPCQ9LY8",
+        "name": "reisus",
+        "townhallLevel": 18,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QLYUQCQCJ",
+        "name": "lukasmllr",
+        "townhallLevel": 10,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#20GYJLR9",
+        "name": "klabusa",
+        "townhallLevel": 19,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LQJGJ220Q",
+        "name": "maxiswat",
+        "townhallLevel": 18,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GU98GC0YP",
+        "name": "Martin",
+        "townhallLevel": 18,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#U0VPCGRV",
+        "name": "Roman",
+        "townhallLevel": 19,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QYQPGJ8PL",
+        "name": "xS4MU3Lx",
+        "townhallLevel": 18,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LLGVJURJ",
+        "name": "jan",
+        "townhallLevel": 19,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#R8Q8CRC8C",
+        "name": "Martin2",
+        "townhallLevel": 16,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LJ89CLP8R",
+        "name": "Gronkihts",
+        "townhallLevel": 18,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      }
+    ]
+  },
+  "opponent": {
+    "tag": "#2QGR99Q99",
+    "name": "Bé Hột Lu",
+    "badgeUrls": {
+      "small": "https://api-assets.clashofclans.com/badges/70/HzVo_1XdFtLyHj1uyL0VVsxHLW31XnoApkdyArVA1Ok.png",
+      "large": "https://api-assets.clashofclans.com/badges/512/HzVo_1XdFtLyHj1uyL0VVsxHLW31XnoApkdyArVA1Ok.png",
+      "medium": "https://api-assets.clashofclans.com/badges/200/HzVo_1XdFtLyHj1uyL0VVsxHLW31XnoApkdyArVA1Ok.png"
+    },
+    "clanLevel": 25,
+    "attacks": 0,
+    "stars": 0,
+    "destructionPercentage": 0,
+    "members": [
+      {
+        "tag": "#LCLLYGPUP",
+        "name": "ᐯᑎ•KᗩTO❤️",
+        "townhallLevel": 16,
+        "mapPosition": 13,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#L8PYLRCQV",
+        "name": "__Ngáo__",
+        "townhallLevel": 18,
+        "mapPosition": 4,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GUYGPPL88",
+        "name": "caotriêt",
+        "townhallLevel": 13,
+        "mapPosition": 15,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#G0LPUP0GU",
+        "name": "Crazy_Love❣️",
+        "townhallLevel": 18,
+        "mapPosition": 8,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2GVC22PQ9",
+        "name": "Thái Black",
+        "townhallLevel": 19,
+        "mapPosition": 3,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QV9RJJ8UR",
+        "name": "Tuấn352003",
+        "townhallLevel": 16,
+        "mapPosition": 12,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#PC8YUQLV",
+        "name": "thien xoan",
+        "townhallLevel": 18,
+        "mapPosition": 6,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#GJG0YY2RL",
+        "name": "phước thiện",
+        "townhallLevel": 16,
+        "mapPosition": 9,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2U28G8G9P",
+        "name": "truy na cu2",
+        "townhallLevel": 15,
+        "mapPosition": 11,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#CQ8LQ22Y",
+        "name": "Trung Chợ Neo",
+        "townhallLevel": 19,
+        "mapPosition": 1,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#QP2LUGG8Y",
+        "name": "Hall 9",
+        "townhallLevel": 16,
+        "mapPosition": 10,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#2LCPJCC20",
+        "name": "vằn vèo",
+        "townhallLevel": 19,
+        "mapPosition": 2,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#8V8LQVJJR",
+        "name": "Thành Trung",
+        "townhallLevel": 15,
+        "mapPosition": 14,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#Y0LR9Y8JR",
+        "name": "Trung Bảnh",
+        "townhallLevel": 19,
+        "mapPosition": 5,
+        "opponentAttacks": 0
+      },
+      {
+        "tag": "#LV9CPCGV",
+        "name": "thành trung(81)",
+        "townhallLevel": 18,
+        "mapPosition": 7,
+        "opponentAttacks": 0
+      }
+    ]
+  }
+}
